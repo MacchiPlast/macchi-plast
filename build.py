@@ -3,74 +3,127 @@ import pandas as pd
 import re
 import json
 import os
-from datetime import date
 
-# ── Percorsi ────────────────────────────────────────────────────────────────
+# ── Costanti Percorsi ────────────────────────────────────────────────────────
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-CSV_PATH = os.path.join(BASE_DIR, 'data', 'ordini.csv')
-CONFIG_PATH = os.path.join(BASE_DIR, 'config.json')
-TEMPLATE_PATH = os.path.join(BASE_DIR, 'template.html')
-OUT_DIR = os.path.join(BASE_DIR, 'docs')
-OUT_PATH = os.path.join(OUT_DIR, 'index.html')
 
-os.makedirs(OUT_DIR, exist_ok=True)
+PATHS = {
+    "csv": os.path.join(BASE_DIR, 'data', 'ordini.csv'),
+    "config": os.path.join(BASE_DIR, 'config.json'),
+    "template": os.path.join(BASE_DIR, 'template.html'),
+    "out_dir": os.path.join(BASE_DIR, 'docs'),
+    "out": os.path.join(BASE_DIR, 'docs', 'index.html')
+}
 
-# ── Carica configurazione ────────────────────────────────────────────────────
-with open(CONFIG_PATH, encoding='utf-8') as f:
-    CFG = json.load(f)
+os.makedirs(PATHS["out_dir"], exist_ok=True)
 
-# Dopo aver caricato il file JSON (CFG)
-# Generiamo il lookup in memoria, garantendo che sia sempre aggiornato
-CFG['lookup'] = {}
+# ── Utility ──────────────────────────────────────────────────────────────────
+def load_json(path):
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"❌ Config non trovato: {path}")
+    with open(path, encoding='utf-8') as f:
+        return json.load(f)
 
-for scaffale, articoli in CFG['scaffali'].items():
-    for articolo in articoli:
-        # Pulisci anche qui l'articolo per essere sicuri che corrisponda al CSV
-        articolo_pulito = articolo.strip()
-        
-        if articolo_pulito not in CFG['lookup']:
-            CFG['lookup'][articolo_pulito] = []
-        
-        if scaffale not in CFG['lookup'][articolo_pulito]:
-            CFG['lookup'][articolo_pulito].append(scaffale)
 
-# ── Funzioni di Pulizia ──────────────────────────────────────────────────────
-def clean_notion_field(val):
-    """Rimuove URL Notion (es. https://...) e spazi extra."""
-    if pd.isna(val) or str(val).strip() == "":
+def normalize(text):
+    """Normalizza stringhe per confronti robusti"""
+    if not text:
         return ""
-    # Rimuove tutto ciò che sta tra parentesi (l'URL di Notion)
-    cleaned = re.sub(r'\s\(https://.*?\)', '', str(val))
-    return cleaned.strip()
+    text = str(text).upper().strip()
+    text = re.sub(r'\s+', ' ', text)
+    return text
 
-# ── Leggi e pulisci CSV ──────────────────────────────────────────────────────
-print(f"Lettura CSV: {CSV_PATH}")
-df = pd.read_csv(CSV_PATH, sep=None, engine='python', encoding='utf-8-sig')
-# Rimuove eventuali caratteri invisibili BOM dal CSV
-df.columns = [c.lstrip('\ufeff') for c in df.columns]
 
-# Applichiamo la pulizia alle colonne Articolo e Pressa
-for col in ['Articolo', 'Pressa']:
-    if col in df.columns:
-        df[col] = df[col].apply(clean_notion_field)
+def clean_notion_field(val):
+    if pd.isna(val):
+        return ""
+    val = str(val)
+    val = re.sub(r'\s*\(https://.*?\)', '', val)
+    return val.strip()
 
-print(f"  Righe processate: {len(df)}")
 
-# ── Trasformazione Dati per il Template ──────────────────────────────────────
-# Convertiamo il dataframe in una lista di dizionari per il frontend
-odl_list = df.to_dict(orient='records')
-ODL_JSON = json.dumps(odl_list, ensure_ascii=False)
+def build_lookup(scaffali):
+    """Costruisce lookup articolo -> scaffali"""
+    lookup = {}
 
-# ── Lettura Template e Iniezione Dati ────────────────────────────────────────
-with open(TEMPLATE_PATH, encoding='utf-8') as f:
-    html = f.read()
+    for scaffale, articoli in scaffali.items():
+        for art in articoli:
+            key = normalize(art)
+            lookup.setdefault(key, set()).add(scaffale)
 
-# Sostituzione dei segnaposto nel template
-# Assicurati che nel tuo template.html ci sia la stringa "%%ODL%%"
-html = html.replace('%%ODL%%', ODL_JSON)
+    # convert set → list
+    return {k: list(v) for k, v in lookup.items()}
 
-# Salvataggio file finale
-with open(OUT_PATH, 'w', encoding='utf-8') as f:
-    f.write(html)
 
-print(f"Build completata con successo in: {OUT_PATH}")
+def load_csv(path):
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"❌ CSV non trovato: {path}")
+
+    print(f"📄 Lettura CSV: {path}")
+
+    df = pd.read_csv(path, sep=None, engine='python', encoding='utf-8-sig')
+
+    df.columns = [c.lstrip('\ufeff') for c in df.columns]
+
+    for col in ['Articolo', 'Pressa']:
+        if col in df.columns:
+            df[col] = df[col].apply(clean_notion_field)
+
+    print(f"✅ Righe processate: {len(df)}")
+    return df
+
+
+def enrich_with_scaffali(df, lookup):
+    """Aggiunge colonna Scaffali basata su lookup"""
+
+    def match_scaffali(articolo):
+        key = normalize(articolo)
+        return lookup.get(key, [])
+
+    if "Articolo" in df.columns:
+        df["Scaffali"] = df["Articolo"].apply(match_scaffali)
+    else:
+        print("⚠️ Colonna 'Articolo' non trovata")
+
+    return df
+
+
+def inject_template(template_path, output_path, data_json):
+    if not os.path.exists(template_path):
+        raise FileNotFoundError(f"❌ Template non trovato: {template_path}")
+
+    with open(template_path, encoding='utf-8') as f:
+        html = f.read()
+
+    html = html.replace('%%ODL%%', data_json)
+
+    with open(output_path, 'w', encoding='utf-8') as f:
+        f.write(html)
+
+    print(f"🚀 Build completata: {output_path}")
+
+
+# ── MAIN ─────────────────────────────────────────────────────────────────────
+def main():
+    try:
+        cfg = load_json(PATHS["config"])
+
+        # lookup dinamico
+        lookup = build_lookup(cfg.get('scaffali', {}))
+
+        df = load_csv(PATHS["csv"])
+
+        # 🔥 QUI AVVIENE LA MAGIA
+        df = enrich_with_scaffali(df, lookup)
+
+        odl_list = df.to_dict(orient='records')
+        odl_json = json.dumps(odl_list, ensure_ascii=False)
+
+        inject_template(PATHS["template"], PATHS["out"], odl_json)
+
+    except Exception as e:
+        print(f"💥 ERRORE: {e}")
+
+
+if __name__ == "__main__":
+    main()

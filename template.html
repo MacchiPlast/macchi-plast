@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Macchi Plast</title>
 <style>
-/* Stili presi dalla tua versione V9 funzionante */
+/* Stili V9 completi */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 :root{--bg:#f4f3ef;--surface:#fff;--border:#e2dfd9;--border-s:#c5c1ba;--text:#1a1917;--muted:#6b6762;--hint:#a09c96;--green:#1a7a4a;--green-bg:#edf7f2;--green-b:#aedcc4;--blue:#1a4fa0;--blue-bg:#eef3fc;--blue-b:#b0c8f0;--purple:#5b2d8e;--purple-bg:#f3eeff;--purple-b:#c9b0e8;--r:8px;--rl:14px;}
 body{font-family:'IBM Plex Sans',sans-serif;background:var(--bg);color:var(--text);font-size:15px}
@@ -17,6 +17,9 @@ input{width:100%;padding:10px;border:1px solid var(--border);border-radius:var(-
 .ac-list{position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid var(--border);z-index:999;max-height:250px;overflow-y:auto;display:none}
 .ac-item{padding:10px;cursor:pointer;border-bottom:1px solid var(--bg)}
 .hidden{display:none}
+table{width:100%;border-collapse:collapse;}
+th{text-align:left;padding:8px;background:var(--bg);border-bottom:2px solid var(--border)}
+td{padding:8px;border-bottom:1px solid var(--border)}
 </style>
 </head>
 <body>
@@ -32,40 +35,45 @@ input{width:100%;padding:10px;border:1px solid var(--border);border-radius:var(-
     </div>
   </div>
   <div id="riepilogo" class="hidden">
+     <div id="r-cod" style="font-size:20px;font-weight:bold;margin-bottom:10px;"></div>
      <div id="risultati"></div>
   </div>
 </div>
 
 <script>
-  // Segnaposti per build.py
+  // Dati iniettati da build.py
   const ODL = %%ODL%%;
-  const SOGLIE = %%SOGLIE%%;
-  const OREPP = %%OREPP%%;
-  const AFF = %%AFF%%;
-
+  
   const input = document.getElementById('inp-art');
   const list = document.getElementById('ac-list');
 
-  // Logica di ricerca (Autocomplete)
   input.addEventListener('input', function() {
     const val = this.value.toUpperCase();
     if(!val) { list.style.display = 'none'; return; }
+    // Filtra articoli unici
     const articoli = [...new Set(ODL.map(o => o.articolo))].filter(a => a && a.includes(val));
     
     if(articoli.length > 0) {
-      list.innerHTML = articoli.map(a => `<div class="ac-item" onclick="seleziona('${a}')">${a}</div>`).join('');
+      list.innerHTML = articoli.map(a => `<div class="ac-item" onclick="mostra('${a}')">${a}</div>`).join('');
       list.style.display = 'block';
     } else { list.style.display = 'none'; }
   });
 
-  function seleziona(art) {
+  function mostra(art) {
     input.value = art;
     list.style.display = 'none';
     document.getElementById('riepilogo').classList.remove('hidden');
-    // Qui il codice JS originale della V9 popolava le tabelle:
-    document.getElementById('risultati').innerHTML = "Dati per: " + art;
-    // IMPORTANTE: Se avevi altre funzioni nella V9 (es. calcola(), filtra()), 
-    // copiale e incollale qui sotto dentro questo script!
+    document.getElementById('r-cod').innerText = "Articolo: " + art;
+    
+    // Filtra ODL per l'articolo
+    const filtrati = ODL.filter(o => o.articolo === art);
+    
+    let html = `<table><thead><tr><th>ODL</th><th>Data</th><th>Pezzi</th><th>Pressa</th></tr></thead><tbody>`;
+    filtrati.forEach(o => {
+      html += `<tr><td>${o.odl}</td><td>${o.data_inizio}</td><td>${o.pezzi}</td><td>${o.pressa}</td></tr>`;
+    });
+    html += `</tbody></table>`;
+    document.getElementById('risultati').innerHTML = html;
   }
 </script>
 </body>

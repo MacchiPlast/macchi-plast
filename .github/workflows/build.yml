@@ -1,1 +1,31 @@
+name: Genera HTML
 
+on:
+  push:
+    paths:
+      - 'data/ordini.csv'   # Si attiva solo quando carichi un nuovo CSV
+  workflow_dispatch:         # Permette avvio manuale dal sito GitHub
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Scarica il repository
+        uses: actions/checkout@v4
+
+      - name: Installa Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installa librerie
+        run: pip install pandas numpy
+
+      - name: Genera HTML
+        run: python3 build.py
+
+      - name: Pubblica su GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs

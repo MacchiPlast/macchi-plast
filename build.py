@@ -19,6 +19,21 @@ os.makedirs(OUT_DIR, exist_ok=True)
 with open(CONFIG_PATH, encoding='utf-8') as f:
     CFG = json.load(f)
 
+# Dopo aver caricato il file JSON (CFG)
+# Generiamo il lookup in memoria, garantendo che sia sempre aggiornato
+CFG['lookup'] = {}
+
+for scaffale, articoli in CFG['scaffali'].items():
+    for articolo in articoli:
+        # Pulisci anche qui l'articolo per essere sicuri che corrisponda al CSV
+        articolo_pulito = articolo.strip()
+        
+        if articolo_pulito not in CFG['lookup']:
+            CFG['lookup'][articolo_pulito] = []
+        
+        if scaffale not in CFG['lookup'][articolo_pulito]:
+            CFG['lookup'][articolo_pulito].append(scaffale)
+
 # ── Funzioni di Pulizia ──────────────────────────────────────────────────────
 def clean_notion_field(val):
     """Rimuove URL Notion (es. https://...) e spazi extra."""

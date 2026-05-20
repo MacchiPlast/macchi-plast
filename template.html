@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Macchi Plast</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+:root{
+  --bg:#f4f3ef;--surface:#fff;--border:#e2dfd9;--border-s:#c5c1ba;
+  --text:#1a1917;--muted:#6b6762;--hint:#a09c96;
+  --green:#1a7a4a;--green-bg:#edf7f2;--green-b:#aedcc4;
+  --blue:#1a4fa0;--blue-bg:#eef3fc;--blue-b:#b0c8f0;
+  --amber:#7a4f00;--amber-bg:#fdf4e0;--amber-b:#e8d090;
+  --red:#9a1f1f;--red-bg:#fdf0f0;--red-b:#e8b0b0;
+  --purple:#5b2d8e;--purple-bg:#f3eeff;--purple-b:#c9b0e8;
+  --r:8px;--rl:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'IBM Plex Sans',sans-serif;background:var(--bg);color:var(--text);font-size:15px}
+.header{background:var(--text);color:#fff;padding:1rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.htitle{font-size:17px;font-weight:600}
+.hsub{font-size:12px;opacity:.5;font-family:'IBM Plex Mono',monospace;margin-top:2px}
+.hbadge{font-size:11px;font-family:'IBM Plex Mono',monospace;background:rgba(255,255,255,.12);padding:3px 10px;border-radius:99px;color:rgba(255,255,255,.65)}
+.container{max-width:820px;margin:0 auto;padding:1.5rem 1rem 4rem}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:var(--rl);padding:1.25rem;margin-bottom:1rem}
+.card-title{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.6px;color:var(--muted);margin-bottom:1rem}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:480px){.row2{grid-template-columns:1fr}}
+label{display:block;font-size:12px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:5px}
+input[type=text],input[type=number],select{width:100%;padding:10px 13px;border:1px solid var(--border);border-radius:var(--r);font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:var(--text);background:var(--bg);outline:none;-webkit-appearance:none;appearance:none}
+input:focus,select:focus{border-color:var(--text);background:#fff}
+select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b6762' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:36px}
+.hidden{display:none}
+.art-header{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;flex-wrap:wrap}
+.art-code{font-family:'IBM Plex Mono',monospace;font-size:20px;font-weight:600}
+.art-cli{font-size:13px;color:var(--muted);background:var(--bg);border:1px solid var(--border);border-radius:99px;padding:3px 12px}
+.section{background:var(--surface);border:1px solid var(--border);border-radius:var(--rl);margin-bottom:10px;overflow:hidden}
+.sh{display:flex;align-items:center;gap:10px;padding:11px 16px;border-bottom:1px solid var(--border);background:var(--bg)}
+.sicon{width:26px;height:26px;border-radius:7px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.si-blue{background:var(--blue-bg)}.si-green{background:var(--green-bg)}.si-gray{background:#f0ede8}.si-purple{background:var(--purple-bg)}
+.slabel{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--muted)}
+.sb{padding:14px 16px}
+.metrics{display:flex;gap:10px;flex-wrap:wrap}
+.metric{flex:1;min-width:110px;background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:10px 13px}
+.ml{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px;margin-bottom:3px}
+.mv{font-family:'IBM Plex Mono',monospace;font-size:22px;font-weight:500;line-height:1.1}
+.mv.g{color:var(--green)}
+.mu{font-size:11px;color:var(--hint);margin-top:2px}
+.pressa-row{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.pressa-name{font-family:'IBM Plex Mono',monospace;font-size:28px;font-weight:600}
+.badge{display:inline-flex;align-items:center;font-size:11px;font-family:'IBM Plex Mono',monospace;font-weight:500;padding:4px 10px;border-radius:99px}
+.bg{background:var(--green-bg);color:var(--green);border:1px solid var(--green-b)}
+.ba{background:var(--amber-bg);color:var(--amber);border:1px solid var(--amber-b)}
+.bd{background:var(--text);color:#fff}
+.br{background:var(--red-bg);color:var(--red);border:1px solid var(--red-b)}
+.sub-d{margin-top:10px;font-size:13px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap}
+.sub-d span{color:var(--text);font-weight:500}
+.mat-box{font-size:12px;color:var(--muted);margin-top:10px;padding:8px 12px;background:var(--blue-bg);border-radius:var(--r);border:1px solid var(--blue-b);font-family:'IBM Plex Mono',monospace}
+.warn{margin-top:10px;padding:8px 12px;background:var(--amber-bg);border:1px solid var(--amber-b);border-radius:var(--r);font-size:12px;color:var(--amber)}
+.formula{margin-top:10px;font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--hint)}
+.chart-box{width:100%;overflow-x:auto}
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+.li{display:flex;align-items:center;gap:5px;font-size:12px;font-family:'IBM Plex Mono',monospace;color:var(--muted)}
+.ld{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.odl-count{font-size:12px;color:var(--muted);margin-bottom:10px}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th{text-align:left;padding:7px 10px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);border-bottom:2px solid var(--border);background:var(--bg);white-space:nowrap}
+td{padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:middle}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#faf9f6}
+.mono{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500}
+.cr-tag{display:inline-block;font-size:10px;font-family:'IBM Plex Mono',monospace;font-weight:600;padding:2px 7px;border-radius:4px;background:var(--red-bg);color:var(--red);border:1px solid var(--red-b)}
+.at{display:inline-block;font-size:10px;font-family:'IBM Plex Mono',monospace;font-weight:600;padding:2px 7px;border-radius:4px;background:var(--amber-bg);color:var(--amber);border:1px solid var(--amber-b)}
+.tc{font-size:11px;color:var(--muted);max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:'IBM Plex Mono',monospace}
+.empty{text-align:center;padding:2.5rem 1rem;color:var(--hint);font-size:14px}
+.pos-big{display:inline-flex;align-items:center;gap:16px;background:var(--purple-bg);border:2px solid var(--purple-b);border-radius:var(--rl);padding:14px 20px}
+.pos-coord{font-family:'IBM Plex Mono',monospace;font-size:48px;font-weight:600;color:var(--purple);line-height:1}
+.pos-info{display:flex;flex-direction:column;gap:6px}
+.pos-riga{font-size:13px;color:var(--purple);font-weight:500}
+.pos-stampo{font-size:12px;font-family:'IBM Plex Mono',monospace;color:var(--purple);opacity:.8;background:rgba(91,45,142,.1);padding:2px 8px;border-radius:4px;display:inline-block}
+.pos-altri{font-size:12px;color:var(--muted);margin-top:8px;line-height:1.6}
+.pos-altri b{font-family:'IBM Plex Mono',monospace;font-weight:500;color:var(--text)}
+.pos-none{font-size:13px;color:var(--hint);padding:4px 0}
+.aff-bar-wrap{margin-top:10px}
+.aff-bar-label{font-size:11px;color:var(--muted);margin-bottom:4px}
+.aff-bar-track{height:6px;background:var(--border);border-radius:99px;overflow:hidden}
+.aff-bar-fill{height:100%;border-radius:99px}
+.aff-bar-pct{font-size:11px;color:var(--muted);margin-top:3px;font-family:'IBM Plex Mono',monospace}
+/* Ricerca articolo */
+.search-hint{font-size:12px;color:var(--hint);margin-top:6px}
+</style>
+</head>
+<body>
+<div class="header">
+  <div>
+    <div class="htitle">Macchi Plast &mdash; Storico ODL &amp; Pianificazione</div>
+    <div class="hsub">%%N_ORDINI%% ordini &middot; aggiornato %%OGGI%%</div>
+  </div>
+  <div class="hbadge">v6</div>
+</div>
+<div class="container">
+
+  <div class="card">
+    <div class="card-title">Cerca articolo</div>
+    <div class="row2">
+      <div>
+        <label>Articolo</label>
+        <select id="sel-art">
+          <option value="">-- Seleziona articolo --</option>
+        </select>
+        <div class="search-hint" id="search-hint">Scorri o cerca sotto</div>
+        <input type="text" id="inp-filter" placeholder="Filtra per codice..." style="margin-top:6px">
+      </div>
+      <div>
+        <label>Pezzi da produrre (per stima)</label>
+        <input type="number" id="inp-pezzi" placeholder="es. 72000">
+      </div>
+    </div>
+  </div>
+
+  <div id="riepilogo" class="hidden">
+    <div class="art-header">
+      <div class="art-code" id="r-cod"></div>
+      <div class="art-cli" id="r-cli"></div>
+    </div>
+
+    <div class="section">
+      <div class="sh"><div class="sicon si-purple">&#128205;</div><div class="slabel">Posizione stampo</div></div>
+      <div class="sb"><div id="r-pos-content"></div></div>
+    </div>
+
+    <div class="section">
+      <div class="sh"><div class="sicon si-gray">&#127981;</div><div class="slabel">Pressa consigliata</div></div>
+      <div class="sb">
+        <div class="pressa-row">
+          <div class="pressa-name" id="r-pressa"></div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="badge bd">Consigliata</span><span class="badge" id="r-conf"></span></div>
+        </div>
+        <div class="sub-d" id="r-pd"></div>
+        <div class="aff-bar-wrap" id="r-aff-wrap" style="display:none">
+          <div class="aff-bar-label">Consistenza storica sulla stessa pressa</div>
+          <div class="aff-bar-track"><div class="aff-bar-fill" id="r-aff-fill"></div></div>
+          <div class="aff-bar-pct" id="r-aff-pct"></div>
+        </div>
+        <div class="warn hidden" id="r-pw">Dati limitati &mdash; verifica con esperienza diretta prima di confermare la pressa.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="sh"><div class="sicon si-blue">&#9878;</div><div class="slabel">Materiale necessario</div></div>
+      <div class="sb">
+        <div class="metrics">
+          <div class="metric"><div class="ml">Kg netti teorici</div><div class="mv" id="r-kgn"></div><div class="mu">kg</div></div>
+          <div class="metric"><div class="ml">Scarto (3%)</div><div class="mv" id="r-kgs"></div><div class="mu">kg</div></div>
+          <div class="metric"><div class="ml">Kg da ordinare</div><div class="mv g" id="r-kgt"></div><div class="mu">kg</div></div>
+          <div class="metric"><div class="ml">Peso medio pezzo</div><div class="mv" id="r-peso"></div><div class="mu">grammi</div></div>
+        </div>
+        <div class="mat-box" id="r-mat"></div>
+        <div class="formula" id="r-form"></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="sh"><div class="sicon si-green">&#9201;</div><div class="slabel">Ore di produzione stimate</div></div>
+      <div class="sb">
+        <div class="metrics" id="r-ore"></div>
+        <div class="sub-d" id="r-ored"></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="sh">
+        <div class="sicon si-gray">&#128200;</div>
+        <div class="slabel">Andamento produzione nel tempo</div>
+        <div style="margin-left:auto;font-size:11px;color:var(--hint)">pezzi per mese &middot; per pressa</div>
+      </div>
+      <div class="sb">
+        <div class="chart-box"><svg id="chart-svg" height="220" style="display:block"></svg></div>
+        <div class="legend" id="chart-leg"></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="sh">
+        <div class="sicon si-gray">&#128203;</div>
+        <div class="slabel">Storico ODL</div>
+        <div id="r-nc" style="margin-left:auto"></div>
+      </div>
+      <div class="sb">
+        <div class="odl-count" id="r-cnt"></div>
+        <div class="tw">
+          <table>
+            <thead><tr><th>ODL</th><th>Data</th><th>Pressa</th><th>Pezzi</th><th>Ore</th><th>Kg</th><th>Materiale</th><th>Lotto</th><th>Segnalazioni</th></tr></thead>
+            <tbody id="r-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="empty-state"><div class="empty">Seleziona un articolo per vedere riepilogo, posizione stampo e storico ODL</div></div>
+</div>
+
+<script>
+(function() {
+  var ODL = %%ODL%%;
+  var SOGLIE = %%SOGLIE%%;
+  var OREPP = %%OREPP%%;
+  var LOOKUP = %%LOOKUP%%;
+  var SCAFFALI = %%SCAFFALI%%;
+  var STAMPI_ART = %%STAMPIART%%;
+  var AFF = %%AFF%%;
+  var OVERRIDE_PRESSA = %%OVERRIDE%%;
+  var COLORS = ['#1a4fa0','#1a7a4a','#9a1f1f','#7a4f00','#5b2d8e','#006d77','#b5446e','#3d6b00','#8b4513'];
+  var MESI = ['Gen','Feb','Mar','Apr','Mag','Giu','Lug','Ago','Set','Ott','Nov','Dic'];
+
+  function findPos(art) {
+    if (!art) return null;
+    var key = art.toUpperCase().trim();
+    if (STAMPI_ART[art] && STAMPI_ART[art].pos) return STAMPI_ART[art].pos;
+    if (LOOKUP[key]) return LOOKUP[key];
+    var keys = Object.keys(LOOKUP);
+    for (var i=0; i<keys.length; i++) {
+      var k = keys[i];
+      if (k.indexOf(key) >= 0 || key.indexOf(k) >= 0) return LOOKUP[k];
+    }
+    return null;
+  }
+
+  function findStampo(art) {
+    if (!art) return null;
+    if (STAMPI_ART[art] && STAMPI_ART[art].stampo) return STAMPI_ART[art].stampo;
+    return null;
+  }
+
+  var DB = {};
+  ODL.forEach(function(o) {
+    if (!o.articolo) return;
+    if (!DB[o.articolo]) {
+      var cli = o.cliente;
+      if (o.articolo.indexOf('101A')===0 || o.articolo==='201A3308B') cli='Componenti Vending';
+      DB[o.articolo] = {articolo:o.articolo,cliente:cli,pressa:o.pressa,peso:null,mat:o.materiale,n:0,ore_med:SOGLIE[o.articolo]||null,opp:OREPP[o.articolo]||null};
+    }
+    DB[o.articolo].n++;
+    if (o.peso_medio && o.peso_medio>0 && o.peso_medio<10000) DB[o.articolo].peso=o.peso_medio;
+    if (!DB[o.articolo].mat && o.materiale) DB[o.articolo].mat=o.materiale;
+  });
+  Object.keys(STAMPI_ART).forEach(function(art) {
+    if (!DB[art]) {
+      var cli=(art.indexOf('101A')===0||art==='201A3308B')?'Componenti Vending':null;
+      DB[art]={articolo:art,cliente:cli,pressa:null,peso:null,mat:null,n:0,ore_med:null,opp:null};
+    }
+  });
+
+  // Override pressa per articoli 555
+  Object.keys(OVERRIDE_PRESSA).forEach(function(art) {
+    if (DB[art]) DB[art].pressa = OVERRIDE_PRESSA[art];
+  });
+
+  var ARTS = Object.keys(DB).sort();
+  var sel = null;
+
+  // Popola select con tutti gli articoli
+  var selEl = document.getElementById('sel-art');
+  var allOpts = [];
+  ARTS.forEach(function(a) {
+    var pos = findPos(a);
+    var opt = document.createElement('option');
+    opt.value = a;
+    var label = a;
+    if (pos) label += ' [' + pos + ']';
+    if (DB[a].cliente) label += ' - ' + DB[a].cliente;
+    opt.textContent = label;
+    selEl.appendChild(opt);
+    allOpts.push({value: a, label: label.toLowerCase(), opt: opt});
+  });
+
+  // Filtro testuale aggiorna le opzioni del select
+  document.getElementById('inp-filter').addEventListener('input', function() {
+    var q = this.value.toLowerCase().trim();
+    allOpts.forEach(function(item) {
+      item.opt.style.display = (!q || item.label.indexOf(q) >= 0) ? '' : 'none';
+    });
+    // Se c'è una sola opzione visibile selezionala automaticamente
+    var visible = allOpts.filter(function(item) { return item.opt.style.display !== 'none'; });
+    if (visible.length === 1) {
+      selEl.value = visible[0].value;
+      sel = DB[visible[0].value];
+      render();
+    }
+  });
+
+  // Cambio selezione nel select nativo
+  selEl.addEventListener('change', function() {
+    var art = this.value;
+    if (!art) {
+      sel = null;
+      document.getElementById('riepilogo').classList.add('hidden');
+      document.getElementById('empty-state').style.display = 'block';
+      return;
+    }
+    sel = DB[art];
+    document.getElementById('inp-filter').value = '';
+    render();
+  });
+
+  // Aggiorna anche al cambio pezzi
+  document.getElementById('inp-pezzi').addEventListener('input', render);
+
+  function id(x){return document.getElementById(x);}
+  function f(n,d){d=d===undefined?1:d;return (n==null||n===undefined||isNaN(n))?'&mdash;':Number(n).toFixed(d);}
+  function fi(n){return n?Math.round(n).toLocaleString('it-IT'):'&mdash;';}
+  function show(el){el.classList.remove('hidden');}
+  function hide(el){el.classList.add('hidden');}
+
+  function render() {
+    if (!sel){
+      id('riepilogo').classList.add('hidden');
+      id('empty-state').style.display='block';
+      return;
+    }
+    id('riepilogo').classList.remove('hidden');
+    id('empty-state').style.display='none';
+    var pezzi = parseFloat(id('inp-pezzi').value)||0;
+
+    id('r-cod').textContent = sel.articolo;
+    id('r-cli').textContent = sel.cliente||'';
+
+    // POSIZIONE STAMPO
+    var pos = findPos(sel.articolo);
+    var stampo = findStampo(sel.articolo);
+    var posEl = id('r-pos-content');
+    if (pos || stampo) {
+      var rigaMap={'A':'Riga A','B':'Riga B','C':'Riga C','D':'Riga D','E':'Riga E','F':'Riga F'};
+      var rigaLabel = pos ? (rigaMap[pos[0]]||pos[0]) : '';
+      var colLabel = pos ? ('Colonna '+pos[1]) : '';
+      var stampoHtml = stampo ? '<div class="pos-stampo">Stampo: '+stampo+'</div>' : '';
+      var compagni = pos ? (SCAFFALI[pos]||[]).filter(function(a){
+        return a.toUpperCase().trim() !== sel.articolo.toUpperCase().trim();
+      }) : [];
+      var altriHtml = compagni.length
+        ? '<div class="pos-altri">Stesso scaffale: <b>'+compagni.slice(0,6).join('</b>, <b>')+'</b>'+(compagni.length>6?' ...':'')+'</div>'
+        : '';
+      posEl.innerHTML =
+        '<div class="pos-big">'+
+          (pos?'<div class="pos-coord">'+pos+'</div>':'')+
+          '<div class="pos-info">'+
+            (pos?'<div class="pos-riga">'+rigaLabel+' &middot; '+colLabel+'</div>':'')+
+            stampoHtml+
+          '</div>'+
+        '</div>'+altriHtml;
+    } else {
+      posEl.innerHTML = '<div class="pos-none">Posizione non ancora mappata per questo articolo</div>';
+    }
+
+    // PRESSA
+    var pressaEff = OVERRIDE_PRESSA[sel.articolo] || sel.pressa || '';
+    id('r-pressa').textContent = pressaEff;
+    var affDati = AFF[sel.articolo];
+    var cb = id('r-conf');
+    var affWrap = id('r-aff-wrap');
+    var notaOverride = OVERRIDE_PRESSA[sel.articolo]
+      ? '<div style="font-size:11px;color:var(--blue);margin-top:4px;">Decisione aziendale: sempre su SD100-4 (resa estetica)</div>'
+      : '';
+    if (affDati) {
+      var pct = affDati.pct;
+      var conf, confClass, barColor;
+      if (pct===100){conf='Alta affidabilita';confClass='bg';barColor='var(--green)';}
+      else if (pct>=70){conf='Media affidabilita';confClass='ba';barColor='var(--amber)';}
+      else{conf='Bassa affidabilita';confClass='br';barColor='var(--red)';}
+      cb.textContent=conf; cb.className='badge '+confClass;
+      affWrap.style.display='block';
+      id('r-aff-fill').style.width=pct+'%';
+      id('r-aff-fill').style.background=barColor;
+      id('r-aff-pct').textContent=pct+'% degli ordini sulla stessa pressa ('+affDati.n+' ordini, '+affDati.n_presse+' gruppo'+(affDati.n_presse!==1?'i':'')+' pressa)';
+      id('r-pd').innerHTML='<div>Ordini storici: <span>'+sel.n+'</span></div><div>Ore mediane: <span>'+f(sel.ore_med,1)+' h</span></div>'+notaOverride;
+      sel.n<2?show(id('r-pw')):hide(id('r-pw'));
+    } else {
+      cb.textContent='Dati insufficienti'; cb.className='badge ba';
+      affWrap.style.display='none';
+      id('r-pd').innerHTML='<div>Ordini storici: <span>'+sel.n+'</span></div>'+notaOverride;
+      show(id('r-pw'));
+    }
+
+    // MATERIALE
+    if (pezzi && sel.peso) {
+      var kn=pezzi*sel.peso/1000, kt=kn*1.03;
+      id('r-kgn').innerHTML=f(kn,2); id('r-kgs').innerHTML=f(kt-kn,2); id('r-kgt').innerHTML=f(kt,1);
+    } else {
+      ['r-kgn','r-kgs','r-kgt'].forEach(function(x){id(x).innerHTML='&mdash;';});
+    }
+    id('r-peso').innerHTML=f(sel.peso,3);
+    id('r-mat').textContent=sel.mat||'';
+    id('r-form').textContent=pezzi&&sel.peso?fi(pezzi)+' pz x '+f(sel.peso,3)+' g / 1000 x 1.03':'Inserisci i pezzi per il calcolo';
+
+    // ORE
+    var om=id('r-ore'), od=id('r-ored');
+    if (pezzi && sel.opp) {
+      var ore=pezzi*sel.opp;
+      var gg=Math.floor(ore/24), hh=Math.floor(ore%24), mm=Math.round((ore%1)*60);
+      var turni=Math.ceil(ore/8);
+      om.innerHTML=
+        '<div class="metric"><div class="ml">Ore stimate</div><div class="mv g">'+f(ore,1)+'</div><div class="mu">ore totali</div></div>'+
+        '<div class="metric"><div class="ml">Turni (8h)</div><div class="mv">'+turni+'</div><div class="mu">turni da 8 ore</div></div>'+
+        '<div class="metric"><div class="ml">Dettaglio</div><div class="mv" style="font-size:17px">'+(gg>0?gg+'g ':'')+hh+'h '+mm+'m</div></div>';
+      od.innerHTML='<div>Velocita storica: <span>'+f(sel.opp*3600,2)+' sec/pezzo</span></div>';
+    } else {
+      om.innerHTML='<div class="metric"><div class="ml">Ore mediane storiche</div><div class="mv">'+f(sel.ore_med,1)+'</div><div class="mu">ore</div></div>';
+      od.innerHTML='';
+    }
+
+    // ODL
+    var ordini=ODL.filter(function(o){return o.articolo===sel.articolo;}).map(function(o){
+      var dd=o.data_inizio?o.data_inizio.split('/'):null;
+      o._ts=dd?new Date(parseInt(dd[2]),parseInt(dd[1])-1,parseInt(dd[0])):null;
+      return o;
+    }).sort(function(a,b){return (b._ts||0)-(a._ts||0);});
+
+    buildChart(ordini);
+
+    var sog=SOGLIE[sel.articolo];
+    var nc=ordini.filter(function(o){return o.criticita;}).length;
+    var an=ordini.filter(function(o){return o.ore&&sog&&o.ore>sog*1.5;}).length;
+    id('r-cnt').textContent=ordini.length+' ordine'+(ordini.length!==1?'i':'')+' trovati'+(nc?' - '+nc+' con criticita':'')+( an?' - '+an+' anomalie ore':'');
+    var tot=nc+an;
+    id('r-nc').innerHTML=tot?'<span class="badge br">! '+tot+' segnalazione'+(tot!==1?'i':'')+'</span>':'<span class="badge bg">OK Nessuna segnalazione</span>';
+
+    if (!ordini.length){
+      id('r-tbody').innerHTML='<tr><td colspan="9" style="text-align:center;color:var(--hint);padding:1.5rem">Nessun ODL trovato</td></tr>';
+      return;
+    }
+    id('r-tbody').innerHTML=ordini.map(function(o){
+      var isA=o.ore&&sog&&o.ore>sog*1.5, hasCr=!!o.criticita;
+      var rs=hasCr?'background:#fff8f8':isA?'background:#fffdf0':'';
+      var sg=[];
+      if(hasCr) sg.push('<span class="cr-tag">'+o.criticita+'</span>');
+      if(isA) sg.push('<span class="at">Ore +50%</span>');
+      return '<tr style="'+rs+'">'+
+        '<td class="mono">'+o.odl+'</td>'+
+        '<td style="font-size:12px;color:var(--muted)">'+(o.data_inizio||'')+'</td>'+
+        '<td class="mono">'+(o.pressa||'')+'</td>'+
+        '<td>'+fi(o.pezzi)+'</td>'+
+        '<td style="'+(isA?'color:var(--amber);font-weight:500':'')+'">'+( o.ore?f(o.ore,1)+' h':'')+'</td>'+
+        '<td>'+( o.kg?f(o.kg,1)+' kg':'')+'</td>'+
+        '<td class="tc" title="'+(o.materiale||'')+'">'+(o.materiale||'')+'</td>'+
+        '<td class="tc" title="'+(o.lotto||'')+'">'+(o.lotto||'')+'</td>'+
+        '<td>'+(sg.join(' ')||'<span style="color:var(--hint);font-size:12px">&mdash;</span>')+'</td>'+
+        '</tr>';
+    }).join('');
+  }
+
+  function buildChart(ordini) {
+    var svg=id('chart-svg'), leg=id('chart-leg'), pm={};
+    ordini.forEach(function(o){
+      if (!o._ts||!o.pezzi) return;
+      var m=o._ts.getFullYear()+'-'+(('0'+(o._ts.getMonth()+1)).slice(-2));
+      if (!pm[o.pressa]) pm[o.pressa]={};
+      pm[o.pressa][m]=(pm[o.pressa][m]||0)+o.pezzi;
+    });
+    var ms={};
+    Object.keys(pm).forEach(function(p){Object.keys(pm[p]).forEach(function(m){ms[m]=1;});});
+    var mesi=Object.keys(ms).sort(), presse=Object.keys(pm).sort();
+    var W=svg.parentElement.clientWidth||700, H=220;
+    var PL=52,PR=16,PT=16,PB=36,WP=W-PL-PR,HP=H-PT-PB;
+    svg.setAttribute('width',W); svg.setAttribute('height',H);
+    if (!mesi.length){svg.innerHTML='<text x="'+(W/2)+'" y="'+(H/2)+'" text-anchor="middle" font-size="13" fill="#a09c96">Dati insufficienti</text>';leg.innerHTML='';return;}
+    var mx=0;
+    presse.forEach(function(p){mesi.forEach(function(m){if((pm[p][m]||0)>mx)mx=pm[p][m];});});
+    if(!mx)mx=1;
+    function xp(i){return PL+(mesi.length<2?WP/2:i*WP/(mesi.length-1));}
+    function yp(v){return PT+HP-(v/mx*HP);}
+    var out=[];
+    for(var gi=0;gi<=4;gi++){
+      var gv=mx*gi/4,gy=yp(gv),gl=gv>=1000?Math.round(gv/1000)+'k':Math.round(gv)+'';
+      out.push('<line x1="'+PL+'" y1="'+gy+'" x2="'+(W-PR)+'" y2="'+gy+'" stroke="#e2dfd9" stroke-width="1"/>');
+      out.push('<text x="'+(PL-6)+'" y="'+(gy+4)+'" text-anchor="end" font-size="10" fill="#a09c96" font-family="monospace">'+gl+'</text>');
+    }
+    mesi.forEach(function(m,i){
+      var lbl=MESI[parseInt(m.split('-')[1])-1], x=xp(i);
+      out.push('<line x1="'+x+'" y1="'+PT+'" x2="'+x+'" y2="'+(PT+HP)+'" stroke="#f0ede8" stroke-width="1"/>');
+      out.push('<text x="'+x+'" y="'+(H-6)+'" text-anchor="middle" font-size="10" fill="#a09c96" font-family="monospace">'+lbl+'</text>');
+    });
+    presse.forEach(function(p,pi){
+      var col=COLORS[pi%COLORS.length], pts=[];
+      mesi.forEach(function(m,i){var v=pm[p][m];if(v)pts.push({x:xp(i),y:yp(v),v:v,m:m});});
+      if(!pts.length)return;
+      if(pts.length>1){
+        var ap='M '+pts[0].x+' '+(PT+HP);
+        pts.forEach(function(pt){ap+=' L '+pt.x+' '+pt.y;});
+        ap+=' L '+pts[pts.length-1].x+' '+(PT+HP)+' Z';
+        out.push('<path d="'+ap+'" fill="'+col+'" opacity="0.08"/>');
+        var lp=pts.map(function(pt,i){return (i===0?'M ':'L ')+pt.x+' '+pt.y;}).join(' ');
+        out.push('<path d="'+lp+'" stroke="'+col+'" stroke-width="2" fill="none"/>');
+      }
+      pts.forEach(function(pt){
+        var ttl=p+' - '+MESI[parseInt(pt.m.split('-')[1])-1]+': '+Math.round(pt.v).toLocaleString('it-IT')+' pz';
+        out.push('<circle cx="'+pt.x+'" cy="'+pt.y+'" r="4" fill="'+col+'" stroke="white" stroke-width="1.5"><title>'+ttl+'</title></circle>');
+      });
+    });
+    svg.innerHTML=out.join('');
+    leg.innerHTML=presse.map(function(p,i){
+      return '<div class="li"><div class="ld" style="background:'+COLORS[i%COLORS.length]+'"></div><span>'+p+'</span></div>';
+    }).join('');
+  }
+})();
+</script>
+</body>
+</html>

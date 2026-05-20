@@ -1,9 +1,4 @@
 #!/usr/bin/env python3
-"""
-build.py — Macchi Plast
-Legge il CSV da Notion, pulisce i dati e genera index.html
-"""
-
 import pandas as pd
 import re
 import json
@@ -15,47 +10,45 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 CSV_PATH = os.path.join(BASE_DIR, 'data', 'ordini.csv')
 CONFIG_PATH = os.path.join(BASE_DIR, 'config.json')
 TEMPLATE_PATH = os.path.join(BASE_DIR, 'template.html')
+# Assicuriamoci che la cartella docs esista
 OUT_DIR = os.path.join(BASE_DIR, 'docs')
+os.makedirs(OUT_DIR, exist_ok=True)
 OUT_PATH = os.path.join(OUT_DIR, 'index.html')
 
-os.makedirs(OUT_DIR, exist_ok=True)
-
-# ── Carica configurazione ────────────────────────────────────────────────────
-with open(CONFIG_PATH, encoding='utf-8') as f:
-    CFG = json.load(f)
-
-# ── Funzione di pulizia intelligente ─────────────────────────────────────────
+# ── Funzione di pulizia (Gestisce URL Notion e virgole) ──────────────────────
 def clean_notion_field(val):
-    """Rimuove URL Notion e mantiene solo il testo pulito."""
-    if pd.isna(val) or str(val).strip() == "":
-        return ""
-    # Rimuove tutto ciò che sta tra parentesi (l'URL)
+    if pd.isna(val) or str(val).strip() == "": return ""
+    # Rimuove l'URL tra parentesi
     cleaned = re.sub(r'\s\(https://.*?\)', '', str(val))
     return cleaned.strip()
 
-# ── Leggi e pulisci CSV ──────────────────────────────────────────────────────
+# ── 1. Caricamento Dati ─────────────────────────────────────────────────────
 print(f"Lettura CSV: {CSV_PATH}")
 df = pd.read_csv(CSV_PATH, sep=None, engine='python', encoding='utf-8-sig')
 df.columns = [c.lstrip('\ufeff') for c in df.columns]
 
-# Applichiamo la pulizia alle colonne che contengono URL Notion
+# Pulizia colonne
 for col in ['Articolo', 'Pressa']:
     if col in df.columns:
         df[col] = df[col].apply(clean_notion_field)
 
-print(f"  Righe processate: {len(df)}")
+# ── 2. Caricamento Configurazione ───────────────────────────────────────────
+with open(CONFIG_PATH, encoding='utf-8') as f:
+    CFG = json.load(f)
 
-# ── Logica di trasformazione (Esempio semplificato) ──────────────────────────
-# Qui il tuo script continua con la trasformazione in JSON per il template...
-# Assicurati che quando cicli le righe, il campo 'Articolo' ora contiene "3121, 3122"
-# che è molto più facile da processare.
-
+# ── 3. Trasformazione dati (Placeholder per la tua logica) ───────────────────
+# Qui puoi continuare a costruire i tuoi JSON per il template
 odl_list = df.to_dict(orient='records')
+# Esempio: ODL_JSON = json.dumps(odl_list, ensure_ascii=False)
 
-# ── Generazione output (mantenuto come nel tuo originale) ────────────────────
-def jdump(obj): return json.dumps(obj, ensure_ascii=False)
+# ── 4. Generazione Output ────────────────────────────────────────────────────
+with open(TEMPLATE_PATH, encoding='utf-8') as f:
+    html = f.read()
 
-# (Qui dovresti inserire il resto della tua logica di aggregazione per i grafici)
-# ...
+# Esempio di sostituzione (aggiungi le tue variabili qui)
+# html = html.replace('%%ODL%%', ODL_JSON)
 
-print("Build completata con successo.")
+with open(OUT_PATH, 'w', encoding='utf-8') as f:
+    f.write(html)
+
+print(f"Build completata! File creato in: {OUT_PATH}")

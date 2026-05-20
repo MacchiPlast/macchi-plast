@@ -4,7 +4,7 @@ import re
 import json
 import os
 
-# ── Costanti Percorsi ────────────────────────────────────────────────────────
+# ── Percorsi ────────────────────────────────────────────────────────────────
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 PATHS = {
@@ -35,6 +35,7 @@ def normalize(text):
 
 
 def clean_notion_field(val):
+    """Rimuove URL Notion e pulisce stringhe"""
     if pd.isna(val):
         return ""
     val = str(val)
@@ -42,16 +43,33 @@ def clean_notion_field(val):
     return val.strip()
 
 
+# 🔥 BUILD LOOKUP INTELLIGENTE
 def build_lookup(scaffali):
-    """Costruisce lookup articolo -> scaffali"""
+    """Costruisce lookup articolo -> scaffali con supporto '/'"""
     lookup = {}
 
     for scaffale, articoli in scaffali.items():
         for art in articoli:
-            key = normalize(art)
-            lookup.setdefault(key, set()).add(scaffale)
+            art = art.strip()
 
-    # convert set → list
+            parts = art.split("/")
+            expanded = []
+
+            if len(parts) > 1:
+                # trova suffisso (NEW, OLD ecc)
+                suffix_match = re.search(r'(NEW|OLD|[A-Z]+)$', art)
+                suffix = suffix_match.group(1) if suffix_match else ""
+
+                for p in parts:
+                    p = re.sub(r'\s*(NEW|OLD|[A-Z]+)$', '', p).strip()
+                    expanded.append(f"{p} {suffix}".strip())
+            else:
+                expanded = [art]
+
+            for item in expanded:
+                key = normalize(item)
+                lookup.setdefault(key, set()).add(scaffale)
+
     return {k: list(v) for k, v in lookup.items()}
 
 
@@ -63,6 +81,7 @@ def load_csv(path):
 
     df = pd.read_csv(path, sep=None, engine='python', encoding='utf-8-sig')
 
+    # rimuove BOM
     df.columns = [c.lstrip('\ufeff') for c in df.columns]
 
     for col in ['Articolo', 'Pressa']:
@@ -74,7 +93,7 @@ def load_csv(path):
 
 
 def enrich_with_scaffali(df, lookup):
-    """Aggiunge colonna Scaffali basata su lookup"""
+    """Aggiunge colonna Scaffali"""
 
     def match_scaffali(articolo):
         key = normalize(articolo)
@@ -106,19 +125,23 @@ def inject_template(template_path, output_path, data_json):
 # ── MAIN ─────────────────────────────────────────────────────────────────────
 def main():
     try:
+        # carica config
         cfg = load_json(PATHS["config"])
 
-        # lookup dinamico
+        # genera lookup dinamico
         lookup = build_lookup(cfg.get('scaffali', {}))
 
+        # carica CSV
         df = load_csv(PATHS["csv"])
 
-        # 🔥 QUI AVVIENE LA MAGIA
+        # 🔥 arricchimento scaffali
         df = enrich_with_scaffali(df, lookup)
 
+        # export JSON
         odl_list = df.to_dict(orient='records')
         odl_json = json.dumps(odl_list, ensure_ascii=False)
 
+        # genera HTML
         inject_template(PATHS["template"], PATHS["out"], odl_json)
 
     except Exception as e:

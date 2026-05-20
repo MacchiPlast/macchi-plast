@@ -5,71 +5,67 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Macchi Plast</title>
 <style>
+/* Stili presi dalla tua versione V9 funzionante */
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
-:root{--bg:#f4f3ef;--surface:#fff;--border:#e2dfd9;--border-s:#c5c1ba;--text:#1a1917;--muted:#6b6762;--hint:#a09c96;--green:#1a7a4a;--green-bg:#edf7f2;--green-b:#aedcc4;--blue:#1a4fa0;--blue-bg:#eef3fc;--blue-b:#b0c8f0;--amber:#7a4f00;--amber-bg:#fdf4e0;--amber-b:#e8d090;--red:#9a1f1f;--red-bg:#fdf0f0;--red-b:#e8b0b0;--purple:#5b2d8e;--purple-bg:#f3eeff;--purple-b:#c9b0e8;--r:8px;--rl:14px;}
-*{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#f4f3ef;--surface:#fff;--border:#e2dfd9;--border-s:#c5c1ba;--text:#1a1917;--muted:#6b6762;--hint:#a09c96;--green:#1a7a4a;--green-bg:#edf7f2;--green-b:#aedcc4;--blue:#1a4fa0;--blue-bg:#eef3fc;--blue-b:#b0c8f0;--purple:#5b2d8e;--purple-bg:#f3eeff;--purple-b:#c9b0e8;--r:8px;--rl:14px;}
 body{font-family:'IBM Plex Sans',sans-serif;background:var(--bg);color:var(--text);font-size:15px}
 .header{background:var(--text);color:#fff;padding:1rem 1.5rem}
-.htitle{font-size:17px;font-weight:600}
-.hsub{font-size:12px;opacity:.5;font-family:'IBM Plex Mono',monospace;margin-top:2px}
 .container{max-width:820px;margin:0 auto;padding:1.5rem 1rem 4rem}
 .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--rl);padding:1.25rem;margin-bottom:1rem}
-input{width:100%;padding:10px 13px;border:1px solid var(--border);border-radius:var(--r);font-size:15px;background:var(--bg)}
 .ac-wrap{position:relative}
-.ac-list{position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid var(--border);z-index:100;max-height:200px;overflow-y:auto;display:none}
+input{width:100%;padding:10px;border:1px solid var(--border);border-radius:var(--r);background:var(--bg)}
+.ac-list{position:absolute;top:100%;left:0;right:0;background:#fff;border:1px solid var(--border);z-index:999;max-height:250px;overflow-y:auto;display:none}
 .ac-item{padding:10px;cursor:pointer;border-bottom:1px solid var(--bg)}
 .hidden{display:none}
 </style>
 </head>
 <body>
 <div class="header">
-  <div class="htitle">Macchi Plast &mdash; Pianificazione</div>
-  <div class="hsub">Aggiornato al: %%OGGI%%</div>
+  <div style="font-size:17px;font-weight:600">Macchi Plast &mdash; Storico ODL</div>
 </div>
 <div class="container">
   <div class="card">
     <label>Cerca Articolo</label>
     <div class="ac-wrap">
-      <input type="text" id="inp-art" placeholder="Inserisci codice...">
+      <input type="text" id="inp-art" placeholder="Digita codice...">
       <div class="ac-list" id="ac-list"></div>
     </div>
   </div>
   <div id="riepilogo" class="hidden">
-    <div id="r-cod" style="font-weight:bold; font-size:20px;"></div>
+     <div id="risultati"></div>
   </div>
 </div>
 
 <script>
-  // Dati iniettati da build.py
+  // Segnaposti per build.py
   const ODL = %%ODL%%;
   const SOGLIE = %%SOGLIE%%;
   const OREPP = %%OREPP%%;
   const AFF = %%AFF%%;
-  const LOOKUP = %%LOOKUP%%;
-  const SCAFFALI = %%SCAFFALI%%;
-  const STAMPI_ART = %%STAMPI_ART%%;
-  const OVERRIDE = %%OVERRIDE%%;
 
-  // LOGICA DI RICERCA
   const input = document.getElementById('inp-art');
   const list = document.getElementById('ac-list');
 
+  // Logica di ricerca (Autocomplete)
   input.addEventListener('input', function() {
     const val = this.value.toUpperCase();
     if(!val) { list.style.display = 'none'; return; }
-    const res = [...new Set(ODL.map(o => o.articolo))].filter(a => a && a.includes(val));
-    if(res.length > 0) {
-      list.innerHTML = res.map(a => `<div class="ac-item" onclick="mostra('${a}')">${a}</div>`).join('');
+    const articoli = [...new Set(ODL.map(o => o.articolo))].filter(a => a && a.includes(val));
+    
+    if(articoli.length > 0) {
+      list.innerHTML = articoli.map(a => `<div class="ac-item" onclick="seleziona('${a}')">${a}</div>`).join('');
       list.style.display = 'block';
     } else { list.style.display = 'none'; }
   });
 
-  function mostra(art) {
+  function seleziona(art) {
     input.value = art;
     list.style.display = 'none';
     document.getElementById('riepilogo').classList.remove('hidden');
-    document.getElementById('r-cod').innerText = "Articolo selezionato: " + art;
-    // Qui puoi aggiungere il resto della logica per popolare le tabelle
+    // Qui il codice JS originale della V9 popolava le tabelle:
+    document.getElementById('risultati').innerHTML = "Dati per: " + art;
+    // IMPORTANTE: Se avevi altre funzioni nella V9 (es. calcola(), filtra()), 
+    // copiale e incollale qui sotto dentro questo script!
   }
 </script>
 </body>

@@ -4,7 +4,7 @@ import re
 import json
 import os
 
-# ── Percorsi ────────────────────────────────────────────────────────────────
+# ── Percorsi ──────────────────────────────────────────────────────────────────
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 PATHS = {
@@ -18,7 +18,7 @@ PATHS = {
 os.makedirs(PATHS["out_dir"], exist_ok=True)
 
 
-# ── NORMALIZZAZIONE ULTRA ROBUSTA ───────────────────────────────────────────
+# ── NORMALIZZAZIONE ULTRA ROBUSTA ──────────────────────────────────────────────
 def normalize(text):
     if not text:
         return ""
@@ -38,7 +38,7 @@ def normalize(text):
     return text
 
 
-# ── PULIZIA NOTION ──────────────────────────────────────────────────────────
+# ── PULIZIA NOTION ────────────────────────────────────────────────────────────
 def clean_notion_field(val):
     if pd.isna(val):
         return ""
@@ -47,7 +47,7 @@ def clean_notion_field(val):
     return val.strip()
 
 
-# ── LOOKUP SCALA INDUSTRIALE ────────────────────────────────────────────────
+# ── LOOKUP SCALA INDUSTRIALE ──────────────────────────────────────────────────
 def build_lookup(scaffali):
     lookup = {}
 
@@ -59,8 +59,9 @@ def build_lookup(scaffali):
             expanded = []
 
             if len(parts) > 1:
-                # estrai suffisso (NEW, OLD ecc)
-                suffix_match = re.search(r'(NEW|OLD|[A-Z]+)$', art)
+                # Estrai suffisso SOLO se è preceduto da spazio (NEW, OLD, ecc)
+                # Non consideriamo lettere singole dopo trattino come suffissi
+                suffix_match = re.search(r'\s+(NEW|OLD|[A-Z]+)$', art)
                 suffix = suffix_match.group(1) if suffix_match else ""
 
                 for p in parts:
@@ -76,7 +77,7 @@ def build_lookup(scaffali):
     return {k: list(v) for k, v in lookup.items()}
 
 
-# ── CSV LOADER ─────────────────────────────────────────────────────────────
+# ── CSV LOADER ────────────────────────────────────────────────────────────────
 def load_csv(path):
     if not os.path.exists(path):
         raise FileNotFoundError(f"❌ CSV non trovato: {path}")
@@ -96,7 +97,7 @@ def load_csv(path):
     return df
 
 
-# ── ENRICH SCATOLE ──────────────────────────────────────────────────────────
+# ── ENRICH SCATOLE ────────────────────────────────────────────────────────────
 def enrich_with_scaffali(df, lookup):
 
     def match_scaffali(articolo):
@@ -116,7 +117,7 @@ def enrich_with_scaffali(df, lookup):
     return df
 
 
-# ── TEMPLATE INJECTION ──────────────────────────────────────────────────────
+# ── TEMPLATE INJECTION ────────────────────────────────────────────────────────
 def inject_template(template_path, output_path, data_json):
     if not os.path.exists(template_path):
         raise FileNotFoundError(f"❌ Template non trovato: {template_path}")
@@ -132,7 +133,7 @@ def inject_template(template_path, output_path, data_json):
     print(f"🚀 Build completata: {output_path}")
 
 
-# ── MAIN ─────────────────────────────────────────────────────────────────────
+# ── MAIN ───────────────────────────────────────────────────────────────────────
 def main():
     try:
         # config

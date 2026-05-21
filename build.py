@@ -67,6 +67,16 @@ def clean_articolo(art):
     art = re.sub(r'\s+', ' ', art).strip()
     return art
 
+def clean_pressa(pressa):
+    """Rimuove link Notion dalla pressa"""
+    if not isinstance(pressa, str):
+        return str(pressa).strip()
+    # Rimuove URL Notion se presenti
+    pressa = re.sub(r'\s*\(https://www\.notion\.so/[^)]+\)', '', pressa)
+    # Rimuove spazi extra
+    pressa = re.sub(r'\s+', ' ', pressa).strip()
+    return pressa
+
 # ── MAIN ──────────────────────────────────────────────────────────────────────
 def main():
     print("🚀 Inizio build Macchi Plast...")
@@ -119,7 +129,7 @@ def main():
                     "odl": str(row.get('ODL', '')).strip(),
                     "articolo": articolo,
                     "cliente": str(row.get('Cliente', '')).strip(),
-                    "pressa": str(row.get('Pressa', '')).strip(),
+                    "pressa": clean_pressa(row.get('Pressa', '')),
                     "data_inizio": str(row.get('Data di Inizio', '')).strip(),
                     "data_fine": str(row.get('Data di Fine', '')).strip(),
                     "pezzi": pezzi,

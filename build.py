@@ -166,10 +166,21 @@ def main():
             if data['pezzi_tot'] > 0:
                 orepp[art] = data['ore_tot'] / data['pezzi_tot']
         
+        # Genera lookup: articolo → scaffale (da config.json)
+        lookup = {}
+        for scaffale, articoli_in_scaffale in config.get('scaffali', {}).items():
+            for art in articoli_in_scaffale:
+                # Normalizza l'articolo per la ricerca
+                art_key = art.upper().strip()
+                if art_key not in lookup:
+                    lookup[art_key] = []
+                lookup[art_key].append(scaffale)
+        
         # Struttura finale JSON (come richiesto dall'HTML originale)
         data = {
             "odl": odl_list,
             "scaffali": config.get('scaffali', {}),
+            "lookup": lookup,      # Articoli → Scaffali (nuovo!)
             "soglie": soglie,      # Soglie ore per articolo
             "orepp": orepp,        # Ore per pezzo per articolo
             "meta": {

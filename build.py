@@ -19,7 +19,6 @@ os.makedirs(PATHS["out_dir"], exist_ok=True)
 
 # ── PARSER ORE ────────────────────────────────────────────────────────────────
 def parse_ore(val):
-    """Converte stringhe tipo '0 giorni 14 ore 35 minuti' in totale ore (float)"""
     if not isinstance(val, str): return 0.0
     try:
         giorni = float(re.search(r'(\d+)\s+giorni', val).group(1)) if 'giorni' in val else 0
@@ -29,14 +28,13 @@ def parse_ore(val):
     except:
         return 0.0
 
-# ── NORMALIZZAZIONE ───────────────────────────────────────────────────────────
+# ── NORMALIZZAZIONE E PULIZIA ────────────────────────────────────────────────
 def normalize(text):
     if not text: return ""
     text = str(text).replace("\u200b", "").replace("\ufeff", "")
     text = text.replace("–", "-").replace("—", "-").upper().strip()
     return re.sub(r'\s+', ' ', text)
 
-# ── PULIZIA NOTION ────────────────────────────────────────────────────────────
 def clean_notion_field(val):
     if pd.isna(val): return ""
     return re.sub(r'\s*\(https://.*?\)', '', str(val)).strip()
@@ -65,17 +63,12 @@ def build_lookup(scaffali):
 # ── CSV LOADER ────────────────────────────────────────────────────────────────
 def load_csv(path):
     if not os.path.exists(path): raise FileNotFoundError(f"CSV non trovato: {path}")
-    print(f"📄 Lettura CSV: {path}")
     df = pd.read_csv(path, sep=None, engine='python', encoding='utf-8-sig')
     df.columns = [c.lstrip('\ufeff') for c in df.columns]
-    
     for col in ['Articolo', 'Pressa']:
         if col in df.columns: df[col] = df[col].apply(clean_notion_field)
-    
     if 'Ore di Produzione' in df.columns:
         df['Ore_Numeriche'] = df['Ore di Produzione'].apply(parse_ore)
-    
-    print(f"✅ Righe processate: {len(df)}")
     return df
 
 # ── CALCOLA METRICHE ──────────────────────────────────────────────────────────
@@ -88,13 +81,11 @@ def calc_metrics(df):
         valid = ore_vals[ore_vals > 0]
         if not valid.empty:
             soglie[articolo] = float(valid.median())
-        
         valid_orepp = subset[(subset['Ore_Numeriche'] > 0) & (subset['Pezzi da produrre'] > 0)]
         if not valid_orepp.empty:
             orepp[articolo] = float(valid_orepp['Ore_Numeriche'].sum() / valid_orepp['Pezzi da produrre'].sum())
     return soglie, orepp
 
-# ── CALCOLA AFFIDABILITA ──────────────────────────────────────────────────────
 def calc_affidabilita(df):
     aff = {}
     for articolo in df['Articolo'].unique():
@@ -126,12 +117,20 @@ def main():
                 "Pressa": str(row.get('Pressa', '')).strip()
             })
         
-        data = {"odl": odl, "lookup": lookup, "soglie": soglie, "orepp": orepp, "aff": aff, "meta": {"generated": datetime.now().isoformat()}}
+        data = {
+            "odl": odl, 
+            "lookup": lookup, 
+            "soglie": soglie, 
+            "orepp": orepp, 
+            "aff": aff, 
+            "scaffali": cfg.get('scaffali', {}),
+            "meta": {"generated": datetime.now().isoformat()}
+        }
+        
         with open(PATHS["data_json"], 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
         
         print(f"🚀 Build completata! File salvato in {PATHS['data_json']}")
-        
     except Exception as e:
         print(f"💥 ERRORE: {e}")
 

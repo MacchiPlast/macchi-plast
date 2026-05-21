@@ -219,7 +219,7 @@ tr:hover td{background:#faf9f6}
   const MESI = ['Gen','Feb','Mar','Apr','Mag','Giu','Lug','Ago','Set','Ott','Nov','Dic'];
 
   // Carica data.json
-  fetch('docs/data.json')
+  fetch('https://macchiplast.github.io/macchi-plast/docs/data.json')
     .then(r => {
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.json();

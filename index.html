@@ -218,8 +218,8 @@ tr:hover td{background:#faf9f6}
   const COLORS = ['#1a4fa0','#1a7a4a','#9a1f1f','#7a4f00','#5b2d8e','#006d77','#b5446e','#3d6b00','#8b4513'];
   const MESI = ['Gen','Feb','Mar','Apr','Mag','Giu','Lug','Ago','Set','Ott','Nov','Dic'];
 
-  // Carica data.json
-  fetch('https://macchiplast.github.io/macchi-plast/docs/data.json')
+  // Carica data.json dalla stessa cartella
+  fetch('data.json')
     .then(r => {
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.json();
@@ -231,7 +231,7 @@ tr:hover td{background:#faf9f6}
     })
     .catch(err => {
       console.error('Errore caricamento:', err);
-      id('empty-state').innerHTML = `<div class="empty">Errore nel caricamento dei dati. Esegui 'python build.py' per generare data.json</div>`;
+      id('empty-state').innerHTML = `<div class="empty">❌ Errore nel caricamento di data.json<br><small style="font-size:12px;color:var(--muted)">Assicurati che:<br>• data.json esista nella stessa cartella<br>• Esegui: python3 build.py<br>• Apri con server locale: python3 -m http.server 8000</small></div>`;
     });
 
   function init() {

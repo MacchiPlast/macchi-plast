@@ -98,46 +98,57 @@ def main():
                 ore_num = parse_ore(ore_str)
             
             # Pulizia articolo (rimuove URL Notion)
-            articolo = clean_articolo(row.get('Articolo', ''))
+            articolo_raw = clean_articolo(row.get('Articolo', ''))
+            
+            # Gestisci articoli multipli (divisi da virgola, non da URL)
+            # Es: "3121, 3122" → ["3121", "3122"]
+            articoli_list = [a.strip() for a in articolo_raw.split(',') if a.strip()]
+            if not articoli_list:
+                articoli_list = [articolo_raw] if articolo_raw else []
             
             pezzi = _int(row.get('Pezzi da produrre', 0))
             peso_medio = _float(row.get('Peso medio', 0))
             kg = _float(row.get('Kg da utilizzare', 0))
             
-            odl_obj = {
-                "odl": str(row.get('ODL', '')).strip(),
-                "articolo": articolo,
-                "cliente": str(row.get('Cliente', '')).strip(),
-                "pressa": str(row.get('Pressa', '')).strip(),
-                "data_inizio": str(row.get('Data di Inizio', '')).strip(),
-                "data_fine": str(row.get('Data di Fine', '')).strip(),
-                "pezzi": pezzi,
-                "kg": kg,
-                "ore": float(ore_num),
-                "materiale": str(row.get('Materiale', '')).strip(),
-                "lotto": str(row.get('Lotto Materiale', '')).strip(),
-                "criticita": str(row.get('Criticità', '')).strip(),
-                "peso_medio": peso_medio
-            }
-            
-            odl_list.append(odl_obj)
-            
-            # Accumula dati per articolo
-            if articolo:
-                if articolo not in db_articoli:
-                    db_articoli[articolo] = {
-                        'ordini': [],
-                        'ore_tot': 0,
-                        'pezzi_tot': 0,
-                        'n': 0,
-                        'presse': set()
-                    }
-                db_articoli[articolo]['n'] += 1
-                db_articoli[articolo]['ore_tot'] += ore_num
-                db_articoli[articolo]['pezzi_tot'] += pezzi
-                db_articoli[articolo]['ordini'].append(odl_obj)
-                if odl_obj['pressa']:
-                    db_articoli[articolo]['presse'].add(odl_obj['pressa'])
+            # Crea un ordine per OGNI articolo della lista
+            for articolo in articoli_list:
+                if not articolo:
+                    continue
+                
+                odl_obj = {
+                    "odl": str(row.get('ODL', '')).strip(),
+                    "articolo": articolo,
+                    "cliente": str(row.get('Cliente', '')).strip(),
+                    "pressa": str(row.get('Pressa', '')).strip(),
+                    "data_inizio": str(row.get('Data di Inizio', '')).strip(),
+                    "data_fine": str(row.get('Data di Fine', '')).strip(),
+                    "pezzi": pezzi,
+                    "kg": kg,
+                    "ore": float(ore_num),
+                    "materiale": str(row.get('Materiale', '')).strip(),
+                    "lotto": str(row.get('Lotto Materiale', '')).strip(),
+                    "criticita": str(row.get('Criticità', '')).strip(),
+                    "peso_medio": peso_medio
+                }
+                
+                odl_list.append(odl_obj)
+                
+                # Accumula dati per articolo
+                if articolo:
+                    if articolo not in db_articoli:
+                        db_articoli[articolo] = {
+                            'ordini': [],
+                            'ore_tot': 0,
+                            'pezzi_tot': 0,
+                            'n': 0,
+                            'presse': set()
+                        }
+                    db_articoli[articolo]['n'] += 1
+                    db_articoli[articolo]['ore_tot'] += ore_num
+                    db_articoli[articolo]['pezzi_tot'] += pezzi
+                    db_articoli[articolo]['ordini'].append(odl_obj)
+                    if odl_obj['pressa']:
+                        db_articoli[articolo]['presse'].add(odl_obj['pressa'])
 
         # Calcola soglie e ore/pezzo per articolo
         soglie = {}      # ore mediane per articolo

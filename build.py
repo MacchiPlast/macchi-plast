@@ -17,12 +17,11 @@ PATHS = {
 
 os.makedirs(PATHS["out_dir"], exist_ok=True)
 
-# ── PARSER ORE (Nuova funzione) ────────────────────────────────────────────────
+# ── PARSER ORE ────────────────────────────────────────────────────────────────
 def parse_ore(val):
     """Converte stringhe tipo '0 giorni 14 ore 35 minuti' in totale ore (float)"""
     if not isinstance(val, str): return 0.0
     try:
-        # Estrae i numeri prima delle parole chiavi
         giorni = float(re.search(r'(\d+)\s+giorni', val).group(1)) if 'giorni' in val else 0
         ore = float(re.search(r'(\d+)\s+ore', val).group(1)) if 'ore' in val else 0
         minuti = float(re.search(r'(\d+)\s+minuti', val).group(1)) if 'minuti' in val else 0
@@ -70,11 +69,9 @@ def load_csv(path):
     df = pd.read_csv(path, sep=None, engine='python', encoding='utf-8-sig')
     df.columns = [c.lstrip('\ufeff') for c in df.columns]
     
-    # Pulizia colonne
     for col in ['Articolo', 'Pressa']:
         if col in df.columns: df[col] = df[col].apply(clean_notion_field)
     
-    # Conversione ore in numerico
     if 'Ore di Produzione' in df.columns:
         df['Ore_Numeriche'] = df['Ore di Produzione'].apply(parse_ore)
     
@@ -87,18 +84,14 @@ def calc_metrics(df):
     orepp = {}
     for articolo in df['Articolo'].unique():
         subset = df[df['Articolo'] == articolo]
-        
-        # Soglia = mediana ore numeriche
         ore_vals = subset['Ore_Numeriche']
         valid = ore_vals[ore_vals > 0]
         if not valid.empty:
             soglie[articolo] = float(valid.median())
         
-        # Ore per pezzo
         valid_orepp = subset[(subset['Ore_Numeriche'] > 0) & (subset['Pezzi da produrre'] > 0)]
         if not valid_orepp.empty:
             orepp[articolo] = float(valid_orepp['Ore_Numeriche'].sum() / valid_orepp['Pezzi da produrre'].sum())
-            
     return soglie, orepp
 
 # ── CALCOLA AFFIDABILITA ──────────────────────────────────────────────────────
@@ -126,11 +119,11 @@ def main():
         odl = []
         for _, row in df.iterrows():
             odl.append({
-                "odl": str(row.get('ODL', '')).strip(),
-                "articolo": str(row.get('Articolo', '')).strip(),
-                "pezzi": int(row.get('Pezzi da produrre', 0)) if pd.notna(row.get('Pezzi da produrre')) else 0,
-                "ore": float(row.get('Ore_Numeriche', 0)),
-                "pressa": str(row.get('Pressa', '')).strip()
+                "ODL": str(row.get('ODL', '')).strip(),
+                "Articolo": str(row.get('Articolo', '')).strip(),
+                "Pezzi": int(row.get('Pezzi da produrre', 0)) if pd.notna(row.get('Pezzi da produrre')) else 0,
+                "Ore": float(row.get('Ore_Numeriche', 0)),
+                "Pressa": str(row.get('Pressa', '')).strip()
             })
         
         data = {"odl": odl, "lookup": lookup, "soglie": soglie, "orepp": orepp, "aff": aff, "meta": {"generated": datetime.now().isoformat()}}

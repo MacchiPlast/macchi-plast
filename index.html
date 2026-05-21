@@ -426,7 +426,7 @@ tr:hover td{background:#faf9f6}
     buildChart(ordini);
 
     const sog = DATA.soglie[sel.articolo];
-    const nc = ordini.filter(o => o.criticita).length;
+    const nc = ordini.filter(o => o.criticita && o.criticita.toLowerCase() !== 'nan').length;
     const an = ordini.filter(o => o.ore && sog && o.ore > sog*1.5).length;
     const tot = nc + an;
     
@@ -439,7 +439,8 @@ tr:hover td{background:#faf9f6}
     }
 
     id('r-tbody').innerHTML = ordini.map(o => {
-      const isA = o.ore && sog && o.ore > sog*1.5, hasCr = !!o.criticita;
+      const hasCr = o.criticita && o.criticita.toLowerCase() !== 'nan';
+      const isA = o.ore && sog && o.ore > sog*1.5;
       const rs = (hasCr || isA) ? (hasCr ? 'background:#fff8f8' : 'background:#fffdf0') : '';
       const sg = [];
       if(hasCr) sg.push('<span class="cr-tag">'+o.criticita+'</span>');

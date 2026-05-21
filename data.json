@@ -1,0 +1,4285 @@
+{
+  "odl": [
+    {
+      "odl": "01283L",
+      "articolo": "3121, 3122",
+      "pezzi": 1500,
+      "ore": 14.583333333333334,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "01352L",
+      "articolo": "39540150",
+      "pezzi": 100000,
+      "ore": 38.666666666666664,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00006L",
+      "articolo": "39540320",
+      "pezzi": 180000,
+      "ore": 152.56666666666666,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00005L",
+      "articolo": "3123-PC",
+      "pezzi": 10000,
+      "ore": 15.466666666666667,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "01278L",
+      "articolo": "0405",
+      "pezzi": 3000,
+      "ore": 4.8,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "01322L",
+      "articolo": "1488",
+      "pezzi": 8000,
+      "ore": 32.86666666666667,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00009L",
+      "articolo": "S41319",
+      "pezzi": 792,
+      "ore": 13.333333333333334,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "01284L",
+      "articolo": "3115",
+      "pezzi": 5000,
+      "ore": 5.85,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "01325L",
+      "articolo": "3025",
+      "pezzi": 16000,
+      "ore": 48.13333333333333,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "01248L",
+      "articolo": "S41490",
+      "pezzi": 7200,
+      "ore": 10.2,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "01244L",
+      "articolo": "S41339",
+      "pezzi": 1200,
+      "ore": 0.0,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00004L",
+      "articolo": "101A8103C",
+      "pezzi": 3000,
+      "ore": 28.883333333333333,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00010L",
+      "articolo": "S41318",
+      "pezzi": 432,
+      "ore": 23.166666666666668,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00011L",
+      "articolo": "S41343",
+      "pezzi": 240,
+      "ore": 3.7333333333333334,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "01286L",
+      "articolo": "0020",
+      "pezzi": 17000,
+      "ore": 24.15,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00025L",
+      "articolo": "39540300",
+      "pezzi": 24000,
+      "ore": 63.0,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00001L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 72.38333333333334,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "01353L",
+      "articolo": "39540150",
+      "pezzi": 100000,
+      "ore": 42.06666666666667,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "01336L",
+      "articolo": "39520240",
+      "pezzi": 24000,
+      "ore": 41.416666666666664,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "01287L",
+      "articolo": "0020",
+      "pezzi": 20000,
+      "ore": 28.3,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00023L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 33.0,
+      "pressa": "NB210-6"
+    },
+    {
+      "odl": "00024L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 51.18333333333333,
+      "pressa": "NB210-6, NB180-9"
+    },
+    {
+      "odl": "01285L",
+      "articolo": "3115",
+      "pezzi": 5000,
+      "ore": 4.766666666666667,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00021L",
+      "articolo": "55522030",
+      "pezzi": 54000,
+      "ore": 75.05,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00022L",
+      "articolo": "55521960",
+      "pezzi": 67100,
+      "ore": 87.43333333333334,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "01247L",
+      "articolo": "S41373",
+      "pezzi": 800,
+      "ore": 16.4,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00032L",
+      "articolo": "39540150",
+      "pezzi": 100000,
+      "ore": 40.55,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00007L",
+      "articolo": "39530340",
+      "pezzi": 65000,
+      "ore": 57.6,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "01343L",
+      "articolo": "107A0041A",
+      "pezzi": 50000,
+      "ore": 43.68333333333333,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "01265L",
+      "articolo": "SAS5LUNGOBIANCO",
+      "pezzi": 70000,
+      "ore": 44.05,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00018L",
+      "articolo": "3022",
+      "pezzi": 5000,
+      "ore": 20.15,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00019L",
+      "articolo": "3022",
+      "pezzi": 5000,
+      "ore": 14.316666666666666,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "01328L",
+      "articolo": "101A3315A",
+      "pezzi": 2000,
+      "ore": 3.6166666666666667,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00037L",
+      "articolo": "39540530",
+      "pezzi": 40000,
+      "ore": 114.93333333333334,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00142L",
+      "articolo": "39540320",
+      "pezzi": 120000,
+      "ore": 135.43333333333334,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "01288L",
+      "articolo": "0020",
+      "pezzi": 20000,
+      "ore": 25.483333333333334,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "01289L",
+      "articolo": "0020",
+      "pezzi": 20000,
+      "ore": 24.25,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00002L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 72.65,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00012L",
+      "articolo": "39510250",
+      "pezzi": 10000,
+      "ore": 22.166666666666668,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "1L",
+      "articolo": "114261",
+      "pezzi": 217600,
+      "ore": 383.5,
+      "pressa": "AR150-2"
+    },
+    {
+      "odl": "00008L",
+      "articolo": "39530420",
+      "pezzi": 40000,
+      "ore": 72.28333333333333,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00013L",
+      "articolo": "55521080",
+      "pezzi": 18000,
+      "ore": 58.733333333333334,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "01323L",
+      "articolo": "1488",
+      "pezzi": 8000,
+      "ore": 31.85,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00030L",
+      "articolo": "3381, 3382",
+      "pezzi": 5000,
+      "ore": 20.116666666666667,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00031L",
+      "articolo": "3379, 3380",
+      "pezzi": 5000,
+      "ore": 24.5,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "01326L",
+      "articolo": "3025",
+      "pezzi": 8000,
+      "ore": 34.666666666666664,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00061L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 85.21666666666667,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "01332L",
+      "articolo": "101A3372C",
+      "pezzi": 3000,
+      "ore": 36.016666666666666,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00050L",
+      "articolo": "39540400",
+      "pezzi": 16000,
+      "ore": 33.63333333333333,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00045L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 29.75,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00070L",
+      "articolo": "39540400",
+      "pezzi": 16000,
+      "ore": 31.15,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00048L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 28.533333333333335,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "01255L",
+      "articolo": "101A8103A",
+      "pezzi": 25000,
+      "ore": 130.98333333333332,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00071L",
+      "articolo": "39530170",
+      "pezzi": 12000,
+      "ore": 49.833333333333336,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00046L",
+      "articolo": "39520770",
+      "pezzi": 40000,
+      "ore": 35.78333333333333,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00047L",
+      "articolo": "39520770",
+      "pezzi": 21900,
+      "ore": 30.0,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00003L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 85.2,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00078L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 31.183333333333334,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00051L",
+      "articolo": "39540300",
+      "pezzi": 32000,
+      "ore": 51.583333333333336,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00079L",
+      "articolo": "39530390",
+      "pezzi": 30000,
+      "ore": 53.25,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00091L",
+      "articolo": "55521960",
+      "pezzi": 72000,
+      "ore": 35.0,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00062L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 71.68333333333334,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00072L",
+      "articolo": "39510210",
+      "pezzi": 72000,
+      "ore": 19.633333333333333,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00073L",
+      "articolo": "39510210",
+      "pezzi": 72000,
+      "ore": 19.3,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00074L",
+      "articolo": "39510210",
+      "pezzi": 72000,
+      "ore": 128.53333333333333,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00075L",
+      "articolo": "39510210",
+      "pezzi": 72000,
+      "ore": 23.283333333333335,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00076L",
+      "articolo": "39510210",
+      "pezzi": 72000,
+      "ore": 34.65,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00077L",
+      "articolo": "39510210",
+      "pezzi": 72000,
+      "ore": 20.0,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00110L",
+      "articolo": "39540150",
+      "pezzi": 100000,
+      "ore": 45.5,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00111L",
+      "articolo": "39540150",
+      "pezzi": 100000,
+      "ore": 54.63333333333333,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00090L",
+      "articolo": "39540300",
+      "pezzi": 40000,
+      "ore": 34.916666666666664,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00014L",
+      "articolo": "SAS5LUNGOBLU",
+      "pezzi": 70000,
+      "ore": 64.58333333333333,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00033L",
+      "articolo": "008247",
+      "pezzi": 2100,
+      "ore": 27.9,
+      "pressa": "NB210-6"
+    },
+    {
+      "odl": "00034L",
+      "articolo": "008247",
+      "pezzi": 2100,
+      "ore": 45.38333333333333,
+      "pressa": "NB210-6"
+    },
+    {
+      "odl": "00094L",
+      "articolo": "008247",
+      "pezzi": 2100,
+      "ore": 34.53333333333333,
+      "pressa": "NB210-6"
+    },
+    {
+      "odl": "00095L",
+      "articolo": "008247",
+      "pezzi": 2100,
+      "ore": 22.55,
+      "pressa": "NB210-6"
+    },
+    {
+      "odl": "00096L",
+      "articolo": "008247",
+      "pezzi": 2100,
+      "ore": 26.883333333333333,
+      "pressa": "NB210-6"
+    },
+    {
+      "odl": "00097L",
+      "articolo": "008247",
+      "pezzi": 2100,
+      "ore": 42.53333333333333,
+      "pressa": "NB210-6"
+    },
+    {
+      "odl": "00104L",
+      "articolo": "0275, 0276",
+      "pezzi": 3000,
+      "ore": 21.533333333333335,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00100L",
+      "articolo": "3025",
+      "pezzi": 8000,
+      "ore": 25.833333333333332,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00058L",
+      "articolo": "1819",
+      "pezzi": 10000,
+      "ore": 35.0,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00056L",
+      "articolo": "1501",
+      "pezzi": 500,
+      "ore": 7.75,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00057L",
+      "articolo": "1501",
+      "pezzi": 3000,
+      "ore": 14.966666666666667,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "01271L",
+      "articolo": "1500",
+      "pezzi": 2500,
+      "ore": 51.416666666666664,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00060L",
+      "articolo": "1555",
+      "pezzi": 2000,
+      "ore": 30.666666666666668,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00059L",
+      "articolo": "1556",
+      "pezzi": 2000,
+      "ore": 76.76666666666667,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00081L",
+      "articolo": "39510280",
+      "pezzi": 36000,
+      "ore": 37.53333333333333,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00118L",
+      "articolo": "SAS5LUNGOBIANCO",
+      "pezzi": 70000,
+      "ore": 42.78333333333333,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00121L",
+      "articolo": "39530340",
+      "pezzi": 75000,
+      "ore": 163.38333333333333,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00015L",
+      "articolo": "SAS5LUNGOGIALLO",
+      "pezzi": 30000,
+      "ore": 25.45,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00063L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 81.61666666666666,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "R1022L",
+      "articolo": "3025",
+      "pezzi": 1000,
+      "ore": 35.0,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00016L",
+      "articolo": "SAS5LUNGOVERDE",
+      "pezzi": 30000,
+      "ore": 34.31666666666667,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00137L",
+      "articolo": "55521080",
+      "pezzi": 108000,
+      "ore": 139.21666666666667,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00139L",
+      "articolo": "SAS5LUNGOGIALLO",
+      "pezzi": 60000,
+      "ore": 42.6,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00135L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 65.73333333333333,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00064L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 79.8,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00112L",
+      "articolo": "3237",
+      "pezzi": 1000,
+      "ore": 38.96666666666667,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "2L",
+      "articolo": "113071",
+      "pezzi": 19000,
+      "ore": 60.5,
+      "pressa": "AR150-2"
+    },
+    {
+      "odl": "3L",
+      "articolo": "112703",
+      "pezzi": 38000,
+      "ore": 74.0,
+      "pressa": "AR150-2"
+    },
+    {
+      "odl": "4L",
+      "articolo": "114261",
+      "pezzi": 54400,
+      "ore": 267.75,
+      "pressa": "AR150-2"
+    },
+    {
+      "odl": "00017L",
+      "articolo": "SAS5LUNGOROSSO",
+      "pezzi": 25000,
+      "ore": 25.233333333333334,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00080L",
+      "articolo": "39520170",
+      "pezzi": 30000,
+      "ore": 60.88333333333333,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00140L",
+      "articolo": "55522030",
+      "pezzi": 18000,
+      "ore": 26.083333333333332,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00141L",
+      "articolo": "55521960",
+      "pezzi": 18000,
+      "ore": 32.333333333333336,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00115L",
+      "articolo": "S41343",
+      "pezzi": 420,
+      "ore": 141.05,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00116L",
+      "articolo": "S41342",
+      "pezzi": 450,
+      "ore": 12.4,
+      "pressa": "NB210-6"
+    },
+    {
+      "odl": "00113L",
+      "articolo": "S41396",
+      "pezzi": 4500,
+      "ore": 36.21666666666667,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00035L",
+      "articolo": "S41339",
+      "pezzi": 1000,
+      "ore": 15.916666666666666,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00114L",
+      "articolo": "S41352",
+      "pezzi": 1000,
+      "ore": 134.8,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00108L",
+      "articolo": "S41489",
+      "pezzi": 12000,
+      "ore": 25.45,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00107L",
+      "articolo": "S41485",
+      "pezzi": 360,
+      "ore": 6.15,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00109L",
+      "articolo": "S41490",
+      "pezzi": 9600,
+      "ore": 16.083333333333332,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00106L",
+      "articolo": "S41365",
+      "pezzi": 432,
+      "ore": 20.566666666666666,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00117L",
+      "articolo": "S41366",
+      "pezzi": 540,
+      "ore": 7.6,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00136L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 124.96666666666667,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00145L",
+      "articolo": "1442/A",
+      "pezzi": 2000,
+      "ore": 22.916666666666668,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00146L",
+      "articolo": "1442/A",
+      "pezzi": 3000,
+      "ore": 36.75,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00147L",
+      "articolo": "1442/A",
+      "pezzi": 3000,
+      "ore": 59.666666666666664,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00119L",
+      "articolo": "39530440",
+      "pezzi": 42000,
+      "ore": 47.05,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00148L",
+      "articolo": "1573",
+      "pezzi": 1500,
+      "ore": 0.0,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00122L",
+      "articolo": "39530420",
+      "pezzi": 60000,
+      "ore": 102.63333333333334,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00154L",
+      "articolo": "1617",
+      "pezzi": 2500,
+      "ore": 26.9,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00152L",
+      "articolo": "1614",
+      "pezzi": 2500,
+      "ore": 39.05,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00153L",
+      "articolo": "1615, 1618",
+      "pezzi": 2500,
+      "ore": 33.86666666666667,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00163L",
+      "articolo": "SAS5LUNGOBIANCO",
+      "pezzi": 25000,
+      "ore": 12.6,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00143L",
+      "articolo": "1445-A, 1445-B, 1445-C",
+      "pezzi": 2000,
+      "ore": 25.766666666666666,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00144L",
+      "articolo": "1445-A, 1445-B, 1445-C",
+      "pezzi": 3000,
+      "ore": 29.433333333333334,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00169L",
+      "articolo": "3230",
+      "pezzi": 6000,
+      "ore": 8.216666666666667,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00168L",
+      "articolo": "3231, 3232",
+      "pezzi": 3000,
+      "ore": 53.56666666666667,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00155L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 30.383333333333333,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "0000ML",
+      "articolo": "COMPENS S36 NERO, SELLA 36 NERO, SPESSORE S36 NERO",
+      "pezzi": 30000,
+      "ore": 47.0,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00177L",
+      "articolo": "1573",
+      "pezzi": 1500,
+      "ore": 22.866666666666667,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00098L",
+      "articolo": "1500",
+      "pezzi": 2500,
+      "ore": 37.43333333333333,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00099L",
+      "articolo": "1500",
+      "pezzi": 2500,
+      "ore": 31.35,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00175L",
+      "articolo": "1637",
+      "pezzi": 2000,
+      "ore": 9.7,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00150L",
+      "articolo": "3115",
+      "pezzi": 15000,
+      "ore": 4.716666666666667,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00176L",
+      "articolo": "3381, 3382",
+      "pezzi": 5000,
+      "ore": 30.716666666666665,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00166L",
+      "articolo": "1733",
+      "pezzi": 2000,
+      "ore": 17.766666666666666,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00160L",
+      "articolo": "39530420",
+      "pezzi": 95000,
+      "ore": 114.83333333333333,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00180L",
+      "articolo": "1636-R",
+      "pezzi": 500,
+      "ore": 5.5,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00179L",
+      "articolo": "39540300",
+      "pezzi": 45000,
+      "ore": 91.28333333333333,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00164L",
+      "articolo": "0009-A, 0009-C",
+      "pezzi": 2000,
+      "ore": 8.666666666666666,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00138L",
+      "articolo": "101A3358B",
+      "pezzi": 3000,
+      "ore": 11.816666666666666,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00165L",
+      "articolo": "0009-A, 0009-C",
+      "pezzi": 2000,
+      "ore": 7.7,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00183L",
+      "articolo": "0009-B",
+      "pezzi": 2000,
+      "ore": 3.5833333333333335,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00184L",
+      "articolo": "0009-B",
+      "pezzi": 2000,
+      "ore": 2.183333333333333,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00093L",
+      "articolo": "101A5010C",
+      "pezzi": 4000,
+      "ore": 12.0,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00197L",
+      "articolo": "VAMEFIX",
+      "pezzi": 2340,
+      "ore": 38.6,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00196L",
+      "articolo": "RID 42",
+      "pezzi": 11000,
+      "ore": 200.18333333333334,
+      "pressa": "NB210-6"
+    },
+    {
+      "odl": "00186L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 73.5,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00187L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 72.16666666666667,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00188L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 70.83333333333333,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00185L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 83.15,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00200L",
+      "articolo": "S41342W",
+      "pezzi": 30,
+      "ore": 246.6,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00201L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 69.13333333333334,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00202L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 27.0,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00227L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 28.5,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00182L",
+      "articolo": "39540530",
+      "pezzi": 32000,
+      "ore": 68.06666666666666,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00151L",
+      "articolo": "3115",
+      "pezzi": 15000,
+      "ore": 4.016666666666667,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00149L",
+      "articolo": "3115",
+      "pezzi": 15000,
+      "ore": 9.9,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00167L",
+      "articolo": "3372",
+      "pezzi": 2000,
+      "ore": 37.78333333333333,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00204L",
+      "articolo": "39520240",
+      "pezzi": 24000,
+      "ore": 51.45,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00161L",
+      "articolo": "39530340",
+      "pezzi": 68000,
+      "ore": 67.65,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00173L",
+      "articolo": "1819",
+      "pezzi": 20000,
+      "ore": 26.583333333333332,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00174L",
+      "articolo": "1819",
+      "pezzi": 20000,
+      "ore": 32.36666666666667,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00221L",
+      "articolo": "39530340",
+      "pezzi": 68000,
+      "ore": 43.95,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00203L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 29.466666666666665,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00222L",
+      "articolo": "39540400",
+      "pezzi": 16000,
+      "ore": 40.46666666666667,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00170L",
+      "articolo": "1488",
+      "pezzi": 8000,
+      "ore": 28.8,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00171L",
+      "articolo": "1488",
+      "pezzi": 8000,
+      "ore": 27.8,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00172L",
+      "articolo": "1488",
+      "pezzi": 8000,
+      "ore": 28.233333333333334,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00101L",
+      "articolo": "3025",
+      "pezzi": 12000,
+      "ore": 85.31666666666666,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00102L",
+      "articolo": "3025",
+      "pezzi": 12000,
+      "ore": 36.78333333333333,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00103L",
+      "articolo": "3025",
+      "pezzi": 12000,
+      "ore": 35.766666666666666,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00181L",
+      "articolo": "39540300",
+      "pezzi": 40000,
+      "ore": 76.18333333333334,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00233L",
+      "articolo": "39510210",
+      "pezzi": 72000,
+      "ore": 15.683333333333334,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00234L",
+      "articolo": "39510210",
+      "pezzi": 72000,
+      "ore": 30.55,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00235L",
+      "articolo": "39510210",
+      "pezzi": 72000,
+      "ore": 19.716666666666665,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00236L",
+      "articolo": "39510210",
+      "pezzi": 72000,
+      "ore": 20.883333333333333,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00237L",
+      "articolo": "39510210",
+      "pezzi": 72000,
+      "ore": 20.4,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00238L",
+      "articolo": "39510210",
+      "pezzi": 72000,
+      "ore": 11.85,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00231L",
+      "articolo": "39540150",
+      "pezzi": 100000,
+      "ore": 54.0,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00232L",
+      "articolo": "39540150",
+      "pezzi": 100000,
+      "ore": 78.55,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00212L",
+      "articolo": "101A3315A",
+      "pezzi": 2000,
+      "ore": 11.35,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00228L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 26.616666666666667,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00239L",
+      "articolo": "1499",
+      "pezzi": 4000,
+      "ore": 22.733333333333334,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00240L",
+      "articolo": "1499",
+      "pezzi": 4000,
+      "ore": 9.016666666666667,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00246L",
+      "articolo": "Ø127",
+      "pezzi": 10000,
+      "ore": 102.28333333333333,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00229L",
+      "articolo": "39520770",
+      "pezzi": 40000,
+      "ore": 31.266666666666666,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00230L",
+      "articolo": "39520770",
+      "pezzi": 40000,
+      "ore": 35.3,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00247L",
+      "articolo": "Ø178",
+      "pezzi": 5000,
+      "ore": 67.23333333333333,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00105L",
+      "articolo": "0275, 0276",
+      "pezzi": 3000,
+      "ore": 21.383333333333333,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00245L",
+      "articolo": "3135",
+      "pezzi": 1000,
+      "ore": 10.816666666666666,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "5L",
+      "articolo": "114261",
+      "pezzi": 54400,
+      "ore": 247.0,
+      "pressa": "AR150-2"
+    },
+    {
+      "odl": "00264L",
+      "articolo": "02035200000",
+      "pezzi": 2000,
+      "ore": 53.85,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00020L",
+      "articolo": "3022",
+      "pezzi": 5000,
+      "ore": 46.31666666666667,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00253L",
+      "articolo": "39540300",
+      "pezzi": 24000,
+      "ore": 103.35,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00216L",
+      "articolo": "S41332",
+      "pezzi": 2000,
+      "ore": 70.9,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00217L",
+      "articolo": "S41371",
+      "pezzi": 1000,
+      "ore": 6.783333333333333,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00219L",
+      "articolo": "S41333",
+      "pezzi": 8000,
+      "ore": 16.8,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00269L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 80.66666666666667,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00270L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 46.333333333333336,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00271L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 80.4,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00272L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 71.48333333333333,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00273L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 129.11666666666667,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00274L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 72.5,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00265L",
+      "articolo": "39510210",
+      "pezzi": 72000,
+      "ore": 22.4,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00266L",
+      "articolo": "39510210",
+      "pezzi": 72000,
+      "ore": 23.783333333333335,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00092L",
+      "articolo": "101A8103A",
+      "pezzi": 25000,
+      "ore": 138.4,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00267L",
+      "articolo": "101A1589E",
+      "pezzi": 4000,
+      "ore": 24.383333333333333,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00263L",
+      "articolo": "39540150",
+      "pezzi": 100000,
+      "ore": 49.53333333333333,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00220L",
+      "articolo": "101A3372C",
+      "pezzi": 3000,
+      "ore": 44.016666666666666,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00281L",
+      "articolo": "55522030",
+      "pezzi": 54000,
+      "ore": 98.33333333333333,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00243L",
+      "articolo": "0054/N",
+      "pezzi": 7000,
+      "ore": 15.816666666666666,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00215L",
+      "articolo": "S41273",
+      "pezzi": 1080,
+      "ore": 16.283333333333335,
+      "pressa": "NB210-6"
+    },
+    {
+      "odl": "00214L",
+      "articolo": "S41274",
+      "pezzi": 1116,
+      "ore": 21.166666666666668,
+      "pressa": "NB210-6"
+    },
+    {
+      "odl": "00213L",
+      "articolo": "S41318",
+      "pezzi": 1080,
+      "ore": 19.833333333333332,
+      "pressa": "NB210-6"
+    },
+    {
+      "odl": "00218L",
+      "articolo": "S41319",
+      "pezzi": 924,
+      "ore": 15.433333333333334,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00283L",
+      "articolo": "1142",
+      "pezzi": 2000,
+      "ore": 28.366666666666667,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00276L",
+      "articolo": "39520240",
+      "pezzi": 24000,
+      "ore": 58.916666666666664,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00290L",
+      "articolo": "55521080",
+      "pezzi": 108000,
+      "ore": 154.83333333333334,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00248L",
+      "articolo": "Ø115",
+      "pezzi": 10000,
+      "ore": 22.666666666666668,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00275L",
+      "articolo": "39520170",
+      "pezzi": 30000,
+      "ore": 51.03333333333333,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00291L",
+      "articolo": "39540300",
+      "pezzi": 46000,
+      "ore": 93.68333333333334,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00244L",
+      "articolo": "3235, 3236",
+      "pezzi": 1500,
+      "ore": 63.45,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "6L",
+      "articolo": "114362",
+      "pezzi": 57000,
+      "ore": 92.0,
+      "pressa": "AR150-2"
+    },
+    {
+      "odl": "00287L",
+      "articolo": "1500",
+      "pezzi": 1500,
+      "ore": 54.96666666666667,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00300L",
+      "articolo": "0203276V0100",
+      "pezzi": 1000,
+      "ore": 3.4166666666666665,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00303L",
+      "articolo": "008247",
+      "pezzi": 2100,
+      "ore": 53.43333333333333,
+      "pressa": "NB210-6"
+    },
+    {
+      "odl": "00304L",
+      "articolo": "008247",
+      "pezzi": 2100,
+      "ore": 365.56666666666666,
+      "pressa": "NB210-6"
+    },
+    {
+      "odl": "00305L",
+      "articolo": "008247",
+      "pezzi": 2100,
+      "ore": 23.0,
+      "pressa": "NB210-6"
+    },
+    {
+      "odl": "00301L",
+      "articolo": "39540300",
+      "pezzi": 46000,
+      "ore": 67.96666666666667,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00306L",
+      "articolo": "39530340",
+      "pezzi": 90000,
+      "ore": 157.2,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00288L",
+      "articolo": "1501",
+      "pezzi": 1000,
+      "ore": 11.666666666666666,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00289L",
+      "articolo": "1501, 1502",
+      "pezzi": 3000,
+      "ore": 36.81666666666667,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00302L",
+      "articolo": "1572",
+      "pezzi": 2000,
+      "ore": 36.61666666666667,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00307L",
+      "articolo": "39540150",
+      "pezzi": 100000,
+      "ore": 63.416666666666664,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00308L",
+      "articolo": "39540150",
+      "pezzi": 100000,
+      "ore": 42.78333333333333,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00309L",
+      "articolo": "39540150",
+      "pezzi": 100000,
+      "ore": 36.21666666666667,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00282L",
+      "articolo": "55521960",
+      "pezzi": 54000,
+      "ore": 84.41666666666667,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00268L",
+      "articolo": "101A1370A",
+      "pezzi": 1000,
+      "ore": 27.7,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00285L",
+      "articolo": "S41309",
+      "pezzi": 5000,
+      "ore": 10.15,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00316L",
+      "articolo": "39510250",
+      "pezzi": 10000,
+      "ore": 17.716666666666665,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00315L",
+      "articolo": "39510210",
+      "pezzi": 72000,
+      "ore": 24.05,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00296L",
+      "articolo": "55521150",
+      "pezzi": 18000,
+      "ore": 25.5,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00317L",
+      "articolo": "39530390",
+      "pezzi": 30000,
+      "ore": 77.0,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "7L",
+      "articolo": "112703",
+      "pezzi": 38000,
+      "ore": 62.0,
+      "pressa": "AR150-2"
+    },
+    {
+      "odl": "8L",
+      "articolo": "113071",
+      "pezzi": 19000,
+      "ore": 48.0,
+      "pressa": "AR150-2"
+    },
+    {
+      "odl": "9L",
+      "articolo": "114261",
+      "pezzi": 54400,
+      "ore": 169.0,
+      "pressa": "AR150-2"
+    },
+    {
+      "odl": "10L",
+      "articolo": "114261",
+      "pezzi": 217600,
+      "ore": 119.0,
+      "pressa": "AR150-2"
+    },
+    {
+      "odl": "00286L",
+      "articolo": "1733",
+      "pezzi": 3000,
+      "ore": 42.06666666666667,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00332L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 101.11666666666666,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00333L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 95.61666666666666,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00334L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 70.76666666666667,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00328L",
+      "articolo": "39520770",
+      "pezzi": 40000,
+      "ore": 57.25,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00329L",
+      "articolo": "39520770",
+      "pezzi": 40000,
+      "ore": 58.21666666666667,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00325L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 98.45,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00326L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 26.5,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00327L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 27.2,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00335L",
+      "articolo": "101A3358B",
+      "pezzi": 3000,
+      "ore": 27.55,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00379L",
+      "articolo": "SAS5LUNGOBIANCO",
+      "pezzi": 50000,
+      "ore": 50.416666666666664,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00331L",
+      "articolo": "SAS5LUNGOBLU",
+      "pezzi": 80000,
+      "ore": 0.0,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00211L",
+      "articolo": "201A3308B",
+      "pezzi": 2000,
+      "ore": 173.25,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00284L",
+      "articolo": "S41372",
+      "pezzi": 560,
+      "ore": 10.716666666666667,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00338L",
+      "articolo": "3120",
+      "pezzi": 6000,
+      "ore": 26.0,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00324L",
+      "articolo": "39530420",
+      "pezzi": 75000,
+      "ore": 171.0,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00343L",
+      "articolo": "0203276V0100",
+      "pezzi": 50,
+      "ore": 15.0,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00344L",
+      "articolo": "1143/N",
+      "pezzi": 1100,
+      "ore": 8.5,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00345L",
+      "articolo": "1143/N",
+      "pezzi": 5000,
+      "ore": 16.5,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00337L",
+      "articolo": "3124",
+      "pezzi": 1500,
+      "ore": 17.233333333333334,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00249L",
+      "articolo": "101A1660A",
+      "pezzi": 2000,
+      "ore": 19.95,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00346L",
+      "articolo": "SC35 NY BIANCO",
+      "pezzi": 50000,
+      "ore": 144.0,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00351",
+      "articolo": "3135",
+      "pezzi": 1000,
+      "ore": 21.0,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00350L",
+      "articolo": "39530420",
+      "pezzi": 75000,
+      "ore": 86.1,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00348L",
+      "articolo": "0054/N",
+      "pezzi": 6000,
+      "ore": 12.0,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00342L",
+      "articolo": "101A3315A",
+      "pezzi": 2000,
+      "ore": 11.883333333333333,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00359L",
+      "articolo": "101A3315A",
+      "pezzi": 2000,
+      "ore": 8.0,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00355L",
+      "articolo": "39540320",
+      "pezzi": 110000,
+      "ore": 93.56666666666666,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00352L",
+      "articolo": "3025",
+      "pezzi": 16000,
+      "ore": 44.233333333333334,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00353L",
+      "articolo": "3025",
+      "pezzi": 16000,
+      "ore": 66.66666666666667,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00354L",
+      "articolo": "3025",
+      "pezzi": 16000,
+      "ore": 86.0,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00349L",
+      "articolo": "101A8103C",
+      "pezzi": 3000,
+      "ore": 19.333333333333332,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00347L",
+      "articolo": "SC35 NY BLU",
+      "pezzi": 50000,
+      "ore": 72.28333333333333,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00363L",
+      "articolo": "3123-PC",
+      "pezzi": 5000,
+      "ore": 38.31666666666667,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00339L",
+      "articolo": "3121, 3122",
+      "pezzi": 1500,
+      "ore": 36.833333333333336,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00366L",
+      "articolo": "55521960",
+      "pezzi": 54000,
+      "ore": 100.5,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00365L",
+      "articolo": "55522030",
+      "pezzi": 54000,
+      "ore": 78.16666666666667,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00370L",
+      "articolo": "S41318",
+      "pezzi": 864,
+      "ore": 13.366666666666667,
+      "pressa": "NB210-6"
+    },
+    {
+      "odl": "00371L",
+      "articolo": "S41319",
+      "pezzi": 924,
+      "ore": 53.46666666666667,
+      "pressa": "NB210-6"
+    },
+    {
+      "odl": "00373L",
+      "articolo": "S41342",
+      "pezzi": 435,
+      "ore": 16.766666666666666,
+      "pressa": "NB210-6"
+    },
+    {
+      "odl": "00375L",
+      "articolo": "39530420",
+      "pezzi": 30000,
+      "ore": 42.9,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00374L",
+      "articolo": "107A0041A",
+      "pezzi": 50000,
+      "ore": 30.0,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00369L",
+      "articolo": "1555",
+      "pezzi": 1500,
+      "ore": 33.8,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00368L",
+      "articolo": "1556",
+      "pezzi": 2000,
+      "ore": 14.7,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00364L",
+      "articolo": "101A3372C",
+      "pezzi": 3000,
+      "ore": 90.0,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "12L",
+      "articolo": "112703",
+      "pezzi": 38000,
+      "ore": 150.0,
+      "pressa": "AR150-2"
+    },
+    {
+      "odl": "11L",
+      "articolo": "114261",
+      "pezzi": 108800,
+      "ore": 169.5,
+      "pressa": "AR150-2"
+    },
+    {
+      "odl": "00389L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 30.25,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00390L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 53.75,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00380L",
+      "articolo": "39530420",
+      "pezzi": 5000,
+      "ore": 13.0,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00392L",
+      "articolo": "39530420",
+      "pezzi": 40000,
+      "ore": 64.1,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00394L",
+      "articolo": "0020",
+      "pezzi": 20000,
+      "ore": 47.0,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00381L",
+      "articolo": "1445-A, 1445-B, 1445-C",
+      "pezzi": 2000,
+      "ore": 26.0,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00398L",
+      "articolo": "55521150",
+      "pezzi": 10000,
+      "ore": 15.5,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00391L",
+      "articolo": "39510280",
+      "pezzi": 36000,
+      "ore": 40.5,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00399L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 96.5,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00400L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 141.5,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00401L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 74.0,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00372L",
+      "articolo": "S41366",
+      "pezzi": 396,
+      "ore": 31.4,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00393L",
+      "articolo": "39530340",
+      "pezzi": 30000,
+      "ore": 71.9,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00402L",
+      "articolo": "008247",
+      "pezzi": 2100,
+      "ore": 12.766666666666667,
+      "pressa": "NB210-6"
+    },
+    {
+      "odl": "00404L",
+      "articolo": "008247",
+      "pezzi": 2100,
+      "ore": 14.233333333333333,
+      "pressa": "NB210-6"
+    },
+    {
+      "odl": "00412L",
+      "articolo": "39510210",
+      "pezzi": 72000,
+      "ore": 20.016666666666666,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00413L",
+      "articolo": "39510210",
+      "pezzi": 72000,
+      "ore": 70.15,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00414L",
+      "articolo": "39510210",
+      "pezzi": 72000,
+      "ore": 29.0,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00415L",
+      "articolo": "39510210",
+      "pezzi": 72000,
+      "ore": 22.0,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00411L",
+      "articolo": "39510220",
+      "pezzi": 52000,
+      "ore": 30.5,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00409L",
+      "articolo": "3474-Y",
+      "pezzi": 500,
+      "ore": 19.1,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00410L",
+      "articolo": "3476-R",
+      "pezzi": 500,
+      "ore": 32.0,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00416L",
+      "articolo": "101A8103A",
+      "pezzi": 25000,
+      "ore": 0.0,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00418L",
+      "articolo": "101A5010C",
+      "pezzi": 1000,
+      "ore": 4.0,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00417L",
+      "articolo": "101A3358B",
+      "pezzi": 3000,
+      "ore": 14.483333333333333,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00419L",
+      "articolo": "39540300",
+      "pezzi": 40800,
+      "ore": 123.0,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00403L",
+      "articolo": "39530340",
+      "pezzi": 8000,
+      "ore": 8.9,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00424L",
+      "articolo": "S41343",
+      "pezzi": 420,
+      "ore": 11.0,
+      "pressa": "NB210-6"
+    },
+    {
+      "odl": "00425L",
+      "articolo": "S41513",
+      "pezzi": 6000,
+      "ore": 14.483333333333333,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00426L",
+      "articolo": "S41396",
+      "pezzi": 4500,
+      "ore": 13.0,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00427L",
+      "articolo": "S41523",
+      "pezzi": 5000,
+      "ore": 9.5,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00430L",
+      "articolo": "S41523",
+      "pezzi": 5000,
+      "ore": 6.5,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00428L",
+      "articolo": "S41485",
+      "pezzi": 1000,
+      "ore": 0.0,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00429L",
+      "articolo": "S41352",
+      "pezzi": 480,
+      "ore": 0.0,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00000L",
+      "articolo": "S41622",
+      "pezzi": 270,
+      "ore": 74.0,
+      "pressa": "AR150-2"
+    },
+    {
+      "odl": "00441L",
+      "articolo": "1488",
+      "pezzi": 8000,
+      "ore": 29.0,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00442L",
+      "articolo": "1488",
+      "pezzi": 8000,
+      "ore": 28.833333333333332,
+      "pressa": "SD130-1"
+    },
+    {
+      "odl": "00443L",
+      "articolo": "1488",
+      "pezzi": 8000,
+      "ore": 0.0,
+      "pressa": ""
+    },
+    {
+      "odl": "00438L",
+      "articolo": "39510250",
+      "pezzi": 10000,
+      "ore": 46.0,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00459L",
+      "articolo": "39540300",
+      "pezzi": 8000,
+      "ore": 25.0,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00461L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 31.0,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00462L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 30.0,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00463L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 43.5,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00464L",
+      "articolo": "39520740",
+      "pezzi": 40000,
+      "ore": 49.5,
+      "pressa": "NB180-9"
+    },
+    {
+      "odl": "00446L",
+      "articolo": "1502, 1501",
+      "pezzi": 2500,
+      "ore": 51.5,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00460L",
+      "articolo": "39540320",
+      "pezzi": 109000,
+      "ore": 141.5,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "13L",
+      "articolo": "114261",
+      "pezzi": 108800,
+      "ore": 141.16666666666666,
+      "pressa": "AR150-2"
+    },
+    {
+      "odl": "00465L",
+      "articolo": "39510210",
+      "pezzi": 72000,
+      "ore": 20.416666666666668,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00336L",
+      "articolo": "3123-PC",
+      "pezzi": 10000,
+      "ore": 0.0,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00000L",
+      "articolo": "39510210",
+      "pezzi": 72000,
+      "ore": 22.75,
+      "pressa": "WB240-7"
+    },
+    {
+      "odl": "00456L",
+      "articolo": "101A1595B",
+      "pezzi": 4500,
+      "ore": 49.0,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00454L",
+      "articolo": "3230",
+      "pezzi": 5000,
+      "ore": 0.0,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00455L",
+      "articolo": "3231, 3232",
+      "pezzi": 3000,
+      "ore": 0.0,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00469L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 0.0,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00470L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 0.0,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00471L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 0.0,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00472L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 0.0,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00473L",
+      "articolo": "114103",
+      "pezzi": 48000,
+      "ore": 0.0,
+      "pressa": "NB85-5"
+    },
+    {
+      "odl": "00440L",
+      "articolo": "101A3372C",
+      "pezzi": 3000,
+      "ore": 32.75,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00476L",
+      "articolo": "3123-PC",
+      "pezzi": 5150,
+      "ore": 44.333333333333336,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00477L",
+      "articolo": "3123-PC",
+      "pezzi": 5000,
+      "ore": 0.0,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00468L",
+      "articolo": "020327500000",
+      "pezzi": 1000,
+      "ore": 24.5,
+      "pressa": "SD100-4"
+    },
+    {
+      "odl": "00450L",
+      "articolo": "3022",
+      "pezzi": 5000,
+      "ore": 26.0,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00451L",
+      "articolo": "3022",
+      "pezzi": 5000,
+      "ore": 22.0,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "14L",
+      "articolo": "114261",
+      "pezzi": 108800,
+      "ore": 0.0,
+      "pressa": "AR150-2"
+    },
+    {
+      "odl": "00489L",
+      "articolo": "39530340",
+      "pezzi": 64000,
+      "ore": 0.0,
+      "pressa": "NB160-10"
+    },
+    {
+      "odl": "00452L",
+      "articolo": "3115",
+      "pezzi": 5000,
+      "ore": 9.216666666666667,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00453L",
+      "articolo": "3115",
+      "pezzi": 5000,
+      "ore": 0.0,
+      "pressa": "NB55-3"
+    },
+    {
+      "odl": "00474L",
+      "articolo": "39540150",
+      "pezzi": 100000,
+      "ore": 0.0,
+      "pressa": "NB40-11"
+    },
+    {
+      "odl": "00448L",
+      "articolo": "1614",
+      "pezzi": 2500,
+      "ore": 0.0,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00475L",
+      "articolo": "1617",
+      "pezzi": 2500,
+      "ore": 0.0,
+      "pressa": "NB85-8"
+    },
+    {
+      "odl": "00444L",
+      "articolo": "1500",
+      "pezzi": 2500,
+      "ore": 0.0,
+      "pressa": "NB55-3"
+    }
+  ],
+  "lookup": {
+    "0020 NEW": [
+      "A1"
+    ],
+    "1501 NEW": [
+      "A1"
+    ],
+    "1502 NEW": [
+      "A1"
+    ],
+    "3233": [
+      "A1"
+    ],
+    "3237": [
+      "A1"
+    ],
+    "3234": [
+      "A1"
+    ],
+    "3235": [
+      "A1"
+    ],
+    "3236": [
+      "A1"
+    ],
+    "3238": [
+      "A1"
+    ],
+    "3239": [
+      "A1"
+    ],
+    "3372": [
+      "A1"
+    ],
+    "3379": [
+      "A1"
+    ],
+    "3380": [
+      "A1"
+    ],
+    "3381": [
+      "A1"
+    ],
+    "3382": [
+      "A1"
+    ],
+    "3474": [
+      "A2"
+    ],
+    "3476": [
+      "A2"
+    ],
+    "0051": [
+      "A3"
+    ],
+    "1128": [
+      "A3"
+    ],
+    "1109": [
+      "A3"
+    ],
+    "1143": [
+      "A3"
+    ],
+    "2021": [
+      "A3"
+    ],
+    "2021 CANOTTO": [
+      "A3"
+    ],
+    "2043": [
+      "A3"
+    ],
+    "2044": [
+      "A3"
+    ],
+    "2045": [
+      "A3"
+    ],
+    "2049": [
+      "A3"
+    ],
+    "2051": [
+      "A3"
+    ],
+    "2052": [
+      "A3"
+    ],
+    "2057": [
+      "A3"
+    ],
+    "2058": [
+      "A3"
+    ],
+    "2086": [
+      "A6",
+      "A3"
+    ],
+    "0054": [
+      "A4"
+    ],
+    "1499": [
+      "A4",
+      "B1"
+    ],
+    "1500": [
+      "A4"
+    ],
+    "1501": [
+      "A4"
+    ],
+    "1502 OLD": [
+      "A4"
+    ],
+    "1555": [
+      "A4"
+    ],
+    "1556": [
+      "A4"
+    ],
+    "1645": [
+      "A4"
+    ],
+    "1646": [
+      "A4"
+    ],
+    "1648": [
+      "A4"
+    ],
+    "1635": [
+      "A4"
+    ],
+    "1637": [
+      "A4"
+    ],
+    "2011": [
+      "A4"
+    ],
+    "2029A": [
+      "A4"
+    ],
+    "2104": [
+      "A4"
+    ],
+    "2105": [
+      "A4"
+    ],
+    "2106": [
+      "A4"
+    ],
+    "2113": [
+      "A4"
+    ],
+    "3025": [
+      "A4"
+    ],
+    "3123": [
+      "A4"
+    ],
+    "0036": [
+      "A5"
+    ],
+    "0037": [
+      "A5"
+    ],
+    "1074": [
+      "A5"
+    ],
+    "1120": [
+      "A5"
+    ],
+    "1533": [
+      "A5"
+    ],
+    "1733": [
+      "A5"
+    ],
+    "1734": [
+      "A5"
+    ],
+    "2022": [
+      "A5"
+    ],
+    "2042": [
+      "A5"
+    ],
+    "2050": [
+      "A5"
+    ],
+    "3003": [
+      "A5"
+    ],
+    "3135": [
+      "A5"
+    ],
+    "3136": [
+      "A5"
+    ],
+    "3137": [
+      "A5"
+    ],
+    "3138": [
+      "A5"
+    ],
+    "0089": [
+      "A6"
+    ],
+    "1442": [
+      "A6"
+    ],
+    "1488": [
+      "A6"
+    ],
+    "1639": [
+      "A6"
+    ],
+    "1684": [
+      "A6"
+    ],
+    "1634": [
+      "A6"
+    ],
+    "1636": [
+      "A6"
+    ],
+    "2059": [
+      "A6"
+    ],
+    "3098": [
+      "A6"
+    ],
+    "3099": [
+      "A6"
+    ],
+    "3115": [
+      "A6"
+    ],
+    "3120": [
+      "A6"
+    ],
+    "3121": [
+      "A6"
+    ],
+    "3122": [
+      "A6"
+    ],
+    "0009": [
+      "B1"
+    ],
+    "": [
+      "B1"
+    ],
+    "0009-B": [
+      "B1"
+    ],
+    "0275": [
+      "B1"
+    ],
+    "0276": [
+      "B1"
+    ],
+    "0405": [
+      "B1"
+    ],
+    "1445": [
+      "B1"
+    ],
+    "1516": [
+      "B1"
+    ],
+    "3022": [
+      "B1"
+    ],
+    "3124": [
+      "B1"
+    ],
+    "3202": [
+      "B1",
+      "B6"
+    ],
+    "3204": [
+      "B1",
+      "B6"
+    ],
+    "0020 OLD": [
+      "B3"
+    ],
+    "1572": [
+      "B3"
+    ],
+    "1573": [
+      "B3"
+    ],
+    "1614": [
+      "B3"
+    ],
+    "1617": [
+      "B3"
+    ],
+    "1615": [
+      "B3"
+    ],
+    "1618": [
+      "B3"
+    ],
+    "1819": [
+      "B3"
+    ],
+    "3230": [
+      "B3"
+    ],
+    "3231": [
+      "B3"
+    ],
+    "3132": [
+      "B3"
+    ],
+    "3350": [
+      "B3",
+      "B6"
+    ],
+    "S36479": [
+      "B4"
+    ],
+    "S41309": [
+      "B4"
+    ],
+    "S41339": [
+      "B4"
+    ],
+    "S41352": [
+      "B4"
+    ],
+    "S41558": [
+      "B4"
+    ],
+    "S41365": [
+      "B4"
+    ],
+    "S41366": [
+      "B4"
+    ],
+    "S41372": [
+      "B4"
+    ],
+    "S41374": [
+      "B4"
+    ],
+    "COVER": [
+      "B4"
+    ],
+    "S37336": [
+      "B5"
+    ],
+    "S41274": [
+      "B5"
+    ],
+    "S41318": [
+      "B5"
+    ],
+    "S41343": [
+      "B5"
+    ],
+    "S41371": [
+      "B5"
+    ],
+    "S41373": [
+      "B5"
+    ],
+    "ST01 W46": [
+      "B5"
+    ],
+    "48": [
+      "B5"
+    ],
+    "S41273": [
+      "B6"
+    ],
+    "S41319": [
+      "B6"
+    ],
+    "S41342": [
+      "B6"
+    ],
+    "S41485": [
+      "B6"
+    ],
+    "ST1574 SEM SUP W46": [
+      "B6"
+    ],
+    "ST1575 SEM INF W46": [
+      "B6"
+    ],
+    "S41332": [
+      "C1"
+    ],
+    "S41333": [
+      "C1"
+    ],
+    "S41396": [
+      "C1"
+    ],
+    "S41489": [
+      "C1"
+    ],
+    "S41490": [
+      "C1"
+    ],
+    "S41513": [
+      "C1"
+    ],
+    "S41523": [
+      "C1"
+    ],
+    "S74124": [
+      "C1"
+    ],
+    "PIASTRE ARBURG": [
+      "C2"
+    ],
+    "APLA00014": [
+      "C3"
+    ],
+    "APLA00189": [
+      "C3"
+    ],
+    "APLA00456": [
+      "C3"
+    ],
+    "APLA00479": [
+      "C3"
+    ],
+    "APLA00494": [
+      "C3"
+    ],
+    "APLA00529": [
+      "C3"
+    ],
+    "APLA00645": [
+      "C3"
+    ],
+    "APLA00827": [
+      "C3"
+    ],
+    "APLA00831": [
+      "C3"
+    ],
+    "101A1388A": [
+      "C3"
+    ],
+    "101A1578A": [
+      "C3"
+    ],
+    "101A1588C": [
+      "C3"
+    ],
+    "101A1588D": [
+      "C3"
+    ],
+    "101A1589E": [
+      "C3"
+    ],
+    "101A1590H": [
+      "C3"
+    ],
+    "101A1595B": [
+      "C3"
+    ],
+    "101A1660A": [
+      "C3"
+    ],
+    "101A1661A": [
+      "C3"
+    ],
+    "101A3358B": [
+      "C3"
+    ],
+    "101A5010C": [
+      "C3"
+    ],
+    "101A5010D": [
+      "C3"
+    ],
+    "101A5010E": [
+      "C3"
+    ],
+    "101A5010F": [
+      "C3"
+    ],
+    "101A8103A": [
+      "C3"
+    ],
+    "101A8103B": [
+      "C3"
+    ],
+    "101A8103C": [
+      "C3"
+    ],
+    "101A8103D": [
+      "C3"
+    ],
+    "107A0041A": [
+      "C3"
+    ],
+    "201A3308A": [
+      "C3"
+    ],
+    "APLA00468": [
+      "C4"
+    ],
+    "APLA00478": [
+      "C4"
+    ],
+    "APLA00481": [
+      "C4"
+    ],
+    "APLA00482": [
+      "C4"
+    ],
+    "APLA00813": [
+      "C4"
+    ],
+    "101A1368A": [
+      "C4"
+    ],
+    "101A1378A": [
+      "C4"
+    ],
+    "101A1379A": [
+      "C4"
+    ],
+    "101A3315A": [
+      "C4"
+    ],
+    "101A3365F": [
+      "C4"
+    ],
+    "101A3366F": [
+      "C4"
+    ],
+    "101A3367D": [
+      "C4"
+    ],
+    "101A3368D": [
+      "C4"
+    ],
+    "101A3372C": [
+      "C4"
+    ],
+    "1064": [
+      "C5"
+    ],
+    "1073": [
+      "C5"
+    ],
+    "5075": [
+      "C5"
+    ],
+    "7001": [
+      "C5"
+    ],
+    "9039": [
+      "C5"
+    ],
+    "VETRINO": [
+      "C5"
+    ],
+    "3040": [
+      "C6"
+    ],
+    "3050": [
+      "C6"
+    ],
+    "3042": [
+      "C6"
+    ],
+    "3074": [
+      "C6"
+    ],
+    "2029": [
+      "C6"
+    ],
+    "2038": [
+      "C6"
+    ],
+    "GHIERONE": [
+      "C6"
+    ],
+    "GUIDA VALVOLA": [
+      "C6"
+    ],
+    "PORTAGOMMA BLU 2 IMP.": [
+      "C6"
+    ],
+    "55521080": [
+      "C6"
+    ],
+    "55521150": [
+      "C6"
+    ],
+    "55521960": [
+      "C6"
+    ],
+    "55522030": [
+      "C6"
+    ],
+    "2 STAMPO LACCIO": [
+      "D1"
+    ],
+    "CERNIERA": [
+      "D1"
+    ],
+    "DHL": [
+      "D1"
+    ],
+    "FERMO CINTURE SICUREZZA": [
+      "D1"
+    ],
+    "K122001": [
+      "D1"
+    ],
+    "LACCIO SIGILZETA": [
+      "D1"
+    ],
+    "O100": [
+      "D2"
+    ],
+    "O100 CON SUPPORTO": [
+      "D2"
+    ],
+    "O110 VERDE": [
+      "D2"
+    ],
+    "O140": [
+      "D2"
+    ],
+    "O170": [
+      "D2"
+    ],
+    "O178 BOMBATO": [
+      "D2"
+    ],
+    "O178 PIATTO": [
+      "D2"
+    ],
+    "O178 SOTTILE": [
+      "D2"
+    ],
+    "O115": [
+      "D3"
+    ],
+    "O178": [
+      "D3"
+    ],
+    "SIGILLO": [
+      "D3"
+    ],
+    "3X HARKEN MAI USATI": [
+      "D4"
+    ],
+    "1X BELLICON": [
+      "D4"
+    ],
+    "ST009": [
+      "D5"
+    ],
+    "HARKEN W10": [
+      "D5"
+    ],
+    "BELLICON": [
+      "D6"
+    ],
+    "MGM": [
+      "D6"
+    ],
+    "LIVELLA VAME": [
+      "E1"
+    ],
+    "LND974": [
+      "E1"
+    ],
+    "LND1161": [
+      "E1"
+    ],
+    "LND1162": [
+      "E1"
+    ],
+    "LND20923": [
+      "E1"
+    ],
+    "STAMPO PONTI 4 SEDI 1817": [
+      "E1"
+    ],
+    "RID42": [
+      "E1"
+    ],
+    "VAMEFIX": [
+      "E1"
+    ],
+    "MERIDIANO SELLA 46": [
+      "E2"
+    ],
+    "ROLD 114103": [
+      "E2"
+    ],
+    "ROLD 114261": [
+      "E2"
+    ],
+    "1068": [
+      "E3"
+    ],
+    "BLS REGGETTA": [
+      "E3"
+    ],
+    "INVOLUCRO 2 SEDI": [
+      "E3"
+    ],
+    "SC35": [
+      "E4"
+    ],
+    "STAMPO TP REFLEX": [
+      "E4"
+    ],
+    "1063": [
+      "E5"
+    ],
+    "INVOLUCRO": [
+      "E5"
+    ],
+    "CURVETTA": [
+      "E5"
+    ],
+    "APLA00851": [
+      "F1"
+    ],
+    "APLA00817": [
+      "F1"
+    ],
+    "APLA00849": [
+      "F1"
+    ],
+    "APLA00815": [
+      "F1"
+    ],
+    "101A1370A": [
+      "F1"
+    ],
+    "101A1372A": [
+      "F1"
+    ],
+    "101A1397A": [
+      "F1"
+    ],
+    "101A1399A": [
+      "F1"
+    ],
+    "0035": [
+      "F2"
+    ],
+    "0053": [
+      "F2"
+    ],
+    "1114": [
+      "F2"
+    ],
+    "1117 STAMPO MANUALE": [
+      "F2"
+    ],
+    "1121": [
+      "F2"
+    ],
+    "1142": [
+      "F2"
+    ],
+    "1112": [
+      "F2"
+    ],
+    "1164": [
+      "F2"
+    ],
+    "1207": [
+      "F2"
+    ],
+    "2012": [
+      "F2"
+    ],
+    "2047": [
+      "F2"
+    ],
+    "2048": [
+      "F2"
+    ],
+    "2063": [
+      "F2"
+    ],
+    "2064": [
+      "F2"
+    ],
+    "2084": [
+      "F2"
+    ],
+    "2085": [
+      "F2"
+    ],
+    "2090": [
+      "F2"
+    ],
+    "STAMPI HARKEN OBSOLETI": [
+      "F3"
+    ],
+    "GHIERA 2121": [
+      "F4"
+    ]
+  },
+  "soglie": {
+    "3121, 3122": 25.708333333333336,
+    "39540150": 45.5,
+    "39540320": 138.46666666666667,
+    "3123-PC": 38.31666666666667,
+    "0405": 4.8,
+    "1488": 28.833333333333332,
+    "S41319": 15.433333333333334,
+    "3115": 5.308333333333334,
+    "3025": 40.50833333333333,
+    "S41490": 13.141666666666666,
+    "S41339": 15.916666666666666,
+    "101A8103C": 24.108333333333334,
+    "S41318": 19.833333333333332,
+    "S41343": 11.0,
+    "0020": 25.483333333333334,
+    "39540300": 72.075,
+    "114103": 79.8,
+    "39520240": 51.45,
+    "39520740": 30.691666666666666,
+    "55522030": 76.60833333333333,
+    "55521960": 84.41666666666667,
+    "S41373": 16.4,
+    "39530340": 67.65,
+    "107A0041A": 36.84166666666667,
+    "SAS5LUNGOBIANCO": 43.416666666666664,
+    "3022": 22.0,
+    "101A3315A": 9.675,
+    "39540530": 91.5,
+    "39510250": 22.166666666666668,
+    "114261": 169.5,
+    "39530420": 79.19166666666666,
+    "55521080": 139.21666666666667,
+    "3381, 3382": 25.416666666666664,
+    "3379, 3380": 24.5,
+    "101A3372C": 40.016666666666666,
+    "39540400": 33.63333333333333,
+    "101A8103A": 134.69166666666666,
+    "39530170": 49.833333333333336,
+    "39520770": 35.541666666666664,
+    "39530390": 65.125,
+    "39510210": 22.0,
+    "SAS5LUNGOBLU": 64.58333333333333,
+    "008247": 27.9,
+    "0275, 0276": 21.458333333333336,
+    "1819": 32.36666666666667,
+    "1501": 11.666666666666666,
+    "1500": 44.425,
+    "1555": 32.233333333333334,
+    "1556": 45.733333333333334,
+    "39510280": 39.016666666666666,
+    "SAS5LUNGOGIALLO": 34.025,
+    "SAS5LUNGOVERDE": 34.31666666666667,
+    "3237": 38.96666666666667,
+    "113071": 54.25,
+    "112703": 74.0,
+    "SAS5LUNGOROSSO": 25.233333333333334,
+    "39520170": 55.95833333333333,
+    "S41342": 14.583333333333332,
+    "S41396": 24.608333333333334,
+    "S41352": 134.8,
+    "S41489": 25.45,
+    "S41485": 6.15,
+    "S41365": 20.566666666666666,
+    "S41366": 19.5,
+    "1442/A": 36.75,
+    "39530440": 47.05,
+    "1573": 22.866666666666667,
+    "1617": 26.9,
+    "1614": 39.05,
+    "1615, 1618": 33.86666666666667,
+    "1445-A, 1445-B, 1445-C": 26.0,
+    "3230": 8.216666666666667,
+    "3231, 3232": 53.56666666666667,
+    "COMPENS S36 NERO, SELLA 36 NERO, SPESSORE S36 NERO": 47.0,
+    "1637": 9.7,
+    "1733": 29.916666666666668,
+    "1636-R": 5.5,
+    "0009-A, 0009-C": 8.183333333333334,
+    "101A3358B": 14.483333333333333,
+    "0009-B": 2.8833333333333333,
+    "101A5010C": 8.0,
+    "VAMEFIX": 38.6,
+    "RID 42": 200.18333333333334,
+    "S41342W": 246.6,
+    "3372": 37.78333333333333,
+    "1499": 15.875,
+    "Ø127": 102.28333333333333,
+    "Ø178": 67.23333333333333,
+    "3135": 15.908333333333333,
+    "02035200000": 53.85,
+    "S41332": 70.9,
+    "S41371": 6.783333333333333,
+    "S41333": 16.8,
+    "101A1589E": 24.383333333333333,
+    "0054/N": 13.908333333333333,
+    "S41273": 16.283333333333335,
+    "S41274": 21.166666666666668,
+    "1142": 28.366666666666667,
+    "Ø115": 22.666666666666668,
+    "3235, 3236": 63.45,
+    "114362": 92.0,
+    "0203276V0100": 9.208333333333334,
+    "1501, 1502": 36.81666666666667,
+    "1572": 36.61666666666667,
+    "101A1370A": 27.7,
+    "S41309": 10.15,
+    "55521150": 20.5,
+    "201A3308B": 173.25,
+    "S41372": 10.716666666666667,
+    "3120": 26.0,
+    "1143/N": 12.5,
+    "3124": 17.233333333333334,
+    "101A1660A": 19.95,
+    "SC35 NY BIANCO": 144.0,
+    "SC35 NY BLU": 72.28333333333333,
+    "39510220": 30.5,
+    "3474-Y": 19.1,
+    "3476-R": 32.0,
+    "S41513": 14.483333333333333,
+    "S41523": 8.0,
+    "S41622": 74.0,
+    "1502, 1501": 51.5,
+    "101A1595B": 49.0,
+    "020327500000": 24.5
+  },
+  "orepp": {
+    "3121, 3122": 0.01713888888888889,
+    "39540150": 0.0004962878787878788,
+    "39540320": 0.0010078355812459857,
+    "3123-PC": 0.0048693134822167085,
+    "0405": 0.0015999999999999999,
+    "1488": 0.00370327380952381,
+    "S41319": 0.0311489898989899,
+    "3115": 0.0006411111111111112,
+    "3025": 0.00425982905982906,
+    "S41490": 0.0015644841269841269,
+    "S41339": 0.015916666666666666,
+    "101A8103C": 0.008036111111111112,
+    "S41318": 0.02372334455667789,
+    "S41343": 0.14424382716049383,
+    "0020": 0.0015379725085910654,
+    "39540300": 0.002110950453055716,
+    "114103": 0.0017284420289855069,
+    "39520240": 0.002108101851851852,
+    "39520740": 0.0010972727272727273,
+    "55522030": 0.0015424074074074073,
+    "55521960": 0.0012813403747013706,
+    "S41373": 0.020499999999999997,
+    "39530340": 0.0014123349834983497,
+    "107A0041A": 0.0007368333333333334,
+    "SAS5LUNGOBIANCO": 0.0006969767441860465,
+    "3022": 0.005151333333333333,
+    "101A3315A": 0.00435625,
+    "39540530": 0.0025416666666666665,
+    "39510250": 0.0028627777777777775,
+    "114261": 0.0018344566993464054,
+    "39530420": 0.0015877380952380952,
+    "55521080": 0.0015076210826210825,
+    "3381, 3382": 0.005083333333333333,
+    "3379, 3380": 0.0049,
+    "101A3372C": 0.01689861111111111,
+    "39540400": 0.0021927083333333334,
+    "101A8103A": 0.0053876666666666665,
+    "39530170": 0.004152777777777778,
+    "39520770": 0.0011167943518101246,
+    "39530390": 0.002170833333333333,
+    "39510210": 0.0004094246031746031,
+    "SAS5LUNGOBLU": 0.0009226190476190476,
+    "008247": 0.02895165945165945,
+    "0275, 0276": 0.007152777777777779,
+    "1819": 0.0018789999999999998,
+    "1501": 0.0076407407407407405,
+    "1500": 0.019462962962962963,
+    "1555": 0.01841904761904762,
+    "1556": 0.022866666666666667,
+    "39510280": 0.0010837962962962962,
+    "SAS5LUNGOGIALLO": 0.000756111111111111,
+    "SAS5LUNGOVERDE": 0.001143888888888889,
+    "3237": 0.03896666666666667,
+    "113071": 0.002855263157894737,
+    "112703": 0.0025087719298245614,
+    "SAS5LUNGOROSSO": 0.0010093333333333334,
+    "39520170": 0.0018652777777777776,
+    "S41342": 0.03295668549905838,
+    "S41396": 0.005468518518518518,
+    "S41352": 0.1348,
+    "S41489": 0.002120833333333333,
+    "S41485": 0.017083333333333336,
+    "S41365": 0.047608024691358025,
+    "S41366": 0.041666666666666664,
+    "1442/A": 0.014916666666666668,
+    "39530440": 0.0011202380952380952,
+    "1573": 0.015244444444444444,
+    "1617": 0.010759999999999999,
+    "1614": 0.015619999999999998,
+    "1615, 1618": 0.013546666666666667,
+    "1445-A, 1445-B, 1445-C": 0.011600000000000001,
+    "3230": 0.0013694444444444444,
+    "3231, 3232": 0.017855555555555555,
+    "COMPENS S36 NERO, SELLA 36 NERO, SPESSORE S36 NERO": 0.0015666666666666667,
+    "1637": 0.004849999999999999,
+    "1733": 0.011966666666666667,
+    "1636-R": 0.011,
+    "0009-A, 0009-C": 0.004091666666666667,
+    "101A3358B": 0.0059833333333333336,
+    "0009-B": 0.0014416666666666666,
+    "101A5010C": 0.0032,
+    "VAMEFIX": 0.016495726495726497,
+    "RID 42": 0.01819848484848485,
+    "S41342W": 8.22,
+    "3372": 0.018891666666666664,
+    "1499": 0.00396875,
+    "Ø127": 0.010228333333333332,
+    "Ø178": 0.013446666666666668,
+    "3135": 0.015908333333333333,
+    "02035200000": 0.026925,
+    "S41332": 0.03545,
+    "S41371": 0.006783333333333333,
+    "S41333": 0.0021000000000000003,
+    "101A1589E": 0.006095833333333333,
+    "0054/N": 0.00213974358974359,
+    "S41273": 0.015077160493827162,
+    "S41274": 0.018966547192353644,
+    "1142": 0.014183333333333334,
+    "Ø115": 0.002266666666666667,
+    "3235, 3236": 0.042300000000000004,
+    "114362": 0.0016140350877192982,
+    "0203276V0100": 0.01753968253968254,
+    "1501, 1502": 0.012272222222222223,
+    "1572": 0.018308333333333333,
+    "101A1370A": 0.0277,
+    "S41309": 0.00203,
+    "55521150": 0.0014642857142857142,
+    "201A3308B": 0.086625,
+    "S41372": 0.01913690476190476,
+    "3120": 0.004333333333333333,
+    "1143/N": 0.004098360655737705,
+    "3124": 0.011488888888888889,
+    "101A1660A": 0.009975,
+    "SC35 NY BIANCO": 0.00288,
+    "SC35 NY BLU": 0.0014456666666666667,
+    "39510220": 0.0005865384615384616,
+    "3474-Y": 0.038200000000000005,
+    "3476-R": 0.064,
+    "S41513": 0.0024138888888888886,
+    "S41523": 0.0016,
+    "S41622": 0.2740740740740741,
+    "1502, 1501": 0.0206,
+    "101A1595B": 0.010888888888888889,
+    "020327500000": 0.0245
+  },
+  "aff": {
+    "3121, 3122": {
+      "pct": 50.0,
+      "n": 2,
+      "n_presse": 2
+    },
+    "39540150": {
+      "pct": 100.0,
+      "n": 12,
+      "n_presse": 1
+    },
+    "39540320": {
+      "pct": 100.0,
+      "n": 4,
+      "n_presse": 1
+    },
+    "3123-PC": {
+      "pct": 100.0,
+      "n": 5,
+      "n_presse": 1
+    },
+    "0405": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "1488": {
+      "pct": 75.0,
+      "n": 8,
+      "n_presse": 3
+    },
+    "S41319": {
+      "pct": 33.3,
+      "n": 3,
+      "n_presse": 3
+    },
+    "3115": {
+      "pct": 100.0,
+      "n": 7,
+      "n_presse": 1
+    },
+    "3025": {
+      "pct": 70.0,
+      "n": 10,
+      "n_presse": 2
+    },
+    "S41490": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "S41339": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "101A8103C": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "S41318": {
+      "pct": 66.7,
+      "n": 3,
+      "n_presse": 2
+    },
+    "S41343": {
+      "pct": 33.3,
+      "n": 3,
+      "n_presse": 3
+    },
+    "0020": {
+      "pct": 100.0,
+      "n": 5,
+      "n_presse": 1
+    },
+    "39540300": {
+      "pct": 70.0,
+      "n": 10,
+      "n_presse": 3
+    },
+    "114103": {
+      "pct": 96.4,
+      "n": 28,
+      "n_presse": 2
+    },
+    "39520240": {
+      "pct": 66.7,
+      "n": 3,
+      "n_presse": 2
+    },
+    "39520740": {
+      "pct": 90.9,
+      "n": 22,
+      "n_presse": 3
+    },
+    "55522030": {
+      "pct": 50.0,
+      "n": 4,
+      "n_presse": 2
+    },
+    "55521960": {
+      "pct": 60.0,
+      "n": 5,
+      "n_presse": 2
+    },
+    "S41373": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "39530340": {
+      "pct": 87.5,
+      "n": 8,
+      "n_presse": 2
+    },
+    "107A0041A": {
+      "pct": 50.0,
+      "n": 2,
+      "n_presse": 2
+    },
+    "SAS5LUNGOBIANCO": {
+      "pct": 100.0,
+      "n": 4,
+      "n_presse": 1
+    },
+    "3022": {
+      "pct": 80.0,
+      "n": 5,
+      "n_presse": 2
+    },
+    "101A3315A": {
+      "pct": 75.0,
+      "n": 4,
+      "n_presse": 2
+    },
+    "39540530": {
+      "pct": 50.0,
+      "n": 2,
+      "n_presse": 2
+    },
+    "39510250": {
+      "pct": 66.7,
+      "n": 3,
+      "n_presse": 2
+    },
+    "114261": {
+      "pct": 100.0,
+      "n": 8,
+      "n_presse": 1
+    },
+    "39530420": {
+      "pct": 100.0,
+      "n": 8,
+      "n_presse": 1
+    },
+    "55521080": {
+      "pct": 66.7,
+      "n": 3,
+      "n_presse": 2
+    },
+    "3381, 3382": {
+      "pct": 50.0,
+      "n": 2,
+      "n_presse": 2
+    },
+    "3379, 3380": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "101A3372C": {
+      "pct": 100.0,
+      "n": 4,
+      "n_presse": 1
+    },
+    "39540400": {
+      "pct": 100.0,
+      "n": 3,
+      "n_presse": 1
+    },
+    "101A8103A": {
+      "pct": 100.0,
+      "n": 3,
+      "n_presse": 1
+    },
+    "39530170": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "39520770": {
+      "pct": 100.0,
+      "n": 6,
+      "n_presse": 1
+    },
+    "39530390": {
+      "pct": 50.0,
+      "n": 2,
+      "n_presse": 2
+    },
+    "39510210": {
+      "pct": 100.0,
+      "n": 21,
+      "n_presse": 1
+    },
+    "SAS5LUNGOBLU": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "008247": {
+      "pct": 100.0,
+      "n": 11,
+      "n_presse": 1
+    },
+    "0275, 0276": {
+      "pct": 50.0,
+      "n": 2,
+      "n_presse": 2
+    },
+    "1819": {
+      "pct": 66.7,
+      "n": 3,
+      "n_presse": 2
+    },
+    "1501": {
+      "pct": 66.7,
+      "n": 3,
+      "n_presse": 2
+    },
+    "1500": {
+      "pct": 40.0,
+      "n": 5,
+      "n_presse": 3
+    },
+    "1555": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "1556": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "39510280": {
+      "pct": 50.0,
+      "n": 2,
+      "n_presse": 2
+    },
+    "SAS5LUNGOGIALLO": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "SAS5LUNGOVERDE": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "3237": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "113071": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "112703": {
+      "pct": 100.0,
+      "n": 3,
+      "n_presse": 1
+    },
+    "SAS5LUNGOROSSO": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "39520170": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "S41342": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "S41396": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "S41352": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "S41489": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "S41485": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "S41365": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "S41366": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "1442/A": {
+      "pct": 100.0,
+      "n": 3,
+      "n_presse": 1
+    },
+    "39530440": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "1573": {
+      "pct": 50.0,
+      "n": 2,
+      "n_presse": 2
+    },
+    "1617": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "1614": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "1615, 1618": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "1445-A, 1445-B, 1445-C": {
+      "pct": 100.0,
+      "n": 3,
+      "n_presse": 1
+    },
+    "3230": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "3231, 3232": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "COMPENS S36 NERO, SELLA 36 NERO, SPESSORE S36 NERO": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "1637": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "1733": {
+      "pct": 50.0,
+      "n": 2,
+      "n_presse": 2
+    },
+    "1636-R": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "0009-A, 0009-C": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "101A3358B": {
+      "pct": 66.7,
+      "n": 3,
+      "n_presse": 2
+    },
+    "0009-B": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "101A5010C": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "VAMEFIX": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "RID 42": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "S41342W": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "3372": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "1499": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "Ø127": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "Ø178": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "3135": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "02035200000": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "S41332": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "S41371": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "S41333": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "101A1589E": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "0054/N": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "S41273": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "S41274": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "1142": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "Ø115": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "3235, 3236": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "114362": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "0203276V0100": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "1501, 1502": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "1572": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "101A1370A": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "S41309": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "55521150": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "201A3308B": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "S41372": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "3120": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "1143/N": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "3124": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "101A1660A": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "SC35 NY BIANCO": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "SC35 NY BLU": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "39510220": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "3474-Y": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "3476-R": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "S41513": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "S41523": {
+      "pct": 100.0,
+      "n": 2,
+      "n_presse": 1
+    },
+    "S41622": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "1502, 1501": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "101A1595B": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    },
+    "020327500000": {
+      "pct": 100.0,
+      "n": 1,
+      "n_presse": 1
+    }
+  },
+  "meta": {
+    "generated": "2026-05-21T07:03:00.283955"
+  }
+}

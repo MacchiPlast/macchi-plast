@@ -31,7 +31,7 @@ label{display:block;font-size:12px;font-weight:500;color:var(--muted);text-trans
 input{width:100%;padding:10px 13px;border:1px solid var(--border);border-radius:var(--r);font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:var(--text);background:var(--bg);outline:none}
 input:focus{border-color:var(--text);background:#fff}
 .ac-wrap{position:relative}
-.ac-list{position:absolute;top:calc(100% + 4px);left:0;right:0;background:var(--surface);border:1px solid var(--border-s);border-radius:var(--r);z-index:300;max-height:220px;overflow-y:auto;box-sh[...]
+.ac-list{position:absolute;top:calc(100% + 4px);left:0;right:0;background:var(--surface);border:1px solid var(--border-s);border-radius:var(--r);z-index:300;max-height:220px;overflow-y:auto;box-shadow:0 4px 12px rgba(0,0,0,0.08)}
 .ac-item{padding:9px 13px;font-size:13px;cursor:pointer;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:8px}
 .ac-item:last-child{border-bottom:none}
 .ac-item:hover{background:var(--bg)}
@@ -73,13 +73,13 @@ input:focus{border-color:var(--text);background:#fff}
 .odl-count{font-size:12px;color:var(--muted);margin-bottom:10px}
 .tw{overflow-x:auto}
 table{width:100%;border-collapse:collapse;font-size:13px}
-th{text-align:left;padding:7px 10px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);border-bottom:2px solid var(--border);background:var(--bg);white-[...]
+th{text-align:left;padding:7px 10px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);border-bottom:2px solid var(--border);background:var(--bg);white-space:nowrap}
 td{padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:middle}
 tr:last-child td{border-bottom:none}
 tr:hover td{background:#faf9f6}
 .mono{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500}
-.cr-tag{display:inline-block;font-size:10px;font-family:'IBM Plex Mono',monospace;font-weight:600;padding:2px 7px;border-radius:4px;background:var(--red-bg);color:var(--red);border:1px solid var(-[...]
-.at{display:inline-block;font-size:10px;font-family:'IBM Plex Mono',monospace;font-weight:600;padding:2px 7px;border-radius:4px;background:var(--amber-bg);color:var(--amber);border:1px solid var(-[...]
+.cr-tag{display:inline-block;font-size:10px;font-family:'IBM Plex Mono',monospace;font-weight:600;padding:2px 7px;border-radius:4px;background:var(--red-bg);color:var(--red);border:1px solid var(--red-b)}
+.at{display:inline-block;font-size:10px;font-family:'IBM Plex Mono',monospace;font-weight:600;padding:2px 7px;border-radius:4px;background:var(--amber-bg);color:var(--amber);border:1px solid var(--amber-b)}
 .tc{font-size:11px;color:var(--muted);max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:'IBM Plex Mono',monospace}
 .empty{text-align:center;padding:2.5rem 1rem;color:var(--hint);font-size:14px}
 .pos-big{display:inline-flex;align-items:center;gap:16px;background:var(--purple-bg);border:2px solid var(--purple-b);border-radius:var(--rl);padding:14px 20px}
@@ -214,11 +214,9 @@ tr:hover td{background:#faf9f6}
   let DB = {};
   let sel = null;
 
-  // Costanti
   const COLORS = ['#1a4fa0','#1a7a4a','#9a1f1f','#7a4f00','#5b2d8e','#006d77','#b5446e','#3d6b00','#8b4513'];
   const MESI = ['Gen','Feb','Mar','Apr','Mag','Giu','Lug','Ago','Set','Ott','Nov','Dic'];
 
-  // Carica data.json dalla stessa cartella
   fetch('data.json')
     .then(r => {
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
@@ -231,11 +229,10 @@ tr:hover td{background:#faf9f6}
     })
     .catch(err => {
       console.error('Errore caricamento:', err);
-      id('empty-state').innerHTML = `<div class="empty">❌ Errore nel caricamento di data.json<br><small style="font-size:12px;color:var(--muted)">Assicurati che:<br>• data.json esista nella s[...]
+      id('empty-state').innerHTML = '<div class="empty">❌ Errore nel caricamento di data.json<br><small style="font-size:12px;color:var(--muted)">Assicurati che data.json esista nella stessa cartella di index.html</small></div>';
     });
 
   function init() {
-    // Build database
     DATA.odl.forEach(o => {
       if (!o.articolo) return;
       if (!DB[o.articolo]) {
@@ -259,11 +256,9 @@ tr:hover td{background:#faf9f6}
 
     ARTS = Object.keys(DB).sort();
     
-    // Update header
     const meta = DATA.meta || {};
     id('hsub').textContent = `${meta.total_ordini || 0} ordini · ${meta.total_articoli || 0} articoli · aggiornato ${new Date().toLocaleDateString('it-IT')}`;
     
-    // Setup event listeners
     id('inp-art').addEventListener('input', onInputArt);
     id('ac-list').addEventListener('mousedown', onSelectArt);
     id('inp-art').addEventListener('blur', () => setTimeout(() => id('ac-list').style.display='none', 200));
@@ -310,9 +305,7 @@ tr:hover td{background:#faf9f6}
   function findPos(art) {
     if (!art) return null;
     const key = art.toUpperCase().trim();
-    // Primo check: lookup diretto
     if (DATA.lookup[key]) return DATA.lookup[key][0];
-    // Secondo check: ricerca fuzzy nel lookup
     const keys = Object.keys(DATA.lookup);
     for (let k of keys) {
       if (k.indexOf(key) >= 0 || key.indexOf(k) >= 0) return DATA.lookup[k][0];
@@ -333,7 +326,6 @@ tr:hover td{background:#faf9f6}
     id('r-cod').textContent = sel.articolo;
     id('r-cli').textContent = sel.cliente || '';
 
-    // POSIZIONE STAMPO
     const pos = findPos(sel.articolo);
     const posEl = id('r-pos-content');
     if (pos) {
@@ -356,7 +348,6 @@ tr:hover td{background:#faf9f6}
       posEl.innerHTML = '<div class="pos-none">Posizione non ancora mappata per questo articolo</div>';
     }
 
-    // PRESSA
     id('r-pressa').textContent = sel.pressa || '';
     const affDati = DATA.aff[sel.articolo];
     const cb = id('r-conf');
@@ -387,7 +378,6 @@ tr:hover td{background:#faf9f6}
       show(id('r-pw'));
     }
 
-    // MATERIALE
     if (pezzi && sel.peso) {
       const kn = pezzi*sel.peso/1000, kt = kn*1.03;
       id('r-kgn').innerHTML = kn.toFixed(2);
@@ -400,7 +390,6 @@ tr:hover td{background:#faf9f6}
     id('r-mat').textContent = sel.mat || '';
     id('r-form').textContent = pezzi&&sel.peso ? Math.round(pezzi).toLocaleString('it-IT')+' pz x '+sel.peso.toFixed(3)+' g / 1000 x 1.03' : 'Inserisci i pezzi per il calcolo';
 
-    // ORE
     const om = id('r-ore'), od = id('r-ored');
     if (pezzi && sel.opp) {
       const ore = pezzi*sel.opp;
@@ -416,7 +405,6 @@ tr:hover td{background:#faf9f6}
       od.innerHTML = '';
     }
 
-    // ODL
     const ordini = DATA.odl.filter(o => o.articolo === sel.articolo).map(o => {
       const dd = o.data_inizio ? o.data_inizio.split('/') : null;
       o._ts = dd ? new Date(parseInt(dd[2]), parseInt(dd[1])-1, parseInt(dd[0])) : null;
@@ -523,7 +511,6 @@ tr:hover td{background:#faf9f6}
     ).join('');
   }
 
-  // Utilities
   function id(x) { return document.getElementById(x); }
   function show(el) { el.classList.remove('hidden'); }
   function hide(el) { el.classList.add('hidden'); }

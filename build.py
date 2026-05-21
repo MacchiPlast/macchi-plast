@@ -3,7 +3,7 @@ import pandas as pd
 import re
 import json
 import os
-from collections import defaultdict
+from datetime import datetime
 
 # ── Percorsi ──────────────────────────────────────────────────────────────────
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -71,7 +71,7 @@ def load_csv(path):
     if not os.path.exists(path):
         raise FileNotFoundError(f"CSV non trovato: {path}")
     
-    print(f"Lettura CSV: {path}")
+    print(f"📄 Lettura CSV: {path}")
     df = pd.read_csv(path, sep=None, engine='python', encoding='utf-8-sig')
     df.columns = [c.lstrip('\ufeff') for c in df.columns]
     
@@ -79,11 +79,11 @@ def load_csv(path):
         if col in df.columns:
             df[col] = df[col].apply(clean_notion_field)
     
-    print(f"Righe processate: {len(df)}")
+    print(f"✅ Righe processate: {len(df)}")
     return df
 
 
-# ── CALCOLA SOGLIE E ORE ──────────────────────────────────────────────────────
+# ── CALCOLA SOGLIE E ORE PER PEZZO ────────────────────────────────────────────
 def calc_metrics(df):
     soglie = {}
     orepp = {}
@@ -104,8 +104,8 @@ def calc_metrics(df):
     return soglie, orepp
 
 
-# ── CALCOLA AFFIDABILITA ─────────────────────────────────────────────────────
-def calc_affidabilita(df, soglie):
+# ── CALCOLA AFFIDABILITA ──────────────────────────────────────────────────────
+def calc_affidabilita(df):
     aff = {}
     
     for articolo in df['Articolo'].unique():
@@ -146,25 +146,25 @@ def main():
         
         # Calcola metriche
         soglie, orepp = calc_metrics(df)
-        aff = calc_affidabilita(df, soglie)
+        aff = calc_affidabilita(df)
         
         # Prepara ODL records
         odl = []
         for _, row in df.iterrows():
             odl.append({
-                "odl": str(row.get('ODL', '')),
-                "articolo": str(row.get('Articolo', '')),
-                "cliente": str(row.get('Cliente', '')),
-                "pressa": str(row.get('Pressa', '')),
-                "data_inizio": str(row.get('Data di Inizio', '')),
-                "data_fine": str(row.get('Data di Fine', '')),
+                "odl": str(row.get('ODL', '')).strip(),
+                "articolo": str(row.get('Articolo', '')).strip(),
+                "cliente": str(row.get('Cliente', '')).strip(),
+                "pressa": str(row.get('Pressa', '')).strip(),
+                "data_inizio": str(row.get('Data di Inizio', '')).strip(),
+                "data_fine": str(row.get('Data di Fine', '')).strip(),
                 "pezzi": int(row.get('Pezzi da produrre', 0)) if pd.notna(row.get('Pezzi da produrre')) else 0,
                 "kg": float(row.get('Kg da utilizzare', 0)) if pd.notna(row.get('Kg da utilizzare')) else 0,
                 "ore": float(row.get('Ore di Produzione', 0)) if pd.notna(row.get('Ore di Produzione')) else 0,
                 "peso_medio": float(row.get('Peso medio', 0)) if pd.notna(row.get('Peso medio')) else 0,
-                "materiale": str(row.get('Materiale', '')),
-                "lotto": str(row.get('Lotto Materiale', '')),
-                "criticita": str(row.get('Criticità', '')) if pd.notna(row.get('Criticità')) else ""
+                "materiale": str(row.get('Materiale', '')).strip(),
+                "lotto": str(row.get('Lotto Materiale', '')).strip(),
+                "criticita": str(row.get('Criticità', '')).strip() if pd.notna(row.get('Criticità')) else ""
             })
         
         # Prepara data.json
@@ -176,7 +176,7 @@ def main():
             "aff": aff,
             "scaffali": cfg.get('scaffali', {}),
             "meta": {
-                "generated": pd.Timestamp.now().isoformat(),
+                "generated": datetime.now().isoformat(),
                 "total_ordini": len(odl),
                 "total_articoli": len(lookup)
             }
@@ -186,12 +186,14 @@ def main():
         with open(PATHS["data_json"], 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
         
-        print(f"Build completata: {PATHS['data_json']}")
-        print(f"- {len(odl)} ordini")
-        print(f"- {len(lookup)} articoli")
+        print(f"🚀 Build completata: {PATHS['data_json']}")
+        print(f"  • {len(odl)} ordini")
+        print(f"  • {len(lookup)} articoli")
+        print(f"  • {len(soglie)} soglie calcolate")
+        print(f"  • {len(aff)} metriche affidabilità")
         
     except Exception as e:
-        print(f"ERRORE: {e}")
+        print(f"💥 ERRORE: {e}")
         import traceback
         traceback.print_exc()
 

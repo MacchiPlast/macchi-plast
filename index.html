@@ -217,7 +217,7 @@ tr:hover td{background:#faf9f6}
   const COLORS = ['#1a4fa0','#1a7a4a','#9a1f1f','#7a4f00','#5b2d8e','#006d77','#b5446e','#3d6b00','#8b4513'];
   const MESI = ['Gen','Feb','Mar','Apr','Mag','Giu','Lug','Ago','Set','Ott','Nov','Dic'];
 
-  fetch('data.json')
+  fetch('docs/data.json')
     .then(r => {
       if (!r.ok) throw new Error(`HTTP ${r.status}`);
       return r.json();

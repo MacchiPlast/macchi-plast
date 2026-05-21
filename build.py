@@ -13,7 +13,7 @@ from datetime import datetime
 # ── Percorsi ──────────────────────────────────────────────────────────────────
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PATHS = {
-    "csv": os.path.join(BASE_DIR, 'ordini.csv'),
+    "csv": os.path.join(BASE_DIR, 'data', 'ordini.csv'),  # ← Cerca in data/
     "config": os.path.join(BASE_DIR, 'config.json'),
     "out_dir": os.path.join(BASE_DIR),
     "data_json": os.path.join(BASE_DIR, 'data.json')

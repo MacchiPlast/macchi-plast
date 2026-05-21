@@ -155,10 +155,12 @@ input:focus{border-color:var(--text);background:#fff}
 
   async function loadData() {
     try {
+      // Caricamento configurazione principale
       const configRes = await fetch('config.json');
       if (!configRes.ok) throw new Error('config.json non trovato');
       configData = await configRes.json();
 
+      // Caricamento dati ordini/articoli
       const dataRes = await fetch('data.json');
       if (dataRes.ok) {
         const rawData = await dataRes.json();
@@ -173,24 +175,26 @@ input:focus{border-color:var(--text);background:#fff}
   }
 
   function createInverseMapping() {
-    if (!configData || !configData.scaffali) return;
-
-    for (const [scaffale, articoli] of Object.entries(configData.scaffali)) {
-      for (const articolo of articoli) {
-        // Gestisci liste separate (/, ,)
-        let lista = [];
-        if (articolo.includes('/')) {
-          lista = articolo.split('/').map(s => s.trim());
-        } else if (articolo.includes(',')) {
-          lista = articolo.split(',').map(s => s.trim());
-        } else {
-          lista = [articolo.trim()];
-        }
-        
-        for (const item of lista) {
-          articoloToScaffale[item] = scaffale;
+    // 1. Mappa dagli scaffali (config.json)
+    if (configData && configData.scaffali) {
+      for (const [scaffale, articoli] of Object.entries(configData.scaffali)) {
+        for (const entry of articoli) {
+          // Gestione separatori / e ,
+          let lista = entry.split(/[\/,]/).map(s => s.trim());
+          for (const item of lista) {
+            if (item) articoloToScaffale[item] = scaffale;
+          }
         }
       }
+    }
+
+    // 2. Assicurati che gli articoli di data.json siano mappabili anche se non in config
+    if (dataArray) {
+      dataArray.forEach(record => {
+        if (record.articolo && !articoloToScaffale[record.articolo]) {
+          articoloToScaffale[record.articolo] = "Non collocato";
+        }
+      });
     }
   }
 
@@ -206,7 +210,7 @@ input:focus{border-color:var(--text);background:#fff}
       }
 
       const matches = Object.keys(articoloToScaffale)
-        .filter(a => a.includes(val))
+        .filter(a => a.toUpperCase().includes(val))
         .slice(0, 10);
 
       if (!matches.length) {
@@ -250,44 +254,35 @@ input:focus{border-color:var(--text);background:#fff}
   function mostraRisultato(articolo) {
     hideError();
     
-    const scaffale = articoloToScaffale[articolo];
-    if (!scaffale) {
-      showError(`"${articolo}" non trovato`);
-      document.getElementById('riepilogo').classList.add('hidden');
-      return;
-    }
-
-    // Estrai riga e colonna
-    const riga = scaffale.match(/[A-Z]/)[0];
-    const colonna = scaffale.match(/\d+/)[0];
-
-    // Mostra intestazione
+    const scaffale = articoloToScaffale[articolo] || "Non specificato";
+    
+    // UI: Intestazione
     document.getElementById('r-cod').textContent = articolo;
     document.getElementById('r-cli').textContent = 'Scaffale: ' + scaffale;
 
-    // Posizione
-    document.getElementById('r-pos-coord').textContent = scaffale;
-    document.getElementById('r-pos-riga').textContent = `Riga ${riga} · Colonna ${colonna}`;
+    // UI: Posizione (se possibile)
+    if (scaffale !== "Non collocato" && scaffale !== "Non specificato") {
+      const riga = scaffale.match(/[A-Z]/) ? scaffale.match(/[A-Z]/)[0] : '?';
+      const colonna = scaffale.match(/\d+/) ? scaffale.match(/\d+/)[0] : '?';
+      document.getElementById('r-pos-coord').textContent = scaffale;
+      document.getElementById('r-pos-riga').textContent = `Riga ${riga} · Colonna ${colonna}`;
+    } else {
+      document.getElementById('r-pos-coord').textContent = 'N/A';
+      document.getElementById('r-pos-riga').textContent = 'Posizione non definita';
+    }
     document.getElementById('r-pos-stampo').textContent = articolo;
 
-    // Mostra altri articoli nello scaffale
-    const altriArticoli = configData.scaffali[scaffale] || [];
-    let altriHtml = '';
-    if (altriArticoli.length > 1) {
-      const altri = altriArticoli.filter(a => a !== articolo);
-      if (altri.length > 0) {
-        altriHtml = '<div style="margin-top:10px"><b>Stesso scaffale:</b> ' + altri.join(', ') + '</div>';
-      }
-    }
-    document.getElementById('r-pos-altri').innerHTML = altriHtml;
+    // UI: Altri articoli
+    const altriArticoli = configData.scaffali ? (configData.scaffali[scaffale] || []) : [];
+    const altri = altriArticoli.filter(a => a !== articolo);
+    document.getElementById('r-pos-altri').innerHTML = altri.length > 0 
+      ? '<div style="margin-top:10px"><b>Stesso scaffale:</b> ' + altri.join(', ') + '</div>' 
+      : '';
 
-    // Cerca in data.json
+    // UI: Dati da data.json
     let datiSection = document.getElementById('dati-section');
     if (dataArray) {
-      const record = dataArray.find(r => 
-        r.articolo && r.articolo.toUpperCase() === articolo.toUpperCase()
-      );
-      
+      const record = dataArray.find(r => r.articolo && r.articolo.toUpperCase() === articolo.toUpperCase());
       if (record) {
         document.getElementById('r-odl').textContent = record.odl || '—';
         document.getElementById('r-cliente').textContent = record.cliente || '—';
@@ -314,7 +309,6 @@ input:focus{border-color:var(--text);background:#fff}
     document.getElementById('error-msg').classList.remove('show');
   }
 
-  // Inizializza
   loadData();
 })();
 </script>

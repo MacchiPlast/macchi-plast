@@ -31,7 +31,7 @@ label{display:block;font-size:12px;font-weight:500;color:var(--muted);text-trans
 input{width:100%;padding:10px 13px;border:1px solid var(--border);border-radius:var(--r);font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:var(--text);background:var(--bg);outline:none}
 input:focus{border-color:var(--text);background:#fff}
 .ac-wrap{position:relative}
-.ac-list{position:absolute;top:calc(100% + 4px);left:0;right:0;background:var(--surface);border:1px solid var(--border-s);border-radius:var(--r);z-index:300;max-height:220px;overflow-y:auto;box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.ac-list{position:absolute;top:calc(100% + 4px);left:0;right:0;background:var(--surface);border:1px solid var(--border-s);border-radius:var(--r);z-index:300;max-height:220px;overflow-y:auto;box-sh[...]
 .ac-item{padding:9px 13px;font-size:13px;cursor:pointer;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:8px}
 .ac-item:last-child{border-bottom:none}
 .ac-item:hover{background:var(--bg)}
@@ -73,13 +73,13 @@ input:focus{border-color:var(--text);background:#fff}
 .odl-count{font-size:12px;color:var(--muted);margin-bottom:10px}
 .tw{overflow-x:auto}
 table{width:100%;border-collapse:collapse;font-size:13px}
-th{text-align:left;padding:7px 10px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);border-bottom:2px solid var(--border);background:var(--bg);white-space:nowrap}
+th{text-align:left;padding:7px 10px;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.4px;color:var(--muted);border-bottom:2px solid var(--border);background:var(--bg);white-[...]
 td{padding:8px 10px;border-bottom:1px solid var(--border);vertical-align:middle}
 tr:last-child td{border-bottom:none}
 tr:hover td{background:#faf9f6}
 .mono{font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500}
-.cr-tag{display:inline-block;font-size:10px;font-family:'IBM Plex Mono',monospace;font-weight:600;padding:2px 7px;border-radius:4px;background:var(--red-bg);color:var(--red);border:1px solid var(--red-b)}
-.at{display:inline-block;font-size:10px;font-family:'IBM Plex Mono',monospace;font-weight:600;padding:2px 7px;border-radius:4px;background:var(--amber-bg);color:var(--amber);border:1px solid var(--amber-b)}
+.cr-tag{display:inline-block;font-size:10px;font-family:'IBM Plex Mono',monospace;font-weight:600;padding:2px 7px;border-radius:4px;background:var(--red-bg);color:var(--red);border:1px solid var(-[...]
+.at{display:inline-block;font-size:10px;font-family:'IBM Plex Mono',monospace;font-weight:600;padding:2px 7px;border-radius:4px;background:var(--amber-bg);color:var(--amber);border:1px solid var(-[...]
 .tc{font-size:11px;color:var(--muted);max-width:160px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-family:'IBM Plex Mono',monospace}
 .empty{text-align:center;padding:2.5rem 1rem;color:var(--hint);font-size:14px}
 .pos-big{display:inline-flex;align-items:center;gap:16px;background:var(--purple-bg);border:2px solid var(--purple-b);border-radius:var(--rl);padding:14px 20px}
@@ -231,7 +231,7 @@ tr:hover td{background:#faf9f6}
     })
     .catch(err => {
       console.error('Errore caricamento:', err);
-      id('empty-state').innerHTML = `<div class="empty">❌ Errore nel caricamento di data.json<br><small style="font-size:12px;color:var(--muted)">Assicurati che:<br>• data.json esista nella stessa cartella<br>• Esegui: python3 build.py<br>• Apri con server locale: python3 -m http.server 8000</small></div>`;
+      id('empty-state').innerHTML = `<div class="empty">❌ Errore nel caricamento di data.json<br><small style="font-size:12px;color:var(--muted)">Assicurati che:<br>• data.json esista nella s[...]
     });
 
   function init() {
@@ -428,9 +428,10 @@ tr:hover td{background:#faf9f6}
     const sog = DATA.soglie[sel.articolo];
     const nc = ordini.filter(o => o.criticita).length;
     const an = ordini.filter(o => o.ore && sog && o.ore > sog*1.5).length;
-    id('r-cnt').textContent = ordini.length + ' ordine' + (ordini.length!==1?'i':'') + (nc ? ' - '+nc+' con criticità' : '') + (an ? ' - '+an+' anomalie ore' : '');
-    const tot = nc+an;
-    id('r-nc').innerHTML = tot ? '<span class="badge br">! '+tot+' segnalazione'+(tot!==1?'i':'')+'</span>' : '<span class="badge bg">OK Nessuna segnalazione</span>';
+    const tot = nc + an;
+    
+    id('r-cnt').textContent = ordini.length + ' ordine' + (ordini.length!==1?'i':'') + (tot ? ' - '+tot+' con segnalazioni' : '');
+    id('r-nc').innerHTML = tot > 0 ? '<span class="badge br">! '+tot+' segnalazione'+(tot!==1?'i':'')+'</span>' : '<span class="badge bg">OK Nessuna segnalazione</span>';
 
     if (!ordini.length) {
       id('r-tbody').innerHTML = '<tr><td colspan="9" style="text-align:center;color:var(--hint);padding:1.5rem">Nessun ODL trovato</td></tr>';
@@ -439,7 +440,7 @@ tr:hover td{background:#faf9f6}
 
     id('r-tbody').innerHTML = ordini.map(o => {
       const isA = o.ore && sog && o.ore > sog*1.5, hasCr = !!o.criticita;
-      const rs = hasCr ? 'background:#fff8f8' : isA ? 'background:#fffdf0' : '';
+      const rs = (hasCr || isA) ? (hasCr ? 'background:#fff8f8' : 'background:#fffdf0') : '';
       const sg = [];
       if(hasCr) sg.push('<span class="cr-tag">'+o.criticita+'</span>');
       if(isA) sg.push('<span class="at">Ore +50%</span>');

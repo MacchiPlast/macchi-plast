@@ -176,11 +176,40 @@ def main():
                     lookup[art_key] = []
                 lookup[art_key].append(scaffale)
         
+        # Genera aff: affidabilità pressa per articolo
+        # Calcola: % di ordini sulla pressa più usata per quell'articolo
+        aff = {}
+        for art, data in db_articoli.items():
+            ordini = data['ordini']
+            if not ordini:
+                continue
+            
+            # Conta ordini per pressa
+            presse_count = {}
+            for odl in ordini:
+                pressa = odl['pressa']
+                if pressa:
+                    presse_count[pressa] = presse_count.get(pressa, 0) + 1
+            
+            if presse_count:
+                # Pressa più usata
+                pressa_top = max(presse_count, key=presse_count.get)
+                n_top = presse_count[pressa_top]
+                n_total = len(ordini)
+                pct = (n_top / n_total * 100) if n_total > 0 else 0
+                
+                aff[art] = {
+                    'pct': round(pct, 1),
+                    'n': n_total,
+                    'n_presse': len(presse_count)
+                }
+        
         # Struttura finale JSON (come richiesto dall'HTML originale)
         data = {
             "odl": odl_list,
             "scaffali": config.get('scaffali', {}),
-            "lookup": lookup,      # Articoli → Scaffali (nuovo!)
+            "lookup": lookup,      # Articoli → Scaffali
+            "aff": aff,            # Affidabilità pressa per articolo (nuovo!)
             "soglie": soglie,      # Soglie ore per articolo
             "orepp": orepp,        # Ore per pezzo per articolo
             "meta": {

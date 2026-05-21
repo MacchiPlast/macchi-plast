@@ -153,18 +153,18 @@ input:focus{border-color:var(--text);background:#fff}
   var dataArray = null;
   var articoloToScaffale = {};
 
-  async function loadData() {
+async function loadData() {
     try {
-      // Caricamento configurazione principale
       const configRes = await fetch('config.json');
       if (!configRes.ok) throw new Error('config.json non trovato');
       configData = await configRes.json();
 
-      // Caricamento dati ordini/articoli
       const dataRes = await fetch('data.json');
       if (dataRes.ok) {
         const rawData = await dataRes.json();
-        dataArray = Array.isArray(rawData) ? rawData : Object.values(rawData);
+        // MODIFICA QUI: estraiamo l'array dalla chiave "odl"
+        dataArray = rawData.odl ? rawData.odl : []; 
+        console.log("Dati caricati:", dataArray);
       }
 
       createInverseMapping();
@@ -173,7 +173,6 @@ input:focus{border-color:var(--text);background:#fff}
       showError('Errore: ' + error.message);
     }
   }
-
   function createInverseMapping() {
     // 1. Mappa dagli scaffali (config.json)
     if (configData && configData.scaffali) {

@@ -253,23 +253,32 @@ async function loadData() {
   function mostraRisultato(articolo) {
     hideError();
     
-    const scaffale = articoloToScaffale[articolo] || "Non specificato";
-    
-    // UI: Intestazione
-    document.getElementById('r-cod').textContent = articolo;
-    document.getElementById('r-cli').textContent = 'Scaffale: ' + scaffale;
+    // 1. Filtra tutti i record dell'articolo cercato (non solo il primo!)
+    const tuttiIRecord = dataArray.filter(r => 
+      r.articolo && r.articolo.toString().toUpperCase() === articolo.toUpperCase()
+    );
 
-    // UI: Posizione (se possibile)
-    if (scaffale !== "Non collocato" && scaffale !== "Non specificato") {
-      const riga = scaffale.match(/[A-Z]/) ? scaffale.match(/[A-Z]/)[0] : '?';
-      const colonna = scaffale.match(/\d+/) ? scaffale.match(/\d+/)[0] : '?';
-      document.getElementById('r-pos-coord').textContent = scaffale;
-      document.getElementById('r-pos-riga').textContent = `Riga ${riga} · Colonna ${colonna}`;
-    } else {
-      document.getElementById('r-pos-coord').textContent = 'N/A';
-      document.getElementById('r-pos-riga').textContent = 'Posizione non definita';
+    if (tuttiIRecord.length === 0) {
+      document.getElementById('dati-section').style.display = 'none';
+      return;
     }
-    document.getElementById('r-pos-stampo').textContent = articolo;
+
+    // 2. Logica di aggregazione (Esempio: calcola medie per la v5.4)
+    const totaleOrdini = tuttiIRecord.length;
+    // Supponendo che nel JSON ci siano campi come 'ore' e 'pressa'
+    const medieOre = tuttiIRecord.reduce((acc, curr) => acc + (curr.ore || 0), 0) / totaleOrdini;
+
+    // 3. Popolamento UI con i dati aggregati
+    document.getElementById('dati-section').style.display = 'block';
+    document.getElementById('r-odl').textContent = `Ordini storici: ${totaleOrdini}`;
+    document.getElementById('r-pressa').textContent = `Media ore: ${medieOre.toFixed(1)} h`;
+
+    // 4. Se vuoi mostrare anche l'ultimo ordine, prendi l'ultimo elemento
+    const ultimo = tuttiIRecord[tuttiIRecord.length - 1];
+    document.getElementById('r-cliente').textContent = `Ultimo cliente: ${ultimo.cliente}`;
+
+    document.getElementById('riepilogo').classList.remove('hidden');
+  }
 
     // UI: Altri articoli
     const altriArticoli = configData.scaffali ? (configData.scaffali[scaffale] || []) : [];

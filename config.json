@@ -94,7 +94,7 @@
       {"codice": "S41366", "nome": ""},
       {"codice": "S41372", "nome": ""},
       {"codice": "S41374", "nome": ""},
-      {"codice": "Cover", "nome": ""}
+      {"codice": "S41622", "nome": ""}
     ],
     "B5": [
       {"codice": "S37336", "nome": ""},
@@ -129,66 +129,48 @@
       {"codice": "PIASTRE ARBURG", "nome": ""}
     ],
     "C3": [
-      {"codice": "APLA00014", "nome": ""},
-      {"codice": "APLA00189", "nome": ""},
-      {"codice": "APLA00456", "nome": ""},
-      {"codice": "APLA00479", "nome": ""},
-      {"codice": "APLA00494", "nome": ""},
-      {"codice": "APLA00529", "nome": ""},
-      {"codice": "APLA00645", "nome": ""},
-      {"codice": "APLA00827", "nome": ""},
-      {"codice": "APLA00831", "nome": ""},
-      {"codice": "101A1388A", "nome": ""},
-      {"codice": "101A1578A", "nome": ""},
-      {"codice": "101A1588C", "nome": ""},
-      {"codice": "101A1588D", "nome": ""},
-      {"codice": "101A1589E", "nome": ""},
-      {"codice": "101A1590H", "nome": ""},
-      {"codice": "101A1595B", "nome": ""},
-      {"codice": "101A1660A", "nome": ""},
-      {"codice": "101A1661A", "nome": ""},
-      {"codice": "101A3358B", "nome": ""},
-      {"codice": "101A5010C", "nome": ""},
-      {"codice": "101A5010D", "nome": ""},
-      {"codice": "101A5010E", "nome": ""},
-      {"codice": "101A5010F", "nome": ""},
-      {"codice": "101A8103A", "nome": ""},
-      {"codice": "101A8103B", "nome": ""},
-      {"codice": "101A8103C", "nome": ""},
-      {"codice": "101A8103D", "nome": ""},
-      {"codice": "107A0041A", "nome": ""},
-      {"codice": "201A3308A", "nome": ""}
+      {"codice": "101A1388A", "nome": "APLA00831"},
+      {"codice": "101A1578A", "nome": "APLA00189"},
+      {"codice": "101A1588C", "nome": "APLA00189"},
+      {"codice": "101A1588D", "nome": "APLA00189"},
+      {"codice": "101A1589E", "nome": "APLA00189"},
+      {"codice": "101A1590H", "nome": "APLA00189"},
+      {"codice": "101A1595B", "nome": "APLA00494"},
+      {"codice": "101A1660A", "nome": "APLA00494"},
+      {"codice": "101A1661A", "nome": "APLA00494"},
+      {"codice": "101A3358B", "nome": "APLA00479"},
+      {"codice": "101A5010C", "nome": "APLA00456"},
+      {"codice": "101A5010D", "nome": "APLA00456"},
+      {"codice": "101A5010E", "nome": "APLA00456"},
+      {"codice": "101A5010F", "nome": "APLA00456"},
+      {"codice": "101A8103A", "nome": "APLA00014"},
+      {"codice": "101A8103B", "nome": "APLA00014"},
+      {"codice": "101A8103C", "nome": "APLA00014"},
+      {"codice": "101A8103D", "nome": "APLA00014"},
+      {"codice": "107A0041A", "nome": "APLA00529"},
+      {"codice": "201A3308B", "nome": "APLA00645"}
     ],
     "C4": [
-      {"codice": "APLA00468", "nome": ""},
-      {"codice": "APLA00478", "nome": ""},
-      {"codice": "APLA00481", "nome": ""},
-      {"codice": "APLA00482", "nome": ""},
-      {"codice": "APLA00813", "nome": ""},
-      {"codice": "101A1368A", "nome": ""},
-      {"codice": "101A1378A", "nome": ""},
-      {"codice": "101A1379A", "nome": ""},
-      {"codice": "101A3315A", "nome": ""},
-      {"codice": "101A3365F", "nome": ""},
-      {"codice": "101A3366F", "nome": ""},
-      {"codice": "101A3367D", "nome": ""},
-      {"codice": "101A3368D", "nome": ""},
-      {"codice": "101A3372C", "nome": ""}
+      {"codice": "101A1368A", "nome": "APLA00813"},
+      {"codice": "101A1378A", "nome": "APLA00823"},
+      {"codice": "101A1379A", "nome": "APLA00823"},
+      {"codice": "101A3315A", "nome": "APLA00468"},
+      {"codice": "101A3372C", "nome": "APLA00481"}
     ],
     "C5": [
-      {"codice": "1064", "nome": ""},
-      {"codice": "1073", "nome": ""},
-      {"codice": "5075", "nome": ""},
-      {"codice": "7001", "nome": ""},
+      {"codice": "39510230", "nome": ""},
+      {"codice": "39510280", "nome": ""},
+      {"codice": "39540320", "nome": ""},
+      {"codice": "39510250E", "nome": ""},
       {"codice": "9039", "nome": ""},
-      {"codice": "VETRINO", "nome": ""}
+      {"codice": "39540150", "nome": ""}
     ],
     "C6": [
-      {"codice": "3040", "nome": ""},
+      {"codice": "39530170", "nome": ""},
       {"codice": "3050/3042", "nome": ""},
-      {"codice": "3074", "nome": ""},
-      {"codice": "2029/2038", "nome": ""},
-      {"codice": "GHIERONE", "nome": ""},
+      {"codice": "39530390", "nome": ""},
+      {"codice": "39520170", "nome": ""},
+      {"codice": "39520240", "nome": ""},
       {"codice": "GUIDA VALVOLA", "nome": ""},
       {"codice": "PORTAGOMMA BLU 2 IMP.", "nome": ""},
       {"codice": "55521080", "nome": ""},
@@ -217,7 +199,11 @@
     "D3": [
       {"codice": "O115", "nome": ""},
       {"codice": "O178", "nome": ""},
-      {"codice": "SIGILLO", "nome": ""}
+      {"codice": "SAS5LUNGOGIALLO", "nome": ""},
+      {"codice": "SAS5LUNGOBLU", "nome": ""},
+      {"codice": "SAS5LUNGOBIANCO", "nome": ""},
+      {"codice": "SAS5LUNGOVERDE", "nome": ""},
+      {"codice": "SAS5LUNGOROSSO", "nome": ""}
     ],
     "D4": [
       {"codice": "3X HARKEN MAI USATI", "nome": ""},
@@ -233,22 +219,26 @@
     ],
     "E1": [
       {"codice": "LIVELLA VAME", "nome": ""},
-      {"codice": "LND974", "nome": ""},
-      {"codice": "LND1161", "nome": ""},
-      {"codice": "LND1162", "nome": ""},
-      {"codice": "LND20923", "nome": ""},
+      {"codice": "020325200000", "nome": "LND974"},
+      {"codice": "020327500000", "nome": "LND1161"},
+      {"codice": "0203276V0100", "nome": "LND1162"},
+      {"codice": "020340300000", "nome": "LND20923"},
       {"codice": "STAMPO PONTI 4 SEDI 1817", "nome": ""},
-      {"codice": "RID42", "nome": ""},
+      {"codice": "RID 42", "nome": ""},
       {"codice": "VAMEFIX", "nome": ""}
     ],
     "E2": [
-      {"codice": "MERIDIANO SELLA 46", "nome": ""},
-      {"codice": "ROLD 114103", "nome": ""},
-      {"codice": "ROLD 114261", "nome": ""}
+      {"codice": "COMPENS S36 NERO", "nome": ""},
+      {"codice": "SELLA S36 NERO", "nome": ""},
+      {"codice": "SPESSORE S36 NERO", "nome": ""},
+      {"codice": "114103", "nome": ""},
+      {"codice": "113071", "nome": ""},
+      {"codice": "112703", "nome": ""},
+      {"codice": "114261", "nome": ""}
     ],
     "E3": [
       {"codice": "1068", "nome": ""},
-      {"codice": "BLS REGGETTA", "nome": ""},
+      {"codice": "008247", "nome": ""},
       {"codice": "INVOLUCRO 2 SEDI", "nome": ""}
     ],
     "E4": [
@@ -256,19 +246,20 @@
       {"codice": "STAMPO TP REFLEX", "nome": ""}
     ],
     "E5": [
-      {"codice": "1063", "nome": ""},
-      {"codice": "INVOLUCRO", "nome": ""},
-      {"codice": "CURVETTA", "nome": ""}
+      {"codice": "39510210", "nome": ""},
+      {"codice": "39510220", "nome": ""},
+      {"codice": "39540300", "nome": ""},
+      {"codice": "39530420", "nome": ""},
+      {"codice": "39540530", "nome": ""},
+      {"codice": "39540400", "nome": ""},
+      {"codice": "39530440", "nome": ""},
+      {"codice": "39530340", "nome": ""}
     ],
     "F1": [
-      {"codice": "APLA00851", "nome": ""},
-      {"codice": "APLA00817", "nome": ""},
-      {"codice": "APLA00849", "nome": ""},
-      {"codice": "APLA00815", "nome": ""},
-      {"codice": "101A1370A", "nome": ""},
-      {"codice": "101A1372A", "nome": ""},
-      {"codice": "101A1397A", "nome": ""},
-      {"codice": "101A1399A", "nome": ""}
+      {"codice": "101A1370A", "nome": "APLA00815"},
+      {"codice": "101A1372A", "nome": "APLA00817"},
+      {"codice": "101A1397A", "nome": "APLA00849"},
+      {"codice": "101A1399A", "nome": "APLA00851"}
     ],
     "F2": [
       {"codice": "0035", "nome": ""},
@@ -290,7 +281,8 @@
       {"codice": "STAMPI HARKEN OBSOLETI", "nome": ""}
     ],
     "F4": [
-      {"codice": "GHIERA 2121", "nome": ""}
+      {"codice": "39520740", "nome": ""},
+      {"codice": "39520770", "nome": ""}
     ]
   }
 }

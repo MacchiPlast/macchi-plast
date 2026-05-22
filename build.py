@@ -96,8 +96,7 @@ def parse_date(date_str):
     
     # Mappa mesi inglesi
     mesi_en = {
-        'january': '01', 'january': '01',
-        'february': '02', 'march': '03', 'april': '04',
+        'january': '01', 'february': '02', 'march': '03', 'april': '04',
         'may': '05', 'june': '06', 'july': '07',
         'august': '08', 'september': '09', 'october': '10',
         'november': '11', 'december': '12'
@@ -219,18 +218,24 @@ def main():
             if data['pezzi_tot'] > 0:
                 orepp[art] = data['ore_tot'] / data['pezzi_tot']
         
-        # Genera lookup: articolo → scaffale (da config.json)
-        # IMPORTANTE: Normalizza ENTRAMBI gli articoli per il matching
+        # Genera lookup: articolo → scaffale + nome (da config.json)
         lookup = {}
         unmapped_articles = []
         
         for scaffale, articoli_in_scaffale in config.get('scaffali', {}).items():
-            for art in articoli_in_scaffale:
+            for art_obj in articoli_in_scaffale:
+                # Supporta sia formato vecchio (stringa) che nuovo (dict)
+                if isinstance(art_obj, dict):
+                    art_codice = art_obj.get('codice', '')
+                    art_nome = art_obj.get('nome', '')
+                else:
+                    art_codice = art_obj
+                    art_nome = ''
+                
                 # Normalizza l'articolo per la ricerca
-                art_key = normalize(art)
+                art_key = normalize(art_codice)
                 if art_key not in lookup:
-                    lookup[art_key] = []
-                lookup[art_key].append(scaffale)
+                    lookup[art_key] = {'scaffale': scaffale, 'nome': art_nome}
         
         # Crea anche un lookup inverso per il matching fuzzy
         for art_csv in db_articoli.keys():
@@ -288,8 +293,8 @@ def main():
         data = {
             "odl": odl_list,
             "scaffali": config.get('scaffali', {}),
-            "lookup": lookup,      # Articoli → Scaffali (ora con normalizzazione)
-            "aff": aff,            # Affidabilità pressa per articolo (nuovo!)
+            "lookup": lookup,      # Articoli → {scaffale, nome}
+            "aff": aff,            # Affidabilità pressa per articolo
             "soglie": soglie,      # Soglie ore per articolo
             "orepp": orepp,        # Ore per pezzo per articolo
             "meta": {

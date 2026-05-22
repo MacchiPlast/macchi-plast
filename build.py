@@ -10,7 +10,7 @@ import json
 import os
 from datetime import datetime
 
-# ── Percorsi ──────────────────────────────────────────────────────────────────
+# ── Percorsi ───────────────────────────────────────────────────────────────
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PATHS = {
     "csv": os.path.join(BASE_DIR, 'data', 'ordini.csv'),  # ← Cerca in data/
@@ -77,7 +77,7 @@ def clean_pressa(pressa):
     pressa = re.sub(r'\s+', ' ', pressa).strip()
     return pressa
 
-# ── MAIN ──────────────────────────────────────────────────────────────────────
+# ── MAIN ────────────────────────────────────────────────────────────────────
 def main():
     print("🚀 Inizio build Macchi Plast...")
     
@@ -177,14 +177,41 @@ def main():
                 orepp[art] = data['ore_tot'] / data['pezzi_tot']
         
         # Genera lookup: articolo → scaffale (da config.json)
+        # IMPORTANTE: Normalizza ENTRAMBI gli articoli per il matching
         lookup = {}
+        unmapped_articles = []
+        
         for scaffale, articoli_in_scaffale in config.get('scaffali', {}).items():
             for art in articoli_in_scaffale:
                 # Normalizza l'articolo per la ricerca
-                art_key = art.upper().strip()
+                art_key = normalize(art)
                 if art_key not in lookup:
                     lookup[art_key] = []
                 lookup[art_key].append(scaffale)
+        
+        # Crea anche un lookup inverso per il matching fuzzy
+        for art_csv in db_articoli.keys():
+            art_csv_norm = normalize(art_csv)
+            if art_csv_norm not in lookup:
+                # Prova a trovare un match parziale
+                found = False
+                for art_config_norm in lookup.keys():
+                    # Se uno contiene l'altro o hanno molto in comune
+                    if art_csv_norm in art_config_norm or art_config_norm in art_csv_norm:
+                        if art_csv_norm not in lookup:
+                            lookup[art_csv_norm] = lookup[art_config_norm]
+                        found = True
+                        break
+                
+                if not found:
+                    unmapped_articles.append(art_csv)
+        
+        if unmapped_articles:
+            print(f"\n⚠️  Articoli non mappati ({len(unmapped_articles)}):")
+            for art in unmapped_articles[:20]:  # Mostra i primi 20
+                print(f"   - {art}")
+            if len(unmapped_articles) > 20:
+                print(f"   ... e altri {len(unmapped_articles) - 20}")
         
         # Genera aff: affidabilità pressa per articolo
         # Calcola: % di ordini sulla pressa più usata per quell'articolo
@@ -218,7 +245,7 @@ def main():
         data = {
             "odl": odl_list,
             "scaffali": config.get('scaffali', {}),
-            "lookup": lookup,      # Articoli → Scaffali
+            "lookup": lookup,      # Articoli → Scaffali (ora con normalizzazione)
             "aff": aff,            # Affidabilità pressa per articolo (nuovo!)
             "soglie": soglie,      # Soglie ore per articolo
             "orepp": orepp,        # Ore per pezzo per articolo
@@ -228,7 +255,8 @@ def main():
                 "total_articoli": len(db_articoli),
                 "total_pezzi": sum(o['pezzi'] for o in odl_list),
                 "total_ore": sum(o['ore'] for o in odl_list),
-                "total_kg": sum(o['kg'] for o in odl_list)
+                "total_kg": sum(o['kg'] for o in odl_list),
+                "unmapped_count": len(unmapped_articles)
             }
         }
         
@@ -241,6 +269,8 @@ def main():
         print(f"\n📊 Riepilogo:")
         print(f"   • {len(odl_list)} ordini (ODL)")
         print(f"   • {len(db_articoli)} articoli unici")
+        print(f"   • {len(lookup)} articoli mappati")
+        print(f"   • {len(unmapped_articles)} articoli NON mappati")
         print(f"   • {data['meta']['total_pezzi']:,} pezzi totali")
         print(f"   • {data['meta']['total_ore']:,.1f} ore stimate")
         print(f"   • {data['meta']['total_kg']:,.1f} kg totali")

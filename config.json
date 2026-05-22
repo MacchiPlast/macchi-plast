@@ -1,40 +1,296 @@
 {
   "scaffali": {
-    "A1": ["0020 NEW","1501/1502 NEW","3233/3237","3234","3235/3236","3238/3239","3372","3379/3380/3381/3382"],
-    "A2": ["3474","3476"],
-    "A3": ["0051","1128","1109","1143","2021","2021 Canotto","2043","2044/2045","2049","2051/2052","2057/2058","2086"],
-    "A4": ["0054","1499/1500","1501/1502 Old","1555/1556","1645/1646/1648/1635/1637","2011","2029A","2104/2105/2106/2113","3025","3123"],
-    "A5": ["0036/0037","1074","1120","1533","1733/1734","2022","2042","2050","3003","3135/3136/3137/3138"],
-    "A6": ["0089","1442","1488","1639/1684/1634/1636","2059","3098/3099","3115","3120","3121/3122","2086"],
-    "B1": ["0009A/C","0009-B","0275/0276","0405","1445","1516","3022/1499","3124","3202/3204"],
-    "B3": ["0020 Old","1572/1573","1614/1617/1615/1618","1819","3230","3231/3132","3350"],
-    "B4": ["S36479","S41309","S41339","S41352","S41558","S41365","S41366","S41372","S41374","S41622"],
-    "B5": ["S37336","S41274","S41318","S41343","S41371","S41373","ST01 W46/48"],
-    "B6": ["S41273","S41319","S41342","S41485","ST1574 SEM SUP W46","ST1575 SEM INF W46","3350","3202/3204"],
-    "C1": ["S41332","S41333","S41396","S41489","S41490","S41513","S41523","S74124"],
-    "C2": ["PIASTRE ARBURG"],
-    "C3": ["APLA00014","APLA00189","APLA00456","APLA00479","APLA00494","APLA00529","APLA00645","APLA00827","APLA00831",
-           "101A1388A","101A1578A","101A1588C","101A1588D","101A1589E","101A1590H","101A1595B","101A1660A","101A1661A",
-           "101A3358B","101A5010C","101A5010D","101A5010E","101A5010F","101A8103A","101A8103B","101A8103C","101A8103D",
-           "107A0041A","201A3308B"],
-    "C4": ["APLA00468","APLA00478","APLA00481","APLA00482","APLA00813","101A1368A","101A1378A","101A1379A","101A3315A",
-           "101A3365F","101A3366F","101A3367D","101A3368D","101A3372C"],
-    "C5": ["1064","39510280","39540320","39510250","9039","39540150"],
-    "C6": ["39530170","3050/3042","39530390","39520240","GUIDA VALVOLA","PORTAGOMMA BLU 2 IMP.","55521080","55521150","55521960","55522030","39520170"],
-    "D1": ["2 STAMPO LACCIO","CERNIERA","DHL","FERMO CINTURE SICUREZZA","K122001","LACCIO SIGILZETA"],
-    "D2": ["O100","O100 CON SUPPORTO","O110 VERDE","O140","O170","O178 BOMBATO","O178 PIATTO","O178 SOTTILE"],
-    "D3": ["O115","O178","SAS5LUNGOBIANCO","SAS5LUNGOBLU","SAS5LUNGOGIALLO","SAS5LUNGOVERDE","SAS5LUNGOROSSO"],
-    "D4": ["3X HARKEN MAI USATI","1X BELLICON"],
-    "D5": ["ST009","HARKEN W10"],
-    "D6": ["BELLICON","MGM"],
-    "E1": ["LIVELLA VAME","LND974","LND1161","LND1162","LND20923","STAMPO PONTI 4 SEDI 1817","RID 42","VAMEFIX"],
-    "E2": ["COMPENS S36 NERO","114103","114261","113071","112703","SELLA S36 NERO","SPESSORE S36 NERO"],
-    "E3": ["1068","008247","INVOLUCRO 2 SEDI"],
-    "E4": ["SC35","STAMPO TP REFLEX"],
-    "E5": ["39510210","39540400","39530340","39540300","39540530","39530420","39530440","39510220"],
-    "F1": ["APLA00851","APLA00817","APLA00849","APLA00815","101A1370A","101A1372A","101A1397A","101A1399A"],
-    "F2": ["0035","0053","1114","1117 STAMPO MANUALE","1121","1142/1112","1164","1207","2012","2047/2048","2063","2064","2084/2085","2090"],
-    "F3": ["STAMPI HARKEN OBSOLETI"],
-    "F4": ["39520740","39520770"]
+    "A1": [
+      {"codice": "0020 NEW", "nome": ""},
+      {"codice": "1501/1502 NEW", "nome": ""},
+      {"codice": "3233/3237", "nome": ""},
+      {"codice": "3234", "nome": ""},
+      {"codice": "3235/3236", "nome": ""},
+      {"codice": "3238/3239", "nome": ""},
+      {"codice": "3372", "nome": ""},
+      {"codice": "3379/3380/3381/3382", "nome": ""}
+    ],
+    "A2": [
+      {"codice": "3474", "nome": ""},
+      {"codice": "3476", "nome": ""}
+    ],
+    "A3": [
+      {"codice": "0051", "nome": ""},
+      {"codice": "1128", "nome": ""},
+      {"codice": "1109", "nome": ""},
+      {"codice": "1143", "nome": ""},
+      {"codice": "2021", "nome": ""},
+      {"codice": "2021 Canotto", "nome": ""},
+      {"codice": "2043", "nome": ""},
+      {"codice": "2044/2045", "nome": ""},
+      {"codice": "2049", "nome": ""},
+      {"codice": "2051/2052", "nome": ""},
+      {"codice": "2057/2058", "nome": ""},
+      {"codice": "2086", "nome": ""}
+    ],
+    "A4": [
+      {"codice": "0054", "nome": ""},
+      {"codice": "1499/1500", "nome": ""},
+      {"codice": "1501/1502 Old", "nome": ""},
+      {"codice": "1555/1556", "nome": ""},
+      {"codice": "1645/1646/1648/1635/1637", "nome": ""},
+      {"codice": "2011", "nome": ""},
+      {"codice": "2029A", "nome": ""},
+      {"codice": "2104/2105/2106/2113", "nome": ""},
+      {"codice": "3025", "nome": ""},
+      {"codice": "3123", "nome": ""}
+    ],
+    "A5": [
+      {"codice": "0036/0037", "nome": ""},
+      {"codice": "1074", "nome": ""},
+      {"codice": "1120", "nome": ""},
+      {"codice": "1533", "nome": ""},
+      {"codice": "1733/1734", "nome": ""},
+      {"codice": "2022", "nome": ""},
+      {"codice": "2042", "nome": ""},
+      {"codice": "2050", "nome": ""},
+      {"codice": "3003", "nome": ""},
+      {"codice": "3135/3136/3137/3138", "nome": ""}
+    ],
+    "A6": [
+      {"codice": "0089", "nome": ""},
+      {"codice": "1442", "nome": ""},
+      {"codice": "1488", "nome": ""},
+      {"codice": "1639/1684/1634/1636", "nome": ""},
+      {"codice": "2059", "nome": ""},
+      {"codice": "3098/3099", "nome": ""},
+      {"codice": "3115", "nome": ""},
+      {"codice": "3120", "nome": ""},
+      {"codice": "3121/3122", "nome": ""},
+      {"codice": "2086", "nome": ""}
+    ],
+    "B1": [
+      {"codice": "0009A/C", "nome": ""},
+      {"codice": "0009-B", "nome": ""},
+      {"codice": "0275/0276", "nome": ""},
+      {"codice": "0405", "nome": ""},
+      {"codice": "1445", "nome": ""},
+      {"codice": "1516", "nome": ""},
+      {"codice": "3022/1499", "nome": ""},
+      {"codice": "3124", "nome": ""},
+      {"codice": "3202/3204", "nome": ""}
+    ],
+    "B3": [
+      {"codice": "0020 Old", "nome": ""},
+      {"codice": "1572/1573", "nome": ""},
+      {"codice": "1614/1617/1615/1618", "nome": ""},
+      {"codice": "1819", "nome": ""},
+      {"codice": "3230", "nome": ""},
+      {"codice": "3231/3132", "nome": ""},
+      {"codice": "3350", "nome": ""}
+    ],
+    "B4": [
+      {"codice": "S36479", "nome": ""},
+      {"codice": "S41309", "nome": ""},
+      {"codice": "S41339", "nome": ""},
+      {"codice": "S41352", "nome": ""},
+      {"codice": "S41558", "nome": ""},
+      {"codice": "S41365", "nome": ""},
+      {"codice": "S41366", "nome": ""},
+      {"codice": "S41372", "nome": ""},
+      {"codice": "S41374", "nome": ""},
+      {"codice": "Cover", "nome": ""}
+    ],
+    "B5": [
+      {"codice": "S37336", "nome": ""},
+      {"codice": "S41274", "nome": ""},
+      {"codice": "S41318", "nome": ""},
+      {"codice": "S41343", "nome": ""},
+      {"codice": "S41371", "nome": ""},
+      {"codice": "S41373", "nome": ""},
+      {"codice": "ST01 W46/48", "nome": ""}
+    ],
+    "B6": [
+      {"codice": "S41273", "nome": ""},
+      {"codice": "S41319", "nome": ""},
+      {"codice": "S41342", "nome": ""},
+      {"codice": "S41485", "nome": ""},
+      {"codice": "ST1574 SEM SUP W46", "nome": ""},
+      {"codice": "ST1575 SEM INF W46", "nome": ""},
+      {"codice": "3350", "nome": ""},
+      {"codice": "3202/3204", "nome": ""}
+    ],
+    "C1": [
+      {"codice": "S41332", "nome": ""},
+      {"codice": "S41333", "nome": ""},
+      {"codice": "S41396", "nome": ""},
+      {"codice": "S41489", "nome": ""},
+      {"codice": "S41490", "nome": ""},
+      {"codice": "S41513", "nome": ""},
+      {"codice": "S41523", "nome": ""},
+      {"codice": "S74124", "nome": ""}
+    ],
+    "C2": [
+      {"codice": "PIASTRE ARBURG", "nome": ""}
+    ],
+    "C3": [
+      {"codice": "APLA00014", "nome": ""},
+      {"codice": "APLA00189", "nome": ""},
+      {"codice": "APLA00456", "nome": ""},
+      {"codice": "APLA00479", "nome": ""},
+      {"codice": "APLA00494", "nome": ""},
+      {"codice": "APLA00529", "nome": ""},
+      {"codice": "APLA00645", "nome": ""},
+      {"codice": "APLA00827", "nome": ""},
+      {"codice": "APLA00831", "nome": ""},
+      {"codice": "101A1388A", "nome": ""},
+      {"codice": "101A1578A", "nome": ""},
+      {"codice": "101A1588C", "nome": ""},
+      {"codice": "101A1588D", "nome": ""},
+      {"codice": "101A1589E", "nome": ""},
+      {"codice": "101A1590H", "nome": ""},
+      {"codice": "101A1595B", "nome": ""},
+      {"codice": "101A1660A", "nome": ""},
+      {"codice": "101A1661A", "nome": ""},
+      {"codice": "101A3358B", "nome": ""},
+      {"codice": "101A5010C", "nome": ""},
+      {"codice": "101A5010D", "nome": ""},
+      {"codice": "101A5010E", "nome": ""},
+      {"codice": "101A5010F", "nome": ""},
+      {"codice": "101A8103A", "nome": ""},
+      {"codice": "101A8103B", "nome": ""},
+      {"codice": "101A8103C", "nome": ""},
+      {"codice": "101A8103D", "nome": ""},
+      {"codice": "107A0041A", "nome": ""},
+      {"codice": "201A3308A", "nome": ""}
+    ],
+    "C4": [
+      {"codice": "APLA00468", "nome": ""},
+      {"codice": "APLA00478", "nome": ""},
+      {"codice": "APLA00481", "nome": ""},
+      {"codice": "APLA00482", "nome": ""},
+      {"codice": "APLA00813", "nome": ""},
+      {"codice": "101A1368A", "nome": ""},
+      {"codice": "101A1378A", "nome": ""},
+      {"codice": "101A1379A", "nome": ""},
+      {"codice": "101A3315A", "nome": ""},
+      {"codice": "101A3365F", "nome": ""},
+      {"codice": "101A3366F", "nome": ""},
+      {"codice": "101A3367D", "nome": ""},
+      {"codice": "101A3368D", "nome": ""},
+      {"codice": "101A3372C", "nome": ""}
+    ],
+    "C5": [
+      {"codice": "1064", "nome": ""},
+      {"codice": "1073", "nome": ""},
+      {"codice": "5075", "nome": ""},
+      {"codice": "7001", "nome": ""},
+      {"codice": "9039", "nome": ""},
+      {"codice": "VETRINO", "nome": ""}
+    ],
+    "C6": [
+      {"codice": "3040", "nome": ""},
+      {"codice": "3050/3042", "nome": ""},
+      {"codice": "3074", "nome": ""},
+      {"codice": "2029/2038", "nome": ""},
+      {"codice": "GHIERONE", "nome": ""},
+      {"codice": "GUIDA VALVOLA", "nome": ""},
+      {"codice": "PORTAGOMMA BLU 2 IMP.", "nome": ""},
+      {"codice": "55521080", "nome": ""},
+      {"codice": "55521150", "nome": ""},
+      {"codice": "55521960", "nome": ""},
+      {"codice": "55522030", "nome": ""}
+    ],
+    "D1": [
+      {"codice": "2 STAMPO LACCIO", "nome": ""},
+      {"codice": "CERNIERA", "nome": ""},
+      {"codice": "DHL", "nome": ""},
+      {"codice": "FERMO CINTURE SICUREZZA", "nome": ""},
+      {"codice": "K122001", "nome": ""},
+      {"codice": "LACCIO SIGILZETA", "nome": ""}
+    ],
+    "D2": [
+      {"codice": "O100", "nome": ""},
+      {"codice": "O100 CON SUPPORTO", "nome": ""},
+      {"codice": "O110 VERDE", "nome": ""},
+      {"codice": "O140", "nome": ""},
+      {"codice": "O170", "nome": ""},
+      {"codice": "O178 BOMBATO", "nome": ""},
+      {"codice": "O178 PIATTO", "nome": ""},
+      {"codice": "O178 SOTTILE", "nome": ""}
+    ],
+    "D3": [
+      {"codice": "O115", "nome": ""},
+      {"codice": "O178", "nome": ""},
+      {"codice": "SIGILLO", "nome": ""}
+    ],
+    "D4": [
+      {"codice": "3X HARKEN MAI USATI", "nome": ""},
+      {"codice": "1X BELLICON", "nome": ""}
+    ],
+    "D5": [
+      {"codice": "ST009", "nome": ""},
+      {"codice": "HARKEN W10", "nome": ""}
+    ],
+    "D6": [
+      {"codice": "BELLICON", "nome": ""},
+      {"codice": "MGM", "nome": ""}
+    ],
+    "E1": [
+      {"codice": "LIVELLA VAME", "nome": ""},
+      {"codice": "LND974", "nome": ""},
+      {"codice": "LND1161", "nome": ""},
+      {"codice": "LND1162", "nome": ""},
+      {"codice": "LND20923", "nome": ""},
+      {"codice": "STAMPO PONTI 4 SEDI 1817", "nome": ""},
+      {"codice": "RID42", "nome": ""},
+      {"codice": "VAMEFIX", "nome": ""}
+    ],
+    "E2": [
+      {"codice": "MERIDIANO SELLA 46", "nome": ""},
+      {"codice": "ROLD 114103", "nome": ""},
+      {"codice": "ROLD 114261", "nome": ""}
+    ],
+    "E3": [
+      {"codice": "1068", "nome": ""},
+      {"codice": "BLS REGGETTA", "nome": ""},
+      {"codice": "INVOLUCRO 2 SEDI", "nome": ""}
+    ],
+    "E4": [
+      {"codice": "SC35", "nome": ""},
+      {"codice": "STAMPO TP REFLEX", "nome": ""}
+    ],
+    "E5": [
+      {"codice": "1063", "nome": ""},
+      {"codice": "INVOLUCRO", "nome": ""},
+      {"codice": "CURVETTA", "nome": ""}
+    ],
+    "F1": [
+      {"codice": "APLA00851", "nome": ""},
+      {"codice": "APLA00817", "nome": ""},
+      {"codice": "APLA00849", "nome": ""},
+      {"codice": "APLA00815", "nome": ""},
+      {"codice": "101A1370A", "nome": ""},
+      {"codice": "101A1372A", "nome": ""},
+      {"codice": "101A1397A", "nome": ""},
+      {"codice": "101A1399A", "nome": ""}
+    ],
+    "F2": [
+      {"codice": "0035", "nome": ""},
+      {"codice": "0053", "nome": ""},
+      {"codice": "1114", "nome": ""},
+      {"codice": "1117 STAMPO MANUALE", "nome": ""},
+      {"codice": "1121", "nome": ""},
+      {"codice": "1142/1112", "nome": ""},
+      {"codice": "1164", "nome": ""},
+      {"codice": "1207", "nome": ""},
+      {"codice": "2012", "nome": ""},
+      {"codice": "2047/2048", "nome": ""},
+      {"codice": "2063", "nome": ""},
+      {"codice": "2064", "nome": ""},
+      {"codice": "2084/2085", "nome": ""},
+      {"codice": "2090", "nome": ""}
+    ],
+    "F3": [
+      {"codice": "STAMPI HARKEN OBSOLETI", "nome": ""}
+    ],
+    "F4": [
+      {"codice": "GHIERA 2121", "nome": ""}
+    ]
   }
 }

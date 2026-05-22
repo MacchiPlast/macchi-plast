@@ -77,6 +77,43 @@ def clean_pressa(pressa):
     pressa = re.sub(r'\s+', ' ', pressa).strip()
     return pressa
 
+def parse_date(date_str):
+    """
+    Converte date da formati diversi a dd/mm/yyyy
+    Accetta:
+    - "March 25, 2026 17:45 (GMT+1)"
+    - "January 8, 2026 1:35 (GMT+1)"
+    - Formato riconosciuto da datetime
+    """
+    if not date_str or pd.isna(date_str):
+        return ""
+    
+    date_str = str(date_str).strip()
+    
+    # Rimuovi la parte (GMT+X)
+    date_str = re.sub(r'\s*\(GMT[^)]*\).*$', '', date_str)
+    date_str = date_str.strip()
+    
+    # Mappa mesi inglesi
+    mesi_en = {
+        'january': '01', 'january': '01',
+        'february': '02', 'march': '03', 'april': '04',
+        'may': '05', 'june': '06', 'july': '07',
+        'august': '08', 'september': '09', 'october': '10',
+        'november': '11', 'december': '12'
+    }
+    
+    # Prova a parsare il formato "Month Day, Year Time"
+    match = re.match(r'(\w+)\s+(\d{1,2}),\s+(\d{4})', date_str)
+    if match:
+        mese_nome, giorno, anno = match.groups()
+        mese_num = mesi_en.get(mese_nome.lower(), '')
+        if mese_num:
+            return f"{int(giorno):02d}/{mese_num}/{anno}"
+    
+    # Se niente funziona, restituisci la stringa originale
+    return date_str
+
 # ── MAIN ────────────────────────────────────────────────────────────────────
 def main():
     print("🚀 Inizio build Macchi Plast...")
@@ -120,6 +157,12 @@ def main():
             peso_medio = _float(row.get('Peso medio', 0))
             kg = _float(row.get('Kg da utilizzare', 0))
             
+            # Converti date a dd/mm/yyyy
+            data_inizio_raw = str(row.get('Data di Inizio', '')).strip()
+            data_fine_raw = str(row.get('Data di Fine', '')).strip()
+            data_inizio = parse_date(data_inizio_raw)
+            data_fine = parse_date(data_fine_raw)
+            
             # Crea un ordine per OGNI articolo della lista
             for articolo in articoli_list:
                 if not articolo:
@@ -130,8 +173,8 @@ def main():
                     "articolo": articolo,
                     "cliente": str(row.get('Cliente', '')).strip(),
                     "pressa": clean_pressa(row.get('Pressa', '')),
-                    "data_inizio": str(row.get('Data di Inizio', '')).strip(),
-                    "data_fine": str(row.get('Data di Fine', '')).strip(),
+                    "data_inizio": data_inizio,
+                    "data_fine": data_fine,
                     "pezzi": pezzi,
                     "kg": kg,
                     "ore": float(ore_num),

@@ -469,7 +469,7 @@ tr:hover td{background:#faf9f6}
     const tot = nc + an;
     
     id('r-cnt').textContent = ordini.length + ' ordine' + (ordini.length!==1?'i':'') + (tot ? ' - '+tot+' con segnalazioni' : '');
-    id('r-nc').innerHTML = tot > 0 ? '<span class="badge br">! '+tot+' segnalazione'+(tot!==1?'i':'')+'</span>' : '<span class="badge bg">OK Nessuna segnalazione</span>';
+    id('r-nc').innerHTML = tot > 0 ? '<span class="badge br">! '+tot+' segnalazion'+(tot!==1?'i':'e')+'</span>' : '<span class="badge bg">OK Nessuna segnalazione</span>';
 
     if (!ordini.length) {
       id('r-tbody').innerHTML = '<tr><td colspan="9" style="text-align:center;color:var(--hint);padding:1.5rem">Nessun ODL trovato</td></tr>';

@@ -6223,7 +6223,7 @@
         "nome": ""
       },
       {
-        "codice": "Cover",
+        "codice": "S41622",
         "nome": ""
       }
     ],
@@ -6333,195 +6333,123 @@
     ],
     "C3": [
       {
-        "codice": "APLA00014",
-        "nome": ""
-      },
-      {
-        "codice": "APLA00189",
-        "nome": ""
-      },
-      {
-        "codice": "APLA00456",
-        "nome": ""
-      },
-      {
-        "codice": "APLA00479",
-        "nome": ""
-      },
-      {
-        "codice": "APLA00494",
-        "nome": ""
-      },
-      {
-        "codice": "APLA00529",
-        "nome": ""
-      },
-      {
-        "codice": "APLA00645",
-        "nome": ""
-      },
-      {
-        "codice": "APLA00827",
-        "nome": ""
-      },
-      {
-        "codice": "APLA00831",
-        "nome": ""
-      },
-      {
         "codice": "101A1388A",
-        "nome": ""
+        "nome": "APLA00831"
       },
       {
         "codice": "101A1578A",
-        "nome": ""
+        "nome": "APLA00189"
       },
       {
         "codice": "101A1588C",
-        "nome": ""
+        "nome": "APLA00189"
       },
       {
         "codice": "101A1588D",
-        "nome": ""
+        "nome": "APLA00189"
       },
       {
         "codice": "101A1589E",
-        "nome": ""
+        "nome": "APLA00189"
       },
       {
         "codice": "101A1590H",
-        "nome": ""
+        "nome": "APLA00189"
       },
       {
         "codice": "101A1595B",
-        "nome": ""
+        "nome": "APLA00494"
       },
       {
         "codice": "101A1660A",
-        "nome": ""
+        "nome": "APLA00494"
       },
       {
         "codice": "101A1661A",
-        "nome": ""
+        "nome": "APLA00494"
       },
       {
         "codice": "101A3358B",
-        "nome": ""
+        "nome": "APLA00479"
       },
       {
         "codice": "101A5010C",
-        "nome": ""
+        "nome": "APLA00456"
       },
       {
         "codice": "101A5010D",
-        "nome": ""
+        "nome": "APLA00456"
       },
       {
         "codice": "101A5010E",
-        "nome": ""
+        "nome": "APLA00456"
       },
       {
         "codice": "101A5010F",
-        "nome": ""
+        "nome": "APLA00456"
       },
       {
         "codice": "101A8103A",
-        "nome": ""
+        "nome": "APLA00014"
       },
       {
         "codice": "101A8103B",
-        "nome": ""
+        "nome": "APLA00014"
       },
       {
         "codice": "101A8103C",
-        "nome": ""
+        "nome": "APLA00014"
       },
       {
         "codice": "101A8103D",
-        "nome": ""
+        "nome": "APLA00014"
       },
       {
         "codice": "107A0041A",
-        "nome": ""
+        "nome": "APLA00529"
       },
       {
-        "codice": "201A3308A",
-        "nome": ""
+        "codice": "201A3308B",
+        "nome": "APLA00645"
       }
     ],
     "C4": [
       {
-        "codice": "APLA00468",
-        "nome": ""
-      },
-      {
-        "codice": "APLA00478",
-        "nome": ""
-      },
-      {
-        "codice": "APLA00481",
-        "nome": ""
-      },
-      {
-        "codice": "APLA00482",
-        "nome": ""
-      },
-      {
-        "codice": "APLA00813",
-        "nome": ""
-      },
-      {
         "codice": "101A1368A",
-        "nome": ""
+        "nome": "APLA00813"
       },
       {
         "codice": "101A1378A",
-        "nome": ""
+        "nome": "APLA00823"
       },
       {
         "codice": "101A1379A",
-        "nome": ""
+        "nome": "APLA00823"
       },
       {
         "codice": "101A3315A",
-        "nome": ""
-      },
-      {
-        "codice": "101A3365F",
-        "nome": ""
-      },
-      {
-        "codice": "101A3366F",
-        "nome": ""
-      },
-      {
-        "codice": "101A3367D",
-        "nome": ""
-      },
-      {
-        "codice": "101A3368D",
-        "nome": ""
+        "nome": "APLA00468"
       },
       {
         "codice": "101A3372C",
-        "nome": ""
+        "nome": "APLA00481"
       }
     ],
     "C5": [
       {
-        "codice": "1064",
+        "codice": "39510230",
         "nome": ""
       },
       {
-        "codice": "1073",
+        "codice": "39510280",
         "nome": ""
       },
       {
-        "codice": "5075",
+        "codice": "39540320",
         "nome": ""
       },
       {
-        "codice": "7001",
+        "codice": "39510250E",
         "nome": ""
       },
       {
@@ -6529,13 +6457,13 @@
         "nome": ""
       },
       {
-        "codice": "VETRINO",
+        "codice": "39540150",
         "nome": ""
       }
     ],
     "C6": [
       {
-        "codice": "3040",
+        "codice": "39530170",
         "nome": ""
       },
       {
@@ -6543,15 +6471,15 @@
         "nome": ""
       },
       {
-        "codice": "3074",
+        "codice": "39530390",
         "nome": ""
       },
       {
-        "codice": "2029/2038",
+        "codice": "39520170",
         "nome": ""
       },
       {
-        "codice": "GHIERONE",
+        "codice": "39520240",
         "nome": ""
       },
       {
@@ -6649,7 +6577,23 @@
         "nome": ""
       },
       {
-        "codice": "SIGILLO",
+        "codice": "SAS5LUNGOGIALLO",
+        "nome": ""
+      },
+      {
+        "codice": "SAS5LUNGOBLU",
+        "nome": ""
+      },
+      {
+        "codice": "SAS5LUNGOBIANCO",
+        "nome": ""
+      },
+      {
+        "codice": "SAS5LUNGOVERDE",
+        "nome": ""
+      },
+      {
+        "codice": "SAS5LUNGOROSSO",
         "nome": ""
       }
     ],
@@ -6689,27 +6633,27 @@
         "nome": ""
       },
       {
-        "codice": "LND974",
-        "nome": ""
+        "codice": "020325200000",
+        "nome": "LND974"
       },
       {
-        "codice": "LND1161",
-        "nome": ""
+        "codice": "020327500000",
+        "nome": "LND1161"
       },
       {
-        "codice": "LND1162",
-        "nome": ""
+        "codice": "0203276V0100",
+        "nome": "LND1162"
       },
       {
-        "codice": "LND20923",
-        "nome": ""
+        "codice": "020340300000",
+        "nome": "LND20923"
       },
       {
         "codice": "STAMPO PONTI 4 SEDI 1817",
         "nome": ""
       },
       {
-        "codice": "RID42",
+        "codice": "RID 42",
         "nome": ""
       },
       {
@@ -6719,15 +6663,31 @@
     ],
     "E2": [
       {
-        "codice": "MERIDIANO SELLA 46",
+        "codice": "COMPENS S36 NERO",
         "nome": ""
       },
       {
-        "codice": "ROLD 114103",
+        "codice": "SELLA S36 NERO",
         "nome": ""
       },
       {
-        "codice": "ROLD 114261",
+        "codice": "SPESSORE S36 NERO",
+        "nome": ""
+      },
+      {
+        "codice": "114103",
+        "nome": ""
+      },
+      {
+        "codice": "113071",
+        "nome": ""
+      },
+      {
+        "codice": "112703",
+        "nome": ""
+      },
+      {
+        "codice": "114261",
         "nome": ""
       }
     ],
@@ -6737,7 +6697,7 @@
         "nome": ""
       },
       {
-        "codice": "BLS REGGETTA",
+        "codice": "008247",
         "nome": ""
       },
       {
@@ -6757,50 +6717,54 @@
     ],
     "E5": [
       {
-        "codice": "1063",
+        "codice": "39510210",
         "nome": ""
       },
       {
-        "codice": "INVOLUCRO",
+        "codice": "39510220",
         "nome": ""
       },
       {
-        "codice": "CURVETTA",
+        "codice": "39540300",
+        "nome": ""
+      },
+      {
+        "codice": "39530420",
+        "nome": ""
+      },
+      {
+        "codice": "39540530",
+        "nome": ""
+      },
+      {
+        "codice": "39540400",
+        "nome": ""
+      },
+      {
+        "codice": "39530440",
+        "nome": ""
+      },
+      {
+        "codice": "39530340",
         "nome": ""
       }
     ],
     "F1": [
       {
-        "codice": "APLA00851",
-        "nome": ""
-      },
-      {
-        "codice": "APLA00817",
-        "nome": ""
-      },
-      {
-        "codice": "APLA00849",
-        "nome": ""
-      },
-      {
-        "codice": "APLA00815",
-        "nome": ""
-      },
-      {
         "codice": "101A1370A",
-        "nome": ""
+        "nome": "APLA00815"
       },
       {
         "codice": "101A1372A",
-        "nome": ""
+        "nome": "APLA00817"
       },
       {
         "codice": "101A1397A",
-        "nome": ""
+        "nome": "APLA00849"
       },
       {
         "codice": "101A1399A",
-        "nome": ""
+        "nome": "APLA00851"
       }
     ],
     "F2": [
@@ -6869,7 +6833,11 @@
     ],
     "F4": [
       {
-        "codice": "GHIERA 2121",
+        "codice": "39520740",
+        "nome": ""
+      },
+      {
+        "codice": "39520770",
         "nome": ""
       }
     ]
@@ -7179,7 +7147,7 @@
       "scaffale": "B4",
       "nome": ""
     },
-    "COVER": {
+    "S41622": {
       "scaffale": "B4",
       "nome": ""
     },
@@ -7271,191 +7239,119 @@
       "scaffale": "C2",
       "nome": ""
     },
-    "APLA00014": {
-      "scaffale": "C3",
-      "nome": ""
-    },
-    "APLA00189": {
-      "scaffale": "C3",
-      "nome": ""
-    },
-    "APLA00456": {
-      "scaffale": "C3",
-      "nome": ""
-    },
-    "APLA00479": {
-      "scaffale": "C3",
-      "nome": ""
-    },
-    "APLA00494": {
-      "scaffale": "C3",
-      "nome": ""
-    },
-    "APLA00529": {
-      "scaffale": "C3",
-      "nome": ""
-    },
-    "APLA00645": {
-      "scaffale": "C3",
-      "nome": ""
-    },
-    "APLA00827": {
-      "scaffale": "C3",
-      "nome": ""
-    },
-    "APLA00831": {
-      "scaffale": "C3",
-      "nome": ""
-    },
     "101A1388A": {
       "scaffale": "C3",
-      "nome": ""
+      "nome": "APLA00831"
     },
     "101A1578A": {
       "scaffale": "C3",
-      "nome": ""
+      "nome": "APLA00189"
     },
     "101A1588C": {
       "scaffale": "C3",
-      "nome": ""
+      "nome": "APLA00189"
     },
     "101A1588D": {
       "scaffale": "C3",
-      "nome": ""
+      "nome": "APLA00189"
     },
     "101A1589E": {
       "scaffale": "C3",
-      "nome": ""
+      "nome": "APLA00189"
     },
     "101A1590H": {
       "scaffale": "C3",
-      "nome": ""
+      "nome": "APLA00189"
     },
     "101A1595B": {
       "scaffale": "C3",
-      "nome": ""
+      "nome": "APLA00494"
     },
     "101A1660A": {
       "scaffale": "C3",
-      "nome": ""
+      "nome": "APLA00494"
     },
     "101A1661A": {
       "scaffale": "C3",
-      "nome": ""
+      "nome": "APLA00494"
     },
     "101A3358B": {
       "scaffale": "C3",
-      "nome": ""
+      "nome": "APLA00479"
     },
     "101A5010C": {
       "scaffale": "C3",
-      "nome": ""
+      "nome": "APLA00456"
     },
     "101A5010D": {
       "scaffale": "C3",
-      "nome": ""
+      "nome": "APLA00456"
     },
     "101A5010E": {
       "scaffale": "C3",
-      "nome": ""
+      "nome": "APLA00456"
     },
     "101A5010F": {
       "scaffale": "C3",
-      "nome": ""
+      "nome": "APLA00456"
     },
     "101A8103A": {
       "scaffale": "C3",
-      "nome": ""
+      "nome": "APLA00014"
     },
     "101A8103B": {
       "scaffale": "C3",
-      "nome": ""
+      "nome": "APLA00014"
     },
     "101A8103C": {
       "scaffale": "C3",
-      "nome": ""
+      "nome": "APLA00014"
     },
     "101A8103D": {
       "scaffale": "C3",
-      "nome": ""
+      "nome": "APLA00014"
     },
     "107A0041A": {
       "scaffale": "C3",
-      "nome": ""
+      "nome": "APLA00529"
     },
-    "201A3308A": {
+    "201A3308B": {
       "scaffale": "C3",
-      "nome": ""
-    },
-    "APLA00468": {
-      "scaffale": "C4",
-      "nome": ""
-    },
-    "APLA00478": {
-      "scaffale": "C4",
-      "nome": ""
-    },
-    "APLA00481": {
-      "scaffale": "C4",
-      "nome": ""
-    },
-    "APLA00482": {
-      "scaffale": "C4",
-      "nome": ""
-    },
-    "APLA00813": {
-      "scaffale": "C4",
-      "nome": ""
+      "nome": "APLA00645"
     },
     "101A1368A": {
       "scaffale": "C4",
-      "nome": ""
+      "nome": "APLA00813"
     },
     "101A1378A": {
       "scaffale": "C4",
-      "nome": ""
+      "nome": "APLA00823"
     },
     "101A1379A": {
       "scaffale": "C4",
-      "nome": ""
+      "nome": "APLA00823"
     },
     "101A3315A": {
       "scaffale": "C4",
-      "nome": ""
-    },
-    "101A3365F": {
-      "scaffale": "C4",
-      "nome": ""
-    },
-    "101A3366F": {
-      "scaffale": "C4",
-      "nome": ""
-    },
-    "101A3367D": {
-      "scaffale": "C4",
-      "nome": ""
-    },
-    "101A3368D": {
-      "scaffale": "C4",
-      "nome": ""
+      "nome": "APLA00468"
     },
     "101A3372C": {
       "scaffale": "C4",
-      "nome": ""
+      "nome": "APLA00481"
     },
-    "1064": {
+    "39510230": {
       "scaffale": "C5",
       "nome": ""
     },
-    "1073": {
+    "39510280": {
       "scaffale": "C5",
       "nome": ""
     },
-    "5075": {
+    "39540320": {
       "scaffale": "C5",
       "nome": ""
     },
-    "7001": {
+    "39510250E": {
       "scaffale": "C5",
       "nome": ""
     },
@@ -7463,11 +7359,11 @@
       "scaffale": "C5",
       "nome": ""
     },
-    "VETRINO": {
+    "39540150": {
       "scaffale": "C5",
       "nome": ""
     },
-    "3040": {
+    "39530170": {
       "scaffale": "C6",
       "nome": ""
     },
@@ -7475,15 +7371,15 @@
       "scaffale": "C6",
       "nome": ""
     },
-    "3074": {
+    "39530390": {
       "scaffale": "C6",
       "nome": ""
     },
-    "2029/2038": {
+    "39520170": {
       "scaffale": "C6",
       "nome": ""
     },
-    "GHIERONE": {
+    "39520240": {
       "scaffale": "C6",
       "nome": ""
     },
@@ -7575,7 +7471,23 @@
       "scaffale": "D3",
       "nome": ""
     },
-    "SIGILLO": {
+    "SAS5LUNGOGIALLO": {
+      "scaffale": "D3",
+      "nome": ""
+    },
+    "SAS5LUNGOBLU": {
+      "scaffale": "D3",
+      "nome": ""
+    },
+    "SAS5LUNGOBIANCO": {
+      "scaffale": "D3",
+      "nome": ""
+    },
+    "SAS5LUNGOVERDE": {
+      "scaffale": "D3",
+      "nome": ""
+    },
+    "SAS5LUNGOROSSO": {
       "scaffale": "D3",
       "nome": ""
     },
@@ -7607,27 +7519,27 @@
       "scaffale": "E1",
       "nome": ""
     },
-    "LND974": {
+    "020325200000": {
       "scaffale": "E1",
-      "nome": ""
+      "nome": "LND974"
     },
-    "LND1161": {
+    "020327500000": {
       "scaffale": "E1",
-      "nome": ""
+      "nome": "LND1161"
     },
-    "LND1162": {
+    "0203276V0100": {
       "scaffale": "E1",
-      "nome": ""
+      "nome": "LND1162"
     },
-    "LND20923": {
+    "020340300000": {
       "scaffale": "E1",
-      "nome": ""
+      "nome": "LND20923"
     },
     "STAMPO PONTI 4 SEDI 1817": {
       "scaffale": "E1",
       "nome": ""
     },
-    "RID42": {
+    "RID 42": {
       "scaffale": "E1",
       "nome": ""
     },
@@ -7635,15 +7547,31 @@
       "scaffale": "E1",
       "nome": ""
     },
-    "MERIDIANO SELLA 46": {
+    "COMPENS S36 NERO": {
       "scaffale": "E2",
       "nome": ""
     },
-    "ROLD 114103": {
+    "SELLA S36 NERO": {
       "scaffale": "E2",
       "nome": ""
     },
-    "ROLD 114261": {
+    "SPESSORE S36 NERO": {
+      "scaffale": "E2",
+      "nome": ""
+    },
+    "114103": {
+      "scaffale": "E2",
+      "nome": ""
+    },
+    "113071": {
+      "scaffale": "E2",
+      "nome": ""
+    },
+    "112703": {
+      "scaffale": "E2",
+      "nome": ""
+    },
+    "114261": {
       "scaffale": "E2",
       "nome": ""
     },
@@ -7651,7 +7579,7 @@
       "scaffale": "E3",
       "nome": ""
     },
-    "BLS REGGETTA": {
+    "008247": {
       "scaffale": "E3",
       "nome": ""
     },
@@ -7667,49 +7595,53 @@
       "scaffale": "E4",
       "nome": ""
     },
-    "1063": {
+    "39510210": {
       "scaffale": "E5",
       "nome": ""
     },
-    "INVOLUCRO": {
+    "39510220": {
       "scaffale": "E5",
       "nome": ""
     },
-    "CURVETTA": {
+    "39540300": {
       "scaffale": "E5",
       "nome": ""
     },
-    "APLA00851": {
-      "scaffale": "F1",
+    "39530420": {
+      "scaffale": "E5",
       "nome": ""
     },
-    "APLA00817": {
-      "scaffale": "F1",
+    "39540530": {
+      "scaffale": "E5",
       "nome": ""
     },
-    "APLA00849": {
-      "scaffale": "F1",
+    "39540400": {
+      "scaffale": "E5",
       "nome": ""
     },
-    "APLA00815": {
-      "scaffale": "F1",
+    "39530440": {
+      "scaffale": "E5",
+      "nome": ""
+    },
+    "39530340": {
+      "scaffale": "E5",
       "nome": ""
     },
     "101A1370A": {
       "scaffale": "F1",
-      "nome": ""
+      "nome": "APLA00815"
     },
     "101A1372A": {
       "scaffale": "F1",
-      "nome": ""
+      "nome": "APLA00817"
     },
     "101A1397A": {
       "scaffale": "F1",
-      "nome": ""
+      "nome": "APLA00849"
     },
     "101A1399A": {
       "scaffale": "F1",
-      "nome": ""
+      "nome": "APLA00851"
     },
     "0035": {
       "scaffale": "F2",
@@ -7771,7 +7703,11 @@
       "scaffale": "F3",
       "nome": ""
     },
-    "GHIERA 2121": {
+    "39520740": {
+      "scaffale": "F4",
+      "nome": ""
+    },
+    "39520770": {
       "scaffale": "F4",
       "nome": ""
     },
@@ -7791,16 +7727,12 @@
       "scaffale": "A1",
       "nome": "prova"
     },
-    "114103": {
-      "scaffale": "E2",
-      "nome": ""
-    },
     "3022": {
       "scaffale": "B1",
       "nome": ""
     },
-    "114261": {
-      "scaffale": "E2",
+    "39510250": {
+      "scaffale": "C5",
       "nome": ""
     },
     "3381": {
@@ -8908,12 +8840,12 @@
     "020327500000": 0.0245
   },
   "meta": {
-    "generated": "2026-05-22T11:51:14.467624",
+    "generated": "2026-05-22T12:55:25.696307",
     "total_ordini": 393,
     "total_articoli": 135,
     "total_pezzi": 11028385,
     "total_ore": 18123.416666666668,
     "total_kg": 71040.32,
-    "unmapped_count": 42
+    "unmapped_count": 9
   }
 }

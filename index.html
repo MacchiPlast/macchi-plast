@@ -31,7 +31,7 @@ label{display:block;font-size:12px;font-weight:500;color:var(--muted);text-trans
 input{width:100%;padding:10px 13px;border:1px solid var(--border);border-radius:var(--r);font-family:'IBM Plex Sans',sans-serif;font-size:15px;color:var(--text);background:var(--bg);outline:none}
 input:focus{border-color:var(--text);background:#fff}
 .ac-wrap{position:relative}
-.ac-list{position:absolute;top:calc(100% + 4px);left:0;right:0;background:var(--surface);border:1px solid var(--border-s);border-radius:var(--r);z-index:300;max-height:220px;overflow-y:auto;box-shadow:0 4px 12px rgba(0,0,0,0.08)}
+.ac-list{position:absolute;top:calc(100% + 4px);left:0;right:0;background:var(--surface);border:1px solid var(--border-s);border-radius:var(--r);z-index:300;max-height:220px;overflow-y:auto;box-shadow:0 4px 12px rgba(0,0,0,.08)}
 .ac-item{padding:9px 13px;font-size:13px;cursor:pointer;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;gap:8px}
 .ac-item:last-child{border-bottom:none}
 .ac-item:hover{background:var(--bg)}
@@ -305,10 +305,52 @@ tr:hover td{background:#faf9f6}
   function findPos(art) {
     if (!art) return null;
     const key = art.toUpperCase().trim();
-    if (DATA.lookup[key]) return DATA.lookup[key][0];
+    const lookup = DATA.lookup[key];
+    
+    // Supporta sia formato vecchio che nuovo
+    if (lookup) {
+      if (typeof lookup === 'object' && lookup.scaffale) {
+        return lookup.scaffale;
+      } else if (typeof lookup === 'string') {
+        return lookup;
+      } else if (Array.isArray(lookup) && lookup.length > 0) {
+        return lookup[0];
+      }
+    }
+    
     const keys = Object.keys(DATA.lookup);
     for (let k of keys) {
-      if (k.indexOf(key) >= 0 || key.indexOf(k) >= 0) return DATA.lookup[k][0];
+      if (k.indexOf(key) >= 0 || key.indexOf(k) >= 0) {
+        const val = DATA.lookup[k];
+        if (typeof val === 'object' && val.scaffale) {
+          return val.scaffale;
+        } else if (typeof val === 'string') {
+          return val;
+        } else if (Array.isArray(val) && val.length > 0) {
+          return val[0];
+        }
+      }
+    }
+    return null;
+  }
+
+  function getNomeStampo(art) {
+    if (!art) return null;
+    const key = art.toUpperCase().trim();
+    const lookup = DATA.lookup[key];
+    
+    if (lookup && typeof lookup === 'object' && lookup.nome) {
+      return lookup.nome;
+    }
+    
+    const keys = Object.keys(DATA.lookup);
+    for (let k of keys) {
+      if (k.indexOf(key) >= 0 || key.indexOf(k) >= 0) {
+        const val = DATA.lookup[k];
+        if (typeof val === 'object' && val.nome) {
+          return val.nome;
+        }
+      }
     }
     return null;
   }
@@ -329,19 +371,27 @@ tr:hover td{background:#faf9f6}
     const pos = findPos(sel.articolo);
     const posEl = id('r-pos-content');
     if (pos) {
-      const rigaMap = {'A':'Riga A','B':'Riga B','C':'Riga C','D':'Riga D','E':'Riga E','F':'Riga F'};
-      const rigaLabel = rigaMap[pos[0]] || pos[0];
-      const colLabel = 'Colonna ' + pos[1];
+      const nomeStampo = getNomeStampo(sel.articolo);
       const articoliScaffale = DATA.scaffali[pos] || [];
-      const compagni = articoliScaffale.filter(a => a.toUpperCase().trim() !== sel.articolo.toUpperCase().trim());
+      const compagni = articoliScaffale.filter(a => {
+        const codice = typeof a === 'object' ? a.codice : a;
+        return codice.toUpperCase().trim() !== sel.articolo.toUpperCase().trim();
+      });
       const altriHtml = compagni.length
-        ? '<div class="pos-altri">Stesso scaffale: <b>'+compagni.slice(0,6).join('</b>, <b>')+'</b>'+(compagni.length>6?' ...':'')+'</div>'
+        ? '<div class="pos-altri">Stesso scaffale: <b>'+compagni.slice(0,6).map(a => typeof a === 'object' ? a.codice : a).join('</b>, <b>')+'</b>'+(compagni.length>6?' ...':'')+'</div>'
         : '';
+      
+      let posInfoHtml = '';
+      if (nomeStampo && nomeStampo.trim()) {
+        // Mostra solo il nome stampo se è diverso dal codice articolo
+        posInfoHtml = '<div class="pos-riga">'+nomeStampo+'</div>';
+      }
+      
       posEl.innerHTML =
         '<div class="pos-big">'+
           '<div class="pos-coord">'+pos+'</div>'+
           '<div class="pos-info">'+
-            '<div class="pos-riga">'+rigaLabel+' &middot; '+colLabel+'</div>'+
+            posInfoHtml+
           '</div>'+
         '</div>'+altriHtml;
     } else {

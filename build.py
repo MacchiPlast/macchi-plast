@@ -62,7 +62,7 @@ def clean_articolo(art):
     if not isinstance(art, str):
         return str(art).strip()
     # Rimuove URL Notion se presenti
-    art = re.sub(r'\s*\(https://www\.notion\.so/[^)]+\)', '', art)
+    art = re.sub(r'\s*\(https://app\.notion\.com/[^)]+\)', '', art)
     # Rimuove spazi extra
     art = re.sub(r'\s+', ' ', art).strip()
     return art
@@ -72,7 +72,7 @@ def clean_pressa(pressa):
     if not isinstance(pressa, str):
         return str(pressa).strip()
     # Rimuove URL Notion se presenti
-    pressa = re.sub(r'\s*\(https://www\.notion\.so/[^)]+\)', '', pressa)
+    pressa = re.sub(r'\s*\(https://app\.notion\.com/[^)]+\)', '', pressa)
     # Rimuove spazi extra
     pressa = re.sub(r'\s+', ' ', pressa).strip()
     return pressa
